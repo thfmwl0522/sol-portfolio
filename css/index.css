@@ -46,5 +46,5 @@ html, body {font-size: 16px;}
 .top-wrap i {font-size: 2em;}
 
 .cont-wrapper {display: flex; border: 10px solid brown; flex-direction:column; align-items: flex-start;}
-.cont-wrapper div {/* position: absolute; */ font-family: 'Bellefair', serif; font-size:10rem; color: #fff; line-height:9.5rem; display:flex; flex-direction:column; border: 10px solid blue; align-items: flex-start;}
+.cont-wrapper div {font-family: 'Bellefair', serif; font-size:10rem; color: #fff; line-height:9.5rem; display:flex; flex-direction:column; border: 10px solid blue; align-items: flex-start;}
 .cont-wrapper .front {left: 5rem;}
