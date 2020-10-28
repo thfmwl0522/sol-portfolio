@@ -5,13 +5,12 @@
 
 
 /********************* 공통사항 *********************/
-html, body {font-size: 16px;}
+html, body {font-size: 16px; font-family: 'Bellefair', serif; }
 
 /********************* .header-wrapper *********************/
 .header-wrapper {
 	width:100%; 
 	height: 100vh;
-/* 	display: flex;  */
 	position: relative; 
 	background-image: linear-gradient( 145deg, #1a4177, #bad7ff);
 	background-size: cover;
@@ -20,12 +19,14 @@ html, body {font-size: 16px;}
 }
 
 .main-bg {
-	opacity: 0.2;
+	opacity: 0.5;
+	mix-blend-mode: overlay;
 	width: 100%; height: 100vh; position: absolute; top: 0; left: 0;
-	background-image: url(../img/noise.jpg);
+	background-image: url(../img/noise-1.jpg);
 	background-size: 100% auto;
 	background-position: left top;
 	background-repeat: repeat;
+	
 }
 
 .main-content {
@@ -34,8 +35,7 @@ html, body {font-size: 16px;}
 
 .top-wrap {
 	width: 100%;
-	padding: 1.625rem;
-	border: 1px solid red; 
+	padding: 1.8rem;
 	display:flex;
 	align-items: center;
 	justify-content:space-between; 
@@ -43,8 +43,29 @@ html, body {font-size: 16px;}
 	top: 0; 
 	left: 0;}
 
-.top-wrap i {font-size: 2em;}
+/* .top-wrap i {font-size: 2.5em; color: #fff;} */
+.top-wrap .navi-bar {cursor: pointer; display: block;}
+.top-wrap .bar::after {width: 46px; display: block; content: ""; border: 2px solid #fff; margin: 0.5em 0;}
 
-.cont-wrapper {display: flex; border: 10px solid brown; flex-direction:column; align-items: flex-start;}
-.cont-wrapper div {font-family: 'Bellefair', serif; font-size:10rem; color: #fff; line-height:9.5rem; display:flex; flex-direction:column; border: 10px solid blue; align-items: flex-start;}
-.cont-wrapper .front {left: 5rem;}
+.cont-wrapper {display: flex; /* border: 1px solid brown; */ flex-direction:column; align-items: flex-start; margin: 6.7em auto; }
+.cont-wrapper div {font-size:11rem; color: #fff; line-height:9rem; display:flex; flex-direction:column;cursor: pointer; transition: all .5s; align-items: flex-start;}
+/* .cont-wrapper div:hover {color: rgb(185, 0, 87);} */
+.cont-wrapper div:nth-child(1) {margin: 0 2.5em;}
+.cont-wrapper div:nth-child(2) {margin: 0 0 0 2.7em;}
+.cont-wrapper div:nth-child(3) {margin: 0 0 0 2.5em;}
+.cont-wrapper div:nth-child(4) {margin: 0 0 0 3.2em;}
+.cont-wrapper div:nth-child(5) {margin: 0 2.8em;}
+.cont-wrapper div:nth-child(1):hover {transform: translateX(-10px); color: rgb(185, 0, 87);}
+.cont-wrapper div:nth-child(2):hover {transform: translateX(10px); color: rgb(185, 0, 87);}
+.cont-wrapper div:nth-child(3):hover {transform: translateX(-5px); color: rgb(138, 56, 94);}
+.cont-wrapper div:nth-child(4):hover {transform: translateX(5px); color: rgb(185, 0, 87);}
+.cont-wrapper div:nth-child(5):hover {transform: translateX(-10px); color: rgb(185, 0, 87);}
+
+.scroll-bar .icon-scroll {cursor: pointer; position: absolute; right: -2em; bottom: 1.5em; font-size: 2em; transform: rotate(-90deg); transform-origin: bottom left; color: rgb(37, 37, 37);}
+.bar-infinity::after {display: block; content: ""; border-bottom: 2px solid rgb(112, 112, 112); animation-name: hoverAni; animation-duration: 2s; animation-iteration-count: infinite; animation-direction: reverse; width: 80%;}
+@keyframes hoverAni {
+	0% {transform-origin: right; transform: scaleX(1);}
+	49% {transform-origin: right;}
+	50% {transform-origin: left; transform: scaleX(0);}
+	99% {transform-origin: left;}
+	100% {transform: scaleX(1);}
