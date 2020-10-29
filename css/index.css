@@ -12,7 +12,8 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif; }
 	width:100%; 
 	height: 100vh;
 	position: relative; 
-	background-image: linear-gradient( 145deg, #1a4177, #bad7ff);
+/* 	background-image: linear-gradient( 145deg, #1a4177, #bad7ff); */
+	background-image: linear-gradient( 145deg, #3767ac, #bad7ff);
 /* 	background-image: linear-gradient( 145deg, #042553, #bad7ff); */
 /* 	background-image: linear-gradient( 145deg, #8bb100, #e7c7e0); */
 	background-size: cover;
@@ -22,7 +23,7 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif; }
 
 .main-bg {
 	opacity: 0.5;
-	mix-blend-mode: overlay;
+/* 	mix-blend-mode: overlay; */
 	width: 100%; height: 100vh; position: absolute; top: 0; left: 0;
 	background-image: url(../img/noise-1.jpg);
 	background-size: 100% auto;
@@ -57,11 +58,11 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif; }
 .cont-wrapper div:nth-child(3) {margin: 0 0 0 2.5em;}
 .cont-wrapper div:nth-child(4) {margin: 0 0 0 3.2em;}
 .cont-wrapper div:nth-child(5) {margin: 0 2.8em;}
-.cont-wrapper div:nth-child(1):hover {transform: translateX(-10px); color: rgb(185, 0, 87);}
+/* .cont-wrapper div:nth-child(1):hover {transform: translateX(-10px); color: rgb(185, 0, 87);}
 .cont-wrapper div:nth-child(2):hover {transform: translateX(10px); color: rgb(185, 0, 87);}
 .cont-wrapper div:nth-child(3):hover {transform: translateX(-5px); color: rgb(138, 56, 94);}
 .cont-wrapper div:nth-child(4):hover {transform: translateX(5px); color: rgb(185, 0, 87);}
-.cont-wrapper div:nth-child(5):hover {transform: translateX(-10px); color: rgb(185, 0, 87);}
+.cont-wrapper div:nth-child(5):hover {transform: translateX(-10px); color: rgb(185, 0, 87);} */
 
 .scroll-bar .icon-scroll {cursor: pointer; position: absolute; right: -2em; bottom: 1.5em; font-size: 2em; transform: rotate(-90deg); transform-origin: bottom left; color: rgb(37, 37, 37);}
 .bar-infinity::after {display: block; content: ""; border-bottom: 2px solid rgb(112, 112, 112); animation-name: hoverAni; animation-duration: 2s; animation-iteration-count: infinite; animation-direction: reverse; width: 80%;}
