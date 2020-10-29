@@ -13,12 +13,13 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif; }
 	height: 100vh;
 	position: relative; 
 /* 	background-image: linear-gradient( 145deg, #1a4177, #bad7ff); */
-	background-image: linear-gradient( 145deg, #3767ac, #bad7ff);
+	background-image: linear-gradient( 145deg, #006aff, #bad7ff);
 /* 	background-image: linear-gradient( 145deg, #042553, #bad7ff); */
 /* 	background-image: linear-gradient( 145deg, #8bb100, #e7c7e0); */
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+	overflow: hidden;
 }
 
 .main-bg {
@@ -46,23 +47,30 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif; }
 	top: 0; 
 	left: 0;}
 
-/* .top-wrap i {font-size: 2.5em; color: #fff;} */
 .top-wrap .navi-bar {cursor: pointer; display: block;}
 .top-wrap .bar::after {width: 46px; display: block; content: ""; border: 2px solid #fff; margin: 0.5em 0;}
 
-.cont-wrapper {display: flex; /* border: 1px solid brown; */ flex-direction:column; align-items: flex-start; margin: 6.7em auto; }
-.cont-wrapper div {font-size:11rem; color: #fff; line-height:9rem; display:flex; flex-direction:column;cursor: pointer; transition: all .5s; align-items: flex-start;}
-/* .cont-wrapper div:hover {color: rgb(185, 0, 87);} */
-.cont-wrapper div:nth-child(1) {margin: 0 2.5em;}
+.cont-wrapper {display: flex; flex-direction:column; align-items: flex-start; margin: 5em 0 0;/*  border: 2px solid firebrick; */}
+.cont-wrapper .cont-wrap {/* border: 2px solid rgb(137, 253, 255); */ margin: 0 auto;}
+/* .cont-wrapper div {font-size:11rem; color: #fff; line-height:9rem; display:flex; flex-direction:column;cursor: pointer; transition: all .5s; align-items: flex-start;}
+ *//* .cont-wrapper div:nth-child(1) {margin: 0 2.5em;}
 .cont-wrapper div:nth-child(2) {margin: 0 0 0 2.7em;}
 .cont-wrapper div:nth-child(3) {margin: 0 0 0 2.5em;}
 .cont-wrapper div:nth-child(4) {margin: 0 0 0 3.2em;}
-.cont-wrapper div:nth-child(5) {margin: 0 2.8em;}
+.cont-wrapper div:nth-child(5) {margin: 0 2.8em;} */
 /* .cont-wrapper div:nth-child(1):hover {transform: translateX(-10px); color: rgb(185, 0, 87);}
 .cont-wrapper div:nth-child(2):hover {transform: translateX(10px); color: rgb(185, 0, 87);}
 .cont-wrapper div:nth-child(3):hover {transform: translateX(-5px); color: rgb(138, 56, 94);}
 .cont-wrapper div:nth-child(4):hover {transform: translateX(5px); color: rgb(185, 0, 87);}
 .cont-wrapper div:nth-child(5):hover {transform: translateX(-10px); color: rgb(185, 0, 87);} */
+.cont-wrapper ul {font-size:11rem; color: #fff; display:flex; cursor: pointer; margin-bottom: -0.12em; }
+.cont-wrapper li {/* border:1px solid aquamarine */ }
+.cont-wrapper ul:nth-child(1) {padding-left: 0;}
+.cont-wrapper ul:nth-child(2) {padding-left: 0.3em;}
+.cont-wrapper ul:nth-child(3) {padding-left: 0.2em;}
+.cont-wrapper ul:nth-child(4) {padding-left: 0.5em;}
+.cont-wrapper ul:nth-child(5) {padding-left: 0.1em;} 
+
 
 .scroll-bar .icon-scroll {cursor: pointer; position: absolute; right: -2em; bottom: 1.5em; font-size: 2em; transform: rotate(-90deg); transform-origin: bottom left; color: rgb(37, 37, 37);}
 .bar-infinity::after {display: block; content: ""; border-bottom: 2px solid rgb(112, 112, 112); animation-name: hoverAni; animation-duration: 2s; animation-iteration-count: infinite; animation-direction: reverse; width: 80%;}
