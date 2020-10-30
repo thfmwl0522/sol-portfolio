@@ -7,13 +7,15 @@
 /********************* 공통사항 *********************/
 html, body {font-size: 16px; font-family: 'Bellefair', serif; }
 
+
 /********************* .header-wrapper *********************/
 .header-wrapper {
 	width:100%; 
 	height: 100vh;
 	position: relative; 
 /* 	background-image: linear-gradient( 145deg, #1a4177, #bad7ff); */
-	background-image: linear-gradient( 145deg, #006aff, #bad7ff);
+/* 	background-image: linear-gradient( 145deg, #006aff, #bad7ff); */
+	background-image: linear-gradient( 145deg, #0b65e4, #bad7ff);
 /* 	background-image: linear-gradient( 145deg, #042553, #bad7ff); */
 /* 	background-image: linear-gradient( 145deg, #8bb100, #e7c7e0); */
 	background-size: cover;
@@ -33,9 +35,7 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif; }
 	
 }
 
-.main-content {
-	width: 100%; height: 100vh; position: absolute; top: 0; left: 0;
-}
+.main-content {width: 100%; height: 100vh; position: absolute; top: 0; left: 0;}
 
 .top-wrap {
 	width: 100%;
@@ -51,32 +51,34 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif; }
 .top-wrap .bar::after {width: 46px; display: block; content: ""; border: 2px solid #fff; margin: 0.5em 0;}
 
 .cont-wrapper {display: flex; flex-direction:column; align-items: flex-start; margin: 5em 0 0;/*  border: 2px solid firebrick; */}
-.cont-wrapper .cont-wrap {/* border: 2px solid rgb(137, 253, 255); */ margin: 0 auto;}
+.cont-wrapper .cont-wrap {margin: 0 auto;}
 /* .cont-wrapper div {font-size:11rem; color: #fff; line-height:9rem; display:flex; flex-direction:column;cursor: pointer; transition: all .5s; align-items: flex-start;}
- *//* .cont-wrapper div:nth-child(1) {margin: 0 2.5em;}
-.cont-wrapper div:nth-child(2) {margin: 0 0 0 2.7em;}
-.cont-wrapper div:nth-child(3) {margin: 0 0 0 2.5em;}
-.cont-wrapper div:nth-child(4) {margin: 0 0 0 3.2em;}
-.cont-wrapper div:nth-child(5) {margin: 0 2.8em;} */
 /* .cont-wrapper div:nth-child(1):hover {transform: translateX(-10px); color: rgb(185, 0, 87);}
 .cont-wrapper div:nth-child(2):hover {transform: translateX(10px); color: rgb(185, 0, 87);}
 .cont-wrapper div:nth-child(3):hover {transform: translateX(-5px); color: rgb(138, 56, 94);}
 .cont-wrapper div:nth-child(4):hover {transform: translateX(5px); color: rgb(185, 0, 87);}
 .cont-wrapper div:nth-child(5):hover {transform: translateX(-10px); color: rgb(185, 0, 87);} */
-.cont-wrapper ul {font-size:11rem; color: #fff; display:flex; cursor: pointer; margin-bottom: -0.12em; }
-.cont-wrapper li {/* border:1px solid aquamarine */ }
-.cont-wrapper ul:nth-child(1) {padding-left: 0;}
-.cont-wrapper ul:nth-child(2) {padding-left: 0.3em;}
-.cont-wrapper ul:nth-child(3) {padding-left: 0.2em;}
-.cont-wrapper ul:nth-child(4) {padding-left: 0.5em;}
-.cont-wrapper ul:nth-child(5) {padding-left: 0.1em;} 
+.cont-wrapper ul {font-size:11rem; color: #fff; display:flex; cursor: pointer; margin-bottom: -0.12em;}
+.cont-wrapper ul:nth-child(1) {padding-left: 0.2em;}
+.cont-wrapper ul:nth-child(2) {padding-left: 0.5em;}
+.cont-wrapper ul:nth-child(3) {padding-left: 0em; }
+.cont-wrapper ul:nth-child(4) {padding-left: 0.7em;}
+.cont-wrapper ul:nth-child(5) {padding-left: 0.3em;} 
 
+/* @keyframes ani() {
+	0% {}
+	100% {}
+} */
 
 .scroll-bar .icon-scroll {cursor: pointer; position: absolute; right: -2em; bottom: 1.5em; font-size: 2em; transform: rotate(-90deg); transform-origin: bottom left; color: rgb(37, 37, 37);}
-.bar-infinity::after {display: block; content: ""; border-bottom: 2px solid rgb(112, 112, 112); animation-name: hoverAni; animation-duration: 2s; animation-iteration-count: infinite; animation-direction: reverse; width: 80%;}
+.bar-infinity::after {display: block; content: ""; border-bottom: 2px solid rgb(59, 56, 56); animation-name: hoverAni; animation-duration: 2s; animation-iteration-count: infinite; animation-direction: reverse; width: 80%;}
 @keyframes hoverAni {
 	0% {transform-origin: right; transform: scaleX(1);}
 	49% {transform-origin: right;}
 	50% {transform-origin: left; transform: scaleX(0);}
 	99% {transform-origin: left;}
 	100% {transform: scaleX(1);}
+}
+
+.navi-wrapper {position:absolute; top: 0; left: 50%; transform: translateX(-50%); font-size: 11rem; color: rgb(138, 56, 94); font-family: 'Sorts Mill Goudy', serif; font-style: italic; margin: 1.4em 0; display:flex; justify-items: center; display:none;}
+.navi-wrapper div {margin-bottom: -0.12em;}
