@@ -15,7 +15,7 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif; }
 	position: relative; 
 /* 	background-image: linear-gradient( 145deg, #1a4177, #bad7ff); */
 /* 	background-image: linear-gradient( 145deg, #006aff, #bad7ff); */
-	background-image: linear-gradient( 145deg, #0b65e4, #bad7ff);
+	background-image: linear-gradient( 145deg, #006aff, #c7defd);
 /* 	background-image: linear-gradient( 145deg, #042553, #bad7ff); */
 /* 	background-image: linear-gradient( 145deg, #8bb100, #e7c7e0); */
 	background-size: cover;
@@ -25,7 +25,7 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif; }
 }
 
 .main-bg {
-	opacity: 0.5;
+	opacity: 0.4;
 /* 	mix-blend-mode: overlay; */
 	width: 100%; height: 100vh; position: absolute; top: 0; left: 0;
 	background-image: url(../img/noise-1.jpg);
@@ -59,16 +59,27 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif; }
 .cont-wrapper div:nth-child(4):hover {transform: translateX(5px); color: rgb(185, 0, 87);}
 .cont-wrapper div:nth-child(5):hover {transform: translateX(-10px); color: rgb(185, 0, 87);} */
 .cont-wrapper ul {font-size:11rem; color: #fff; display:flex; cursor: pointer; margin-bottom: -0.12em;}
-.cont-wrapper ul:nth-child(1) {padding-left: 0.2em;}
+.cont-wrapper ul:nth-child(1) {padding-left: 0.2em;  animation-name: ani;}
 .cont-wrapper ul:nth-child(2) {padding-left: 0.5em;}
 .cont-wrapper ul:nth-child(3) {padding-left: 0em; }
 .cont-wrapper ul:nth-child(4) {padding-left: 0.7em;}
-.cont-wrapper ul:nth-child(5) {padding-left: 0.3em;} 
+.cont-wrapper ul:nth-child(5) {padding-left: 0.3em; animation-name: ani2; animation-duration: 10s; } 
 
-/* @keyframes ani() {
-	0% {}
-	100% {}
-} */
+@keyframes ani {
+	0% {transform: translateX(300px);}
+/* 	49% {}
+	50% {}
+	99% {} */
+	100% {transform: translateX(0);}
+}
+@keyframes ani2 {
+	0% {transform: translateX(300px) translateY(-462px); 	}
+	49% {}
+	50% {transform: translateY();}
+	99% {}
+	100% {transform: translateY(-462px); }
+}
+
 
 .scroll-bar .icon-scroll {cursor: pointer; position: absolute; right: -2em; bottom: 1.5em; font-size: 2em; transform: rotate(-90deg); transform-origin: bottom left; color: rgb(37, 37, 37);}
 .bar-infinity::after {display: block; content: ""; border-bottom: 2px solid rgb(59, 56, 56); animation-name: hoverAni; animation-duration: 2s; animation-iteration-count: infinite; animation-direction: reverse; width: 80%;}
