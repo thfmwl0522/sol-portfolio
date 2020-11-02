@@ -73,12 +73,13 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif; }
 	100% {transform: translateX(0);}
 }
 @keyframes ani2 {
-	0% {transform: translateX(300px) translateY(-462px); 	}
+	0% {transform: translateX(300px) translateY(-462px);}
 	49% {}
 	50% {transform: translateY();}
 	99% {}
 	100% {transform: translateY(-462px); }
 }
+/* 위치조정 */
 
 
 .scroll-bar .icon-scroll {cursor: pointer; position: absolute; right: -2em; bottom: 1.5em; font-size: 2em; transform: rotate(-90deg); transform-origin: bottom left; color: rgb(37, 37, 37);}
