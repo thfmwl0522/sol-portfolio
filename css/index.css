@@ -58,29 +58,58 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif; }
 .cont-wrapper div:nth-child(3):hover {transform: translateX(-5px); color: rgb(138, 56, 94);}
 .cont-wrapper div:nth-child(4):hover {transform: translateX(5px); color: rgb(185, 0, 87);}
 .cont-wrapper div:nth-child(5):hover {transform: translateX(-10px); color: rgb(185, 0, 87);} */
-.cont-wrapper ul {font-size:11rem; color: #fff; display:flex; cursor: pointer; margin-bottom: -0.12em;}
-.cont-wrapper ul:nth-child(1) {padding-left: 0.2em;  animation-name: ani;}
-.cont-wrapper ul:nth-child(2) {padding-left: 0.5em;}
-.cont-wrapper ul:nth-child(3) {padding-left: 0em; }
-.cont-wrapper ul:nth-child(4) {padding-left: 0.7em;}
-.cont-wrapper ul:nth-child(5) {padding-left: 0.3em; animation-name: ani2; animation-duration: 10s; } 
+.cont-wrapper ul {font-size:11rem; color: #fff; display:flex; cursor: pointer; margin-bottom: -0.12em; animation-iteration-count: infinite;}
+.cont-wrapper ul:nth-child(1) {padding-left: 0.2em; animation-name: webAni; animation-duration: 20s; animation-iteration-count: infinite;}
+.cont-wrapper ul:nth-child(2) {padding-left: 0.5em; animation-name: frontAni; animation-duration: 20s; animation-iteration-count: infinite;}
+.cont-wrapper ul.devel > li:nth-child(1) {padding-left: 0em; animation-name: devAni; animation-duration: 20s; animation-iteration-count: infinite;}
+.cont-wrapper ul.devel > li:nth-child(2) {animation-name: erAni1; animation-duration: 20s; animation-iteration-count: infinite;x}
+.cont-wrapper ul.design > li:nth-child(1) {padding-left: 0.7em; animation-name: designAni; animation-duration: 20s; animation-iteration-count: infinite; }
+.cont-wrapper ul.design > li:nth-child(2) {animation-name: erAni2; animation-duration: 20s; animation-iteration-count: infinite;}
+.cont-wrapper ul:nth-child(5) {padding-left: 0.3em; animation-name: portAni; animation-duration: 20s; animation-iteration-count: infinite;} 
 
-@keyframes ani {
-	0% {transform: translateX(300px);}
-/* 	49% {}
-	50% {}
-	99% {} */
+@keyframes webAni{
+	0% {transform: translateX(1500px);}
+	10% {transform: translateX(0);}
 	100% {transform: translateX(0);}
 }
-@keyframes ani2 {
-	0% {transform: translateX(300px) translateY(-462px);}
-	49% {}
-	50% {transform: translateY();}
-	99% {}
-	100% {transform: translateY(-462px); }
+@keyframes portAni {
+	0% {transform: translateX(1500px) translateY(-463px); }
+	10% {transform: translateX(0) translateY(-463px);}
+	15% {transform: translateX(0) translateY(-463px);}
+	30% {transform: translateX(0) translateY(-310px);}
+	35% {transform: translateX(0) translateY(-310px);}
+	50% {transform: translateX(0) translateY(-156px);}
+	55% {transform: translateX(0) translateY(-156px);}
+	70% {transform: translateX(0) translateY(0);}
+	100% {transform: translateX(0) translateY(0);}
 }
-/* 위치조정 */
-
+@keyframes frontAni {
+	0% {transform: translateX(1500px) translateY(0); }
+	15% {transform: translateX(1500px) translateY(0);}
+	35% {transform: translateX(0) translateY(0);}
+	88% {transform: translateX(0) translateY(0);}
+}
+@keyframes devAni {
+	0% {transform: translateX(1500px) translateY(0); }
+	35% {transform: translateX(1500px) translateY(0); }
+	55% {transform: translateX(0) translateY(0);}
+	88% {transform: translateX(0) translateY(0);}
+}
+@keyframes designAni {
+	0% {transform: translateX(1500px) translateY(0); }
+	55% {transform: translateX(1500px) translateY(0);}
+	75% {transform: translateX(0) translateY(0);}
+}
+@keyframes erAni1 {
+	0% {transform: translateX(1500px) translateY(0); }
+	75% {transform: translateX(1500px) translateY(0);}
+	85% {transform: translateX(0) translateY(0);}
+}
+@keyframes erAni2 {
+	0% {transform: translateX(1500px) translateY(0); }
+	75% {transform: translateX(1500px) translateY(0);}
+	85% {transform: translateX(0) translateY(0);}
+}
 
 .scroll-bar .icon-scroll {cursor: pointer; position: absolute; right: -2em; bottom: 1.5em; font-size: 2em; transform: rotate(-90deg); transform-origin: bottom left; color: rgb(37, 37, 37);}
 .bar-infinity::after {display: block; content: ""; border-bottom: 2px solid rgb(59, 56, 56); animation-name: hoverAni; animation-duration: 2s; animation-iteration-count: infinite; animation-direction: reverse; width: 80%;}
