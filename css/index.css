@@ -68,8 +68,8 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif; }
 .cont-wrapper ul:nth-child(4) > li:nth-child(2) {animation-name: erAni2; animation-duration: 14s; animation-iteration-count: infinite;}
 .cont-wrapper ul:nth-child(5) {padding-left: 0.3em; animation-name: portAni; animation-duration: 14s; animation-iteration-count: infinite;} 
 
-.cont-wrap > ul.navi {animation-fill-mode: forwards;}
-.navi-ani {animation-name: naviAni; animation-duration: 8s; animation-fill-mode: forwards;}
+/* .cont-wrap > ul.navi {animation-fill-mode: forwards;}
+.navi-ani {animation-name: naviAni; animation-duration: 8s; animation-fill-mode: forwards;} */
 
 @keyframes webAni{
 	0% {transform: translateX(1500px); color: rgb(18, 43, 126);}
@@ -166,7 +166,7 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif; }
 
 .navi-wrapper .navi-wrap > div:nth-child(1) {animation: aboutAni 8s;animation-fill-mode: forwards;}
 .navi-wrapper .navi-wrap > div:nth-child(2) {padding-left: 0.7em; animation: worksAni 8s; animation-fill-mode: forwards;}
-.navi-wrapper .navi-wrap > div:nth-child(3) {padding-left: 0.2em; animation: contactAni 8s; animation-fill-mode: forwards;}
+.navi-wrapper .navi-wrap > div:nth-child(3) {padding-left: 0.2em; animation: contactAni 8s; animation-fill-mode: backward;}
 
 @keyframes aboutAni {
 	0% {transform: translateX(1500px) translateY(0);}
