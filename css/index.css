@@ -198,7 +198,7 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif; }
 
 
 /********************* .about-wrapper *********************/
-.about-wrapper {position:absolute; top:0; left:0; width:100%; height: 100vh;}
+.about-wrapper {position: relative;; width:100%; height: 100vh;}
 .about-wrapper {
 	width:100%; 
 	height: 100vh;
@@ -211,7 +211,6 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif; }
 }
 .main-bg2 {
 	opacity: 0.4;
-/* 	mix-blend-mode: overlay; */
 	width: 100%; height: 100vh; position: absolute; top: 0; left: 0;
 	background-image: url(../img/noise-1.jpg);
 	background-size: 100% auto;
@@ -221,7 +220,6 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif; }
 
 .main-bg2 {
 	opacity: 0.4;
-/* 	mix-blend-mode: overlay; */
 	width: 100%; height: 100vh; position: absolute; top: 0; left: 0;
 	background-image: url(../img/cosmos-1866820_1920.jpg);
 	background-size: cover;
