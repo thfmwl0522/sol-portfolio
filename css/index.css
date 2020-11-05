@@ -16,6 +16,7 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif; }
 /* 	background-image: linear-gradient( 145deg, #1a4177, #bad7ff); */
 /* 	background-image: linear-gradient( 145deg, #006aff, #bad7ff); */
 	background-image: linear-gradient( 145deg, #006aff, #c7defd);
+/* 	background-image: linear-gradient( 145deg, #006aff, #c7defd); */
 /* 	background-image: linear-gradient( 145deg, #042553, #bad7ff); */
 /* 	background-image: linear-gradient( 145deg, #8bb100, #e7c7e0); */
 	background-size: cover;
@@ -32,6 +33,16 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif; }
 	background-size: 100% auto;
 	background-position: left top;
 	background-repeat: repeat;
+}
+
+.main-bg {
+	opacity: 0.4;
+/* 	mix-blend-mode: overlay; */
+	width: 100%; height: 100vh; position: absolute; top: 0; left: 0;
+	background-image: url(../img/cosmos-1866820_1920.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
 .main-content {width: 100%; height: 100vh; position: absolute; top: 0; left: 0;}
@@ -51,12 +62,6 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif; }
 
 .cont-wrapper {display: flex; flex-direction:column; align-items: flex-start; margin: 5em 0 0;/*  display:none; */}
 .cont-wrapper .cont-wrap {margin: 0 auto;}
-/* .cont-wrapper div {font-size:11rem; color: #fff; line-height:9rem; display:flex; flex-direction:column;cursor: pointer; transition: all .5s; align-items: flex-start;}
-/* .cont-wrapper div:nth-child(1):hover {transform: translateX(-10px); color: rgb(185, 0, 87);}
-.cont-wrapper div:nth-child(2):hover {transform: translateX(10px); color: rgb(185, 0, 87);}
-.cont-wrapper div:nth-child(3):hover {transform: translateX(-5px); color: rgb(138, 56, 94);}
-.cont-wrapper div:nth-child(4):hover {transform: translateX(5px); color: rgb(185, 0, 87);}
-.cont-wrapper div:nth-child(5):hover {transform: translateX(-10px); color: rgb(185, 0, 87);} */
 
 .cont-wrapper ul {font-size:19vh; color: #fff; display:flex; cursor: pointer; margin-bottom: -0.12em; animation-iteration-count: infinite;}
 .cont-wrapper ul:nth-child(1) {padding-left: 0.2em; animation-name: webAni; animation-duration: 14s; animation-iteration-count: infinite;}
@@ -65,14 +70,17 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif; }
 .cont-wrapper ul:nth-child(3) > li:nth-child(2) {animation-name: erAni1; animation-duration: 14s; animation-iteration-count: infinite;}
 .cont-wrapper ul:nth-child(4) > li:nth-child(1) {padding-left: 0.7em; animation-name: designAni; animation-duration: 14s; animation-iteration-count: infinite; }
 .cont-wrapper ul:nth-child(4) > li:nth-child(2) {animation-name: erAni2; animation-duration: 14s; animation-iteration-count: infinite;}
-.cont-wrapper ul:nth-child(5) {padding-left: 0.3em; animation-name: portAni; animation-duration: 14s; animation-iteration-count: infinite;} 
+.cont-wrapper ul:nth-child(5) {padding-left: 0.3em; animation-name: portAni; animation-duration: 14s; animation-iteration-count: infinite;}
 
+/* .navi-ani { animation-name: naviAni; animation-iteration-count:initial; animation-fill-mode: forwards; animation-duration:8s;}
+ */
 
-@keyframes webAni{
+/* @keyframes webAni{
 	0% {transform: translateX(1500px); color: rgb(18, 43, 126);}
 	5% {transform: translateX(0); color: rgb(18, 43, 126);}
-	56% {transform: translateX(0); color: rgb(18, 43, 126);}
-	60% {transform: translateX(0); color: #fff;}
+	56% {transform: translateX(0); color: rgb(18, 43, 126);opacity: 1;}
+	58% {opacity: 0; transform: translateX(0); color: rgb(18, 43, 126); color: #fff;}
+	60% {transform: translateX(0); color: #fff; opacity: 1;}
 	70% {transform: translateX(0); color: #fff;}
 	100% {transform: translateX(0);}
 }
@@ -85,32 +93,36 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif; }
 	25% {transform: translateX(0) translateY(-156px);}
 	30% {transform: translateX(0) translateY(-156px);}
 	35% {transform: translateX(0) translateY(0);}
-	56% {transform: translateX(0); color: rgb(18, 43, 126);}
-	60% {transform: translateX(0); color: #fff;}
+	56% {transform: translateX(0); color: rgb(18, 43, 126);opacity: 1;}
+	58% {opacity: 0; transform: translateX(0); color: rgb(18, 43, 126); color: #fff;}
+	60% {transform: translateX(0); color: #fff; opacity: 1;}
 	100% {transform: translateX(0) translateY(0);}
 }
 @keyframes frontAni {
 	0% {transform: translateX(1500px) translateY(0); color: rgb(18, 43, 126);}
 	9% {transform: translateX(1500px) translateY(0);}
 	15% {transform: translateX(0) translateY(0);}
-	56% {transform: translateX(0); color: rgb(18, 43, 126);}
-	60% {transform: translateX(0); color: #fff;}
+	56% {transform: translateX(0); color: rgb(18, 43, 126);opacity: 1; }
+	58% {opacity: 0; transform: translateX(0); color: rgb(18, 43, 126); color: #fff;}
+	60% {transform: translateX(0); color: #fff; opacity: 1;}
 	88% {transform: translateX(0) translateY(0);}
 }
 @keyframes devAni {
 	0% {transform: translateX(1500px) translateY(0); color: rgb(18, 43, 126);}
 	20% {transform: translateX(1500px) translateY(0); }
 	25% {transform: translateX(0) translateY(0);}
-	56% {transform: translateX(0); color: rgb(18, 43, 126);}
-	60% {transform: translateX(0); color: #fff;}
+	56% {transform: translateX(0); color: rgb(18, 43, 126); opacity: 1;}
+	58% {opacity: 0; transform: translateX(0); color: rgb(18, 43, 126); color: #fff;}
+	60% {transform: translateX(0); color: #fff; opacity: 1;}
 	88% {transform: translateX(0) translateY(0);}
 }
 @keyframes designAni {
 	0% {transform: translateX(1500px) translateY(0); color: rgb(18, 43, 126);}
 	30% {transform: translateX(1500px) translateY(0);}
 	35% {transform: translateX(0) translateY(0);}
-	56% {transform: translateX(0); color: rgb(18, 43, 126);}
-	60% {transform: translateX(0); color: #fff;}
+	56% {transform: translateX(0); color: rgb(18, 43, 126); opacity: 1;}
+	58% {opacity: 0; transform: translateX(0); color: rgb(18, 43, 126); color: #fff;}
+	60% {transform: translateX(0); color: #fff; opacity: 1;}
 	88% {transform: translateX(0) translateY(0);}
 }
 @keyframes erAni1 {
@@ -139,9 +151,9 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif; }
 	60% {opacity: 1; color: #fff;}
 	80% {opacity: 1;}
 	100% {opacity: 1;}
-}
+} */
 
-.scroll-bar .icon-scroll {cursor: pointer; position: absolute; right: -2em; bottom: 1.5em; font-size: 2em; transform: rotate(-90deg); transform-origin: bottom left; color: rgb(37, 37, 37);}
+.scroll-bar .icon-scroll {cursor: pointer; position: absolute; right: -2em; bottom: 1.5em; font-size: 1.8em; transform: rotate(-90deg); transform-origin: bottom left; color: rgb(0, 0, 0);}
 .bar-infinity::after {display: block; content: ""; border-bottom: 2px solid rgb(59, 56, 56); animation-name: hoverAni; animation-duration: 2s; animation-iteration-count: infinite; animation-direction: reverse; width: 80%;}
 @keyframes hoverAni {
 	0% {transform-origin: right; transform: scaleX(1);}
@@ -199,6 +211,7 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif; }
 }
 .main-bg2 {
 	opacity: 0.4;
+/* 	mix-blend-mode: overlay; */
 	width: 100%; height: 100vh; position: absolute; top: 0; left: 0;
 	background-image: url(../img/noise-1.jpg);
 	background-size: 100% auto;
@@ -206,5 +219,14 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif; }
 	background-repeat: repeat;
 }
 
+.main-bg2 {
+	opacity: 0.4;
+/* 	mix-blend-mode: overlay; */
+	width: 100%; height: 100vh; position: absolute; top: 0; left: 0;
+	background-image: url(../img/cosmos-1866820_1920.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
 .about-wrapper > h1 {position:absolute; font-size:13vh; color: rgb(18, 43, 126);/*  color: rgb(18, 43, 126); */ font-family: 'Sorts Mill Goudy', serif; font-style: italic; margin:0.3em 1em;}
 .about-wrapper .sub-wrap {position:absolute; font-size:10vh; color: rgb(64, 71, 97); font-family: 'Sorts Mill Goudy', serif; font-style: italic; right: 7vw; bottom: 2.2vh;}
