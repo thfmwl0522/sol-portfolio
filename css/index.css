@@ -75,7 +75,7 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif; }
 /* .navi-ani { animation-name: naviAni; animation-iteration-count:initial; animation-fill-mode: forwards; animation-duration:8s;}
  */
 
-/* @keyframes webAni{
+ @keyframes webAni{
 	0% {transform: translateX(1500px); color: rgb(18, 43, 126);}
 	5% {transform: translateX(0); color: rgb(18, 43, 126);}
 	56% {transform: translateX(0); color: rgb(18, 43, 126);opacity: 1;}
@@ -151,7 +151,7 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif; }
 	60% {opacity: 1; color: #fff;}
 	80% {opacity: 1;}
 	100% {opacity: 1;}
-} */
+}
 
 .scroll-bar .icon-scroll {cursor: pointer; position: absolute; right: -2em; bottom: 1.5em; font-size: 1.8em; transform: rotate(-90deg); transform-origin: bottom left; color: rgb(0, 0, 0);}
 .bar-infinity::after {display: block; content: ""; border-bottom: 2px solid rgb(59, 56, 56); animation-name: hoverAni; animation-duration: 2s; animation-iteration-count: infinite; animation-direction: reverse; width: 80%;}
