@@ -77,16 +77,16 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif; }
 
 
  @keyframes webAni{
-	0% {transform: translateX(120vw); color: rgb(18, 43, 126);}
-	5% {transform: translateX(0); color: rgb(18, 43, 126);}
-	56% {transform: translateX(0); color: rgb(18, 43, 126);opacity: 1;}
-	58% {opacity: 0; transform: translateX(0); color: rgb(18, 43, 126); color: #fff;}
+	0% {transform: translateX(120vw); color: #07215f;}
+	5% {transform: translateX(0); color: #07215f;}
+	56% {transform: translateX(0); color: #07215f;opacity: 1;}
+	58% {opacity: 0; transform: translateX(0); color: #07215f; color: #fff;}
 	62% {transform: translateX(0); color: #fff; opacity: 1;}
 	70% {transform: translateX(0); color: #fff;}
 	100% {transform: translateX(0);}
 }
 @keyframes portAni {
-	0% {transform: translateX(120vw) translateY(-52vh); color: rgb(18, 43, 126);}
+	0% {transform: translateX(120vw) translateY(-52vh); color:#07215f;}
 	5% {transform: translateX(0) translateY(-52vh);}
 	10% {transform: translateX(0) translateY(-52vh);}
 	15% {transform: translateX(0) translateY(-34.5vh);}
@@ -94,13 +94,13 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif; }
 	25% {transform: translateX(0) translateY(-17.5vh);}
 	30% {transform: translateX(0) translateY(-17.5vh);}
 	35% {transform: translateX(0) translateY(0);}
-	56% {transform: translateX(0); color: rgb(18, 43, 126);opacity: 1;}
-	58% {opacity: 0; transform: translateX(0); color: rgb(18, 43, 126); color: #fff;}
+	56% {transform: translateX(0); color: #07215f; opacity: 1;}
+	58% {opacity: 0; transform: translateX(0); color: #07215f; color: #fff;}
 	62% {transform: translateX(0); color: #fff; opacity: 1;}
 	100% {transform: translateX(0) translateY(0);}
 }
 @keyframes portAni1 {
-	0% {transform: translateX(120vw) translateY(-46.4vh); color: rgb(18, 43, 126);}
+	0% {transform: translateX(120vw) translateY(-46.4vh); color: #07215f;}
 	5% {transform: translateX(0) translateY(-46.4vh);}
 	10% {transform: translateX(0) translateY(-46.4vh);}
 	15% {transform: translateX(0) translateY(-31vh);}
@@ -108,13 +108,13 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif; }
 	25% {transform: translateX(0) translateY(-15.5vh);}
 	30% {transform: translateX(0) translateY(-15.5vh);}
 	35% {transform: translateX(0) translateY(0);}
-	56% {transform: translateX(0); color: rgb(18, 43, 126);opacity: 1;}
-	58% {opacity: 0; transform: translateX(0); color: rgb(18, 43, 126); color: #fff;}
+	56% {transform: translateX(0); color: #07215f; opacity: 1;}
+	58% {opacity: 0; transform: translateX(0); color:#07215f; color: #fff;}
 	62% {transform: translateX(0); color: #fff; opacity: 1;}
 	100% {transform: translateX(0) translateY(0);}
 }
 @keyframes portAni2 {
-	0% {transform: translateX(120vw) translateY(-33vh); color: rgb(18, 43, 126);}
+	0% {transform: translateX(120vw) translateY(-33vh); color:#07215f;}
 	5% {transform: translateX(0) translateY(-33vh);}
 	10% {transform: translateX(0) translateY(-33vh);}
 	15% {transform: translateX(0) translateY(-22vh);}
@@ -122,60 +122,60 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif; }
 	25% {transform: translateX(0) translateY(-11vh);}
 	30% {transform: translateX(0) translateY(-11vh);}
 	35% {transform: translateX(0) translateY(0);}
-	56% {transform: translateX(0); color: rgb(18, 43, 126);opacity: 1;}
-	58% {opacity: 0; transform: translateX(0); color: rgb(18, 43, 126); color: #fff;}
+	56% {transform: translateX(0); color: #07215f; opacity: 1;}
+	58% {opacity: 0; transform: translateX(0); color: #07215f; color: #fff;}
 	62% {transform: translateX(0); color: #fff; opacity: 1;}
 	100% {transform: translateX(0) translateY(0);}
 }
 @keyframes frontAni {
-	0% {transform: translateX(120vw) translateY(0); color: rgb(18, 43, 126);}
+	0% {transform: translateX(120vw) translateY(0); color: #07215f;}
 	9% {transform: translateX(120vw) translateY(0);}
 	15% {transform: translateX(0) translateY(0);}
-	56% {transform: translateX(0); color: rgb(18, 43, 126);opacity: 1; }
-	58% {opacity: 0; transform: translateX(0); color: rgb(18, 43, 126); color: #fff;}
+	56% {transform: translateX(0); color: #07215f; opacity: 1; }
+	58% {opacity: 0; transform: translateX(0); color:#07215f; color: #fff;}
 	62% {transform: translateX(0); color: #fff; opacity: 1;}
 	88% {transform: translateX(0) translateY(0);}
 }
 @keyframes devAni {
-	0% {transform: translateX(120vw) translateY(0); color: rgb(18, 43, 126);}
+	0% {transform: translateX(120vw) translateY(0); color:#07215f;}
 	20% {transform: translateX(120vw) translateY(0); }
 	25% {transform: translateX(0) translateY(0);}
-	56% {transform: translateX(0); color: rgb(18, 43, 126); opacity: 1;}
-	58% {opacity: 0; transform: translateX(0); color: rgb(18, 43, 126); color: #fff;}
+	56% {transform: translateX(0); color: #07215f; opacity: 1;}
+	58% {opacity: 0; transform: translateX(0); color: #07215f; color: #fff;}
 	62% {transform: translateX(0); color: #fff; opacity: 1;}
 	88% {transform: translateX(0) translateY(0);}
 }
 @keyframes designAni {
-	0% {transform: translateX(120vw) translateY(0); color: rgb(18, 43, 126);}
+	0% {transform: translateX(120vw) translateY(0); color: #07215f;}
 	30% {transform: translateX(120vw) translateY(0);}
 	35% {transform: translateX(0) translateY(0);}
-	56% {transform: translateX(0); color: rgb(18, 43, 126); opacity: 1;}
-	58% {opacity: 0; transform: translateX(0); color: rgb(18, 43, 126); color: #fff;}
+	56% {transform: translateX(0); color:#07215f; opacity: 1;}
+	58% {opacity: 0; transform: translateX(0); color:#07215f; color: #fff;}
 	62% {transform: translateX(0); color: #fff; opacity: 1;}
 	88% {transform: translateX(0) translateY(0);}
-}   ㅌㅌㅌㅌ
+}
 @keyframes erAni1 {
-	0% {opacity: 0; color: rgb(18, 43, 126);}
+	0% {opacity: 0; color: #07215f;}
 	46% {opacity: 0;}
 	48% {opacity: 1;}
 	50% {opacity: 0;}
 	52% {opacity: 1;}
 	54% {opacity: 0;}
-	56% {opacity: 1; color: rgb(18, 43, 126);}
+	56% {opacity: 1; color:#07215f;}
 	58% {opacity: 0;}
 	62% {opacity: 1; color: #fff;}
 	80% {opacity: 1;}
 	100% {opacity: 1;}
 }
 @keyframes erAni2 {
-	0% {opacity: 0; color: rgb(18, 43, 126);}
-	0% {opacity: 0; color: rgb(18, 43, 126);}
+	0% {opacity: 0; color:#07215f;}
+	0% {opacity: 0; color:#07215f;}
 	46% {opacity: 0;}
 	48% {opacity: 1;}
 	50% {opacity: 0;}
 	52% {opacity: 1;}
 	54% {opacity: 0;}
-	56% {opacity: 1; color: rgb(18, 43, 126);}
+	56% {opacity: 1; color:#07215f;}
 	58% {opacity: 0;}
 	62% {opacity: 1; color: #fff;}
 	80% {opacity: 1;}
