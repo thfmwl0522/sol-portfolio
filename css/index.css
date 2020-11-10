@@ -77,32 +77,32 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif; }
 
 
  @keyframes webAni{
-	0% {transform: translateX(120vw); color: #07215f;}
+	0% {transform: translateX(10em); color: #07215f;}
 	5% {transform: translateX(0); color: #07215f;}
 	56% {transform: translateX(0); color: #07215f;opacity: 1;}
 	58% {opacity: 0; transform: translateX(0); color: #07215f; color: #fff;}
 	62% {transform: translateX(0); color: #fff; opacity: 1;}
 	70% {transform: translateX(0); color: #fff;}
-	100% {transform: translateX(0);}
+	100% {transform: translateX(0em);}
 }
 @keyframes portAni {
-	0% {transform: translateX(120vw) translateY(-52vh); color:#07215f;}
-	5% {transform: translateX(0) translateY(-52vh);}
-	10% {transform: translateX(0) translateY(-52vh);}
-	15% {transform: translateX(0) translateY(-34.5vh);}
-	20% {transform: translateX(0) translateY(-34.5vh);}
-	25% {transform: translateX(0) translateY(-17.5vh);}
-	30% {transform: translateX(0) translateY(-17.5vh);}
+	0% {transform: translateX(10em) translateY(-2.66em); color:#07215f;}
+	5% {transform: translateX(0) translateY(-2.66em);}
+	10% {transform: translateX(0) translateY(-2.66em);}
+	15% {transform: translateX(0) translateY(-1.77em);}
+	20% {transform: translateX(0) translateY(-1.77em);}
+	25% {transform: translateX(0) translateY(-0.89em);}
+	30% {transform: translateX(0) translateY(-0.89em);}
 	35% {transform: translateX(0) translateY(0);}
 	56% {transform: translateX(0); color: #07215f; opacity: 1;}
 	58% {opacity: 0; transform: translateX(0); color: #07215f; color: #fff;}
 	62% {transform: translateX(0); color: #fff; opacity: 1;}
 	100% {transform: translateX(0) translateY(0);}
 }
-@keyframes portAni1 {
-	0% {transform: translateX(120vw) translateY(-46.4vh); color: #07215f;}
-	5% {transform: translateX(0) translateY(-46.4vh);}
-	10% {transform: translateX(0) translateY(-46.4vh);}
+/* @keyframes portAni1 {
+	0% {transform: translateX(10em) translateY(-2.66em); color: #07215f;}
+	5% {transform: translateX(0) translateY(-2.66em);}
+	10% {transform: translateX(0) translateY(-2.66em);}
 	15% {transform: translateX(0) translateY(-31vh);}
 	20% {transform: translateX(0) translateY(-31vh);}
 	25% {transform: translateX(0) translateY(-15.5vh);}
@@ -112,8 +112,8 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif; }
 	58% {opacity: 0; transform: translateX(0); color:#07215f; color: #fff;}
 	62% {transform: translateX(0); color: #fff; opacity: 1;}
 	100% {transform: translateX(0) translateY(0);}
-}
-@keyframes portAni2 {
+} */
+/* @keyframes portAni2 {
 	0% {transform: translateX(120vw) translateY(-33vh); color:#07215f;}
 	5% {transform: translateX(0) translateY(-33vh);}
 	10% {transform: translateX(0) translateY(-33vh);}
@@ -126,10 +126,10 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif; }
 	58% {opacity: 0; transform: translateX(0); color: #07215f; color: #fff;}
 	62% {transform: translateX(0); color: #fff; opacity: 1;}
 	100% {transform: translateX(0) translateY(0);}
-}
+} */
 @keyframes frontAni {
-	0% {transform: translateX(120vw) translateY(0); color: #07215f;}
-	9% {transform: translateX(120vw) translateY(0);}
+	0% {transform: translateX(10em) translateY(0); color: #07215f;}
+	9% {transform: translateX(10em) translateY(0);}
 	15% {transform: translateX(0) translateY(0);}
 	56% {transform: translateX(0); color: #07215f; opacity: 1; }
 	58% {opacity: 0; transform: translateX(0); color:#07215f; color: #fff;}
@@ -137,8 +137,8 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif; }
 	88% {transform: translateX(0) translateY(0);}
 }
 @keyframes devAni {
-	0% {transform: translateX(120vw) translateY(0); color:#07215f;}
-	20% {transform: translateX(120vw) translateY(0); }
+	0% {transform: translateX(10em) translateY(0); color:#07215f;}
+	20% {transform: translateX(10em) translateY(0); }
 	25% {transform: translateX(0) translateY(0);}
 	56% {transform: translateX(0); color: #07215f; opacity: 1;}
 	58% {opacity: 0; transform: translateX(0); color: #07215f; color: #fff;}
@@ -146,8 +146,8 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif; }
 	88% {transform: translateX(0) translateY(0);}
 }
 @keyframes designAni {
-	0% {transform: translateX(120vw) translateY(0); color: #07215f;}
-	30% {transform: translateX(120vw) translateY(0);}
+	0% {transform: translateX(10em) translateY(0); color: #07215f;}
+	30% {transform: translateX(10em) translateY(0);}
 	35% {transform: translateX(0) translateY(0);}
 	56% {transform: translateX(0); color:#07215f; opacity: 1;}
 	58% {opacity: 0; transform: translateX(0); color:#07215f; color: #fff;}
@@ -182,22 +182,21 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif; }
 	100% {opacity: 1;}
 }
 
-
 @keyframes naviAni {
 	0% {transform: translateX(0) translateY(0); }
-	8% {transform: translateX(0) translateY(0); }
-	12% {transform: translateX(-1300px) translateY(0);}
-	100% {transform: translateX(-1300px) translateY(0);}
+/* 	8% {transform: translateX(0) translateY(0); } */
+	6% {transform: translateX(-7.34em) translateY(0);}
+	100% {transform: translateX(-7.34em) translateY(0);}
 }
 
 @keyframes naviAni2 {
-	0% {transform: translateX(-1300px) translateY(0);}
-	8% {transform: translateX(-1300px) translateY(0);}
-	12% {transform: translateX(0) translateY(0);}
+	0% {transform: translateX(-7.34em) translateY(0);}
+	4% {transform: translateX(-7.34em) translateY(0);}
+	7% {transform: translateX(0) translateY(0);}
 	100% {transform: translateX(0) translateY(0);}
 }
 
-.navi-wrapper {position:absolute; top: 0; left: 50%; transform: translateX(-50%); font-size:19vh; color: rgb(18, 43, 126); font-family: 'Sorts Mill Goudy', serif; font-style: italic; margin: 1.4em 0; display:flex; justify-items: center; display:none; cursor: pointer;}
+.navi-wrapper {position:absolute; top: 1%; left: 50%; transform: translateX(-50%); font-size:19vh; color: rgb(18, 43, 126); font-family: 'Sorts Mill Goudy', serif; font-style: italic; margin: 1.4em 0; display:flex; justify-items: center; display:none; cursor: pointer;}
 .navi-wrapper div {margin-bottom: -0.12em;}
 
 .navi-wrapper .navi-wrap > div:nth-child(1) {animation: aboutAni 8s;animation-fill-mode: forwards;}
@@ -205,40 +204,40 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif; }
 .navi-wrapper .navi-wrap > div:nth-child(3) {padding-left: 0.2em; animation: contactAni 8s; animation-fill-mode: backward;}
 
 @keyframes aboutAni {
-	0% {transform: translateX(1500px) translateY(0);}
-	14% {transform: translateX(1500px) translateY(0);}
-	25% {transform: translateX(0) translateY(0);}
+	0% {transform: translateX(10em) translateY(0);}
+	6% {transform: translateX(10em) translateY(0);}
+	12% {transform: translateX(0) translateY(0);}
 	88% {transform: translateX(0) translateY(0);}
 }
 @keyframes worksAni {
-	0% {transform: translateX(1500px) translateY(0);}
-	14% {transform: translateX(1500px) translateY(0);}
-	23% {transform: translateX(0) translateY(0);}
+	0% {transform: translateX(10em) translateY(0);}
+	6% {transform: translateX(10em) translateY(0);}
+	10% {transform: translateX(0) translateY(0);}
 	88% {transform: translateX(0) translateY(0);}
 }
 @keyframes contactAni {
-	0% {transform: translateX(1500px) translateY(0);}
-	14% {transform: translateX(1500px) translateY(0);}
-	20% {transform: translateX(0) translateY(0);}
+	0% {transform: translateX(10em) translateY(0);}
+	6% {transform: translateX(10em) translateY(0);}
+	8% {transform: translateX(0) translateY(0);}
 	88% {transform: translateX(0) translateY(0);}
 }
 @keyframes aboutAni2 {
 	0% {transform: translateX(0) translateY(0);}
-	14% {transform: translateX(0) translateY(0);}
-	20% {transform: translateX(1500px) translateY(0);}
-	100% {transform: translateX(1500px) translateY(0);}
+/* 	6% {transform: translateX(0) translateY(0);} */
+	8% {transform: translateX(10em) translateY(0);}
+	100% {transform: translateX(10em) translateY(0);}
 }
 @keyframes worksAni2 {
 	0% {transform: translateX(0) translateY(0);}
-	14% {transform: translateX(0) translateY(0);}
-	18% {transform: translateX(1500px) translateY(0);}
-	100% {transform: translateX(1500px) translateY(0);}
+/* 	6% {transform: translateX(0) translateY(0);} */
+	10% {transform: translateX(10em) translateY(0);}
+	100% {transform: translateX(10em) translateY(0);}
 }
 @keyframes contactAni2 {
 	0% {transform: translateX(0) translateY(0);}
-	14% {transform: translateX(0) translateY(0);}
-	16% {transform: translateX(1500px) translateY(0);}
-	100% {transform: translateX(1500px) translateY(0);}
+/* 	6% {transform: translateX(0) translateY(0);} */
+	12% {transform: translateX(10em) translateY(0);}
+	100% {transform: translateX(10em) translateY(0);}
 }
 
 @keyframes naviAni3 {
@@ -269,7 +268,7 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif; }
 .about-wrap {display: flex; position: relative;}
 .about-wrap .img-wrap {z-index: 0;}
 .about-wrap .img-wrap .sol {height: 64vh; position: absolute; top: 22vh; left: 10vw; opacity: 0.8;}
-.about-wrap .img-wrap .sol2 {height: 50vh; position: absolute; top: 22vh; left: 30vw; opacity: 0.8;}
+.about-wrap .img-wrap .sol2 {height: 50vh; position: absolute; top: 22vh; left: 10vw; opacity: 0.8;}
 
 
 
@@ -284,17 +283,17 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif; }
 }
 
 @media screen and (max-width: 991px) {
-	.cont-wrapper ul {font-size:15vh; margin-bottom: 2vh;}
+	.cont-wrapper ul {font-size:15vh;/*  margin-bottom: 2vh; */}
 }
 
 @media screen and (max-width: 767px) {
 	.cont-wrapper {margin: 8em 0 0;}
 	.cont-wrapper ul {font-size:13vh; margin-bottom: 2vh;}
-	.cont-wrapper ul:nth-child(5) {padding-left: 0.3em; animation-name: portAni1; animation-duration: 14s; animation-iteration-count: infinite;}
+/* 	.cont-wrapper ul:nth-child(5) {padding-left: 0.3em; animation-name: portAni1; animation-duration: 14s; animation-iteration-count: infinite;} */
 }
 
 @media screen and (max-width: 575px) {
 	.cont-wrapper {margin: 15em 0 0;}
 	.cont-wrapper ul {font-size:9vh; margin-bottom: 2vh;}
-	.cont-wrapper ul:nth-child(5) {padding-left: 0.3em; animation-name: portAni2; animation-duration: 14s; animation-iteration-count: infinite;}
+	/* .cont-wrapper ul:nth-child(5) {padding-left: 0.3em; animation-name: portAni2; animation-duration: 14s; animation-iteration-count: infinite;} */
 }
