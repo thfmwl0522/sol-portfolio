@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Size Test</title>
+	<style>
+		.w100 {width: 100%;}
+		.h100 {height: 100%;}
+		.wrapper {width: 100%; height: 100vh; display: flex; align-items: center; justify-content: center;}
+		.main-wrapper {max-width: 80%; flex: 60% 0 1; border: 1px solid red; display: flex; flex-direction: column; justify-content: center;}
+		.main-wrapper .txt-wrap {flex: 20% 0 0; display: flex; justify-content: flex-start;}
+		.main-wrapper .txt-wrap .txt {flex: 11.11% 0 1; flex-shrink: 1; border: 1px solid red; height: 100%; background-size: 100% auto; background-repeat: no-repeat;}
+
+		@media screen and (max-width: 1199px) {
+			/*.main-wrapper {width: 60%; font-size: 10vw; line-height: 10vw;}*/
+		}
+
+		@media screen and (max-width: 991px) {
+
+		}
+
+		@media screen and (max-width: 767px) {
+
+		}
+
+		@media screen and (max-width: 575px) {
+
+		}
+	</style>
+	<script src="../js/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="main-wrapper">
+			<div class="txt-wrap">
+				<div class="txt"><img src="../img/E.svg" class="w100"></div>
+				<div class="txt"><img src="../img/b.svg" class="w100"></div>
+				<div class="txt"><img src="../img/W.svg" class="w100"></div>
+			</div>
+			<div class="txt-wrap">
+				<div class="txt"><img src="../img/E.svg" class="w100"></div>
+				<div class="txt"><img src="../img/b.svg" class="w100"></div>
+				<div class="txt"><img src="../img/W.svg" class="w100"></div>
+				<div class="txt"><img src="../img/E.svg" class="w100"></div>
+				<div class="txt"><img src="../img/b.svg" class="w100"></div>
+				<div class="txt"><img src="../img/W.svg" class="w100"></div>
+				<div class="txt"><img src="../img/W.svg" class="w100"></div>
+				<div class="txt"><img src="../img/W.svg" class="w100"></div>
+			</div>
+			<div class="txt-wrap">
+				<div class="txt"><img src="../img/E.svg" class="w100"></div>
+				<div class="txt"><img src="../img/b.svg" class="w100"></div>
+				<div class="txt"><img src="../img/W.svg" class="w100"></div>
+				<div class="txt"><img src="../img/E.svg" class="w100"></div>
+				<div class="txt"><img src="../img/b.svg" class="w100"></div>
+				<div class="txt"><img src="../img/W.svg" class="w100"></div>
+				<div class="txt"><img src="../img/W.svg" class="w100"></div>
+				<div class="txt"><img src="../img/W.svg" class="w100"></div>
+			</div>
+			<div class="txt-wrap">
+				<div class="txt"><img src="../img/E.svg" class="w100"></div>
+				<div class="txt"><img src="../img/b.svg" class="w100"></div>
+				<div class="txt"><img src="../img/W.svg" class="w100"></div>
+				<div class="txt"><img src="../img/E.svg" class="w100"></div>
+				<div class="txt"><img src="../img/b.svg" class="w100"></div>
+				<div class="txt"><img src="../img/W.svg" class="w100"></div>
+				<div class="txt"><img src="../img/W.svg" class="w100"></div>
+				<div class="txt"><img src="../img/W.svg" class="w100"></div>
+			</div>
+			<div class="txt-wrap">
+				<div class="txt"><img src="../img/E.svg" class="w100"></div>
+				<div class="txt"><img src="../img/b.svg" class="w100"></div>
+				<div class="txt"><img src="../img/W.svg" class="w100"></div>
+				<div class="txt"><img src="../img/E.svg" class="w100"></div>
+				<div class="txt"><img src="../img/b.svg" class="w100"></div>
+				<div class="txt"><img src="../img/W.svg" class="w100"></div>
+				<div class="txt"><img src="../img/W.svg" class="w100"></div>
+				<div class="txt"><img src="../img/W.svg" class="w100"></div>
+			</div>
+			<!--<div class="txt-wrap">DEVELOPER</div>
+			<div class="txt-wrap">DESIGNER</div>
+			<div class="txt-wrap">PORTFOLIO</div>-->
+		</div>
+	</div>
+	<script>
+		$(window).resize(onResize);
+		function onResize() {
+			var wid = $(".txt").outerWidth();
+			var hei = $(".txt").outerHeight();
+			if(wid > hei) {
+				$(".txt img").addClass("h100").removeClass("w100");
+			}
+			else {
+				$(".txt img").addClass("w100").removeClass("h100");
+			}
+		}
+	</script>
+</body>
+</html>
