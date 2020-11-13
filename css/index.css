@@ -6,23 +6,20 @@
 
 /********************* 공통사항 *********************/
 html, body {font-size: 16px; font-family: 'Bellefair', serif; }
-
+.w100 {width: 100%;}
+.h100 {height: 100%;}
 
 /********************* .header-wrapper *********************/
 .header-wrapper {
-	width:100%; 
-	height: 100vh;
-	position: relative; 
+	width:100%; height: 100vh; display:flex; align-items:center; justify-content: center;
+/* 	position: relative;  */
 /* 	background-image: linear-gradient( 145deg, #1a4177, #bad7ff); */
 /* 	background-image: linear-gradient( 145deg, #006aff, #bad7ff); */
 	background-image: linear-gradient( 145deg, #006aff, #c7defd);
 /* 	background-image: linear-gradient( 145deg, #006aff, #c7defd); */
 /* 	background-image: linear-gradient( 145deg, #042553, #bad7ff); */
 /* 	background-image: linear-gradient( 145deg, #8bb100, #e7c7e0); */
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	overflow: hidden;
+	background-size: cover; background-position: center; background-repeat: no-repeat; overflow: hidden;
 }
 
 .main-bg {
