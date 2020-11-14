@@ -10,7 +10,9 @@ function onShow() {
 		$(".navi-wrapper .navi-wrap > div:nth-child(2)").css({"animation-name":"worksAni2", "animation-fill-mode":"forwards", "animation-iteration-count":"initial"});
 		$(".navi-wrapper .navi-wrap > div:nth-child(3)").css({"animation-name":"contactAni2", "animation-fill-mode":"forwards", "animation-iteration-count":"initial"});
 		$(".cont-wrap > ul.navi").css({"animation-name":"naviAni2","animation-fill-mode":"forwards", "animation-iteration-count":"initial"});
-		$(".cont-wrap > ul.navi-ani > li").css({"animation-name":"naviAni2","animation-fill-mode":"forwards", "animation-iteration-count":"initial"});
+		$(".cont-wrap > ul.navi-ani > li:nth-child(1)").css({"animation-name":"workAni2","animation-fill-mode":"forwards", "animation-iteration-count":"initial"});
+		$(".cont-wrap > ul.navi-ani > li:nth-child(2)").css({"animation-name":"workAni3","animation-fill-mode":"forwards", "animation-iteration-count":"initial"});
+
 	}
 	else {
 		$(".cont-wrapper ul, .cont-wrapper ul > li").stop().css("animation-name","none");
@@ -19,10 +21,12 @@ function onShow() {
 		$(".navi-wrapper .navi-wrap > div:nth-child(2)").css("animation-name","worksAni");
 		$(".navi-wrapper .navi-wrap > div:nth-child(3)").css("animation-name","contactAni");
 		$(".cont-wrap > ul.navi").css({"animation-name":"naviAni","animation-fill-mode":"forwards", "animation-iteration-count":"initial"});
-		$(".cont-wrap > ul.navi-ani > li").css({"animation-name":"naviAni","animation-fill-mode":"forwards", "animation-iteration-count":"initial"});
+		$(".cont-wrap > ul.navi-ani > li:nth-child(1)").css({"animation-name":"workAni","animation-fill-mode":"forwards", "animation-iteration-count":"initial"});
+		$(".cont-wrap > ul.navi-ani > li:nth-child(2)").css({"animation-name":"naviAni1","animation-fill-mode":"forwards", "animation-iteration-count":"initial"});
 	}
 	isNavi = !isNavi; 
 }
+
 
 $(".navi-wrapper .navi-wrap > div:nth-child(1)").click(onAbout);
 
