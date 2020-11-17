@@ -31,12 +31,10 @@ function onShow() {
 $(".navi-wrapper .navi-wrap > div:nth-child(1)").click(onAbout);
 
 function onAbout() {
+	$(this).css("position", "absolute");
 	$(".cont-wrapper ul:nth-child(1)").css({"animation-name":"naviAni3", "animation-fill-mode":"forwards", "animation-iteration-count":"initial"});
 	$(".cont-wrapper ul:nth-child(5)").css({"animation-name":"naviAni3", "animation-fill-mode":"forwards", "animation-iteration-count":"initial"});
 	$(".cont-wrap > ul.navi").css({"animation-name":"naviAni4","animation-fill-mode":"forwards", "animation-iteration-count":"initial"});
 	$(".cont-wrap > ul.navi-ani > li").css({"animation-name":"naviAni4","animation-fill-mode":"forwards", "animation-iteration-count":"initial"});
-/* 	$(".navi-wrapper .navi-wrap > div:nth-child(1)").css({"animation-name":"aboutAni3", "animation-fill-mode":"forwards", "animation-iteration-count":"initial"});
-	$(".navi-wrapper .navi-wrap > div:nth-child(2)").css({"animation-name":"aboutAni4", "animation-fill-mode":"forwards", "animation-iteration-count":"initial"});
-	$(".navi-wrapper .navi-wrap > div:nth-child(3)").css({"animation-name":"aboutAni4", "animation-fill-mode":"forwards", "animation-iteration-count":"initial"}); */
 	$(".navi-wrapper .navi-wrap > div:nth-child(1)").css("top", "20px");
 }

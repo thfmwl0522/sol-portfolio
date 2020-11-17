@@ -263,15 +263,17 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif;}
 	100% {transform: translateX(32vw) translateY(42vh); font-size: 10vh; color: rgb(64, 71, 97);}
 }
 
-.about-wrapper {display: flex; /* border: 2px solid salmon; */ background-color: rgb(255, 255, 255, 0.1); color: rgba(52, 26, 87, 0.822);/*  color: rgba(57, 16, 110, 0.822); */ z-index: 5; width: 72vw; justify-content: space-around;}
-.about-wrapper .img-wrap {display: flex; flex-direction: column; /* justify-content: space-around; */ align-items: center; margin: 3em;}
+.about-wrapper {display: flex; background-color: rgb(255, 255, 255, 0.1); color: rgba(52, 26, 87, 0.822);
+	/*  color: rgba(57, 16, 110, 0.822); */ z-index: 5; width: 72vw; /* justify-content: space-around */; max-width: 1400px;}
+.about-wrapper .img-wrap {display: flex; flex-direction: column; align-items: center; margin: 7% 7% 3%;/*  margin-left: 5vw; */ /* border: 1px solid red */;}
 .about-wrapper .img-wrap .sol2 {width: 20vw; opacity: 0.85;}
-.about-wrapper .img-wrap h3 {font-family: 'Bree Serif', serif; font-size: 3vw; margin: 0.6em 0; font-size:  2.6vw; background-color: rgb(5, 60, 105); color: #fff; height: 6.4vh; width: 13vw; text-align: center;}
-.about-wrapper .about-wrap {display: flex; flex-direction: column; padding: 4% 5%; justify-content: space-between;}
-.about-wrapper .about-wrap .about {margin: 4% 0 2%; }
-.about-wrapper .about-wrap h3 {font-size: 2vw; font-family: 'Bree Serif', serif;}
-.about-wrapper .about-wrap div {font-family: 'Noto Sans KR', sans-serif; font-weight: 500; font-size: 1vw; line-height: 1.4em; }
-.about-wrapper .about-wrap .skills {}
+.about-wrapper .img-wrap h3 {font-family: 'Bree Serif', serif; margin: 0.6em 0; font-size:  2.6vw; padding: 1% 0 2%;
+ background-color: rgb(5, 60, 105); color: #fff; width: 60%; text-align: center; line-height:1;} 
+.about-wrapper .about-wrap {display: flex; flex-direction: column; padding: 4% 2%; justify-content: space-between; /* border: 1px solid red; */}
+.about-wrapper .about-wrap .about {margin: 4% 0 0%; /* border: 1px solid fuchsia; */}
+.about-wrapper .txt-wrap {font-family: 'Noto Sans KR', sans-serif; font-weight: 500; font-size: 1vw; margin:2%}
+.about-wrapper .about-wrap h3 {font-size: 2vw; font-family: 'Bree Serif', serif; margin-bottom: 3%;}
+.about-wrapper .about-wrap div {margin:2% 0 2% 1%;}
 .about-wrapper .about-wrap .skills img {width: 4vw; margin: 0.6vw;}
 
 
