@@ -267,7 +267,7 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif;}
 
 
 .about-wrapper {position:absolute; display: flex; background-color: rgb(255, 255, 255, 0.1);  color: rgb(0, 32, 58);
- z-index: 5; width: 72vw; max-width: 1600px; left: 150%;}
+ z-index: 5; width: 72vw; max-width: 1600px; left: 150%; transition: all 0.5s;}
 .about-wrapper .img-wrap {display: flex; flex-direction: column; align-items: center; margin: 12% 7% 3%;}
 .about-wrapper .img-wrap .sol2 {width: 20vw; opacity: 0.85;}
 .about-wrapper .img-wrap h3 {font-family: 'Bree Serif', serif; margin: 0.6em 0; font-size:  2.6vw; padding: 1% 0 2%;
@@ -316,7 +316,7 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif;}
 
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
 	.about-wrapper {width: 72vw; height: auto; flex-direction: column;}
 	.top-wrap img {width: 10vw;}
 	.about-wrapper .img-wrap .sol2 {width: 26vw; opacity: 0.85;}
