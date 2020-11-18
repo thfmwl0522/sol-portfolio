@@ -197,9 +197,10 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif;}
 	.navi-wrapper .navi-wrap {margin: 0 auto;}
 	.navi-wrapper div {align-items: center; justify-items: center;}
 
+.navi-wrapper .navi-wrap > div {transition: top 0.5s, left 0.5s; position: relative;}
 .navi-wrapper .navi-wrap > div:nth-child(1) {animation: aboutAni 8s;animation-fill-mode: forwards;}
 .navi-wrapper .navi-wrap > div:nth-child(2) {padding-left: 0.7em; animation: worksAni 8s; animation-fill-mode: forwards;}
-.navi-wrapper .navi-wrap > div:nth-child(3) {padding-left: 0.2em; animation: contactAni 8s; animation-fill-mode: backward;}
+.navi-wrapper .navi-wrap > div:nth-child(3) {padding-left: 0.2em; animation: contactAni 8s; animation-fill-mode: backwards;}
 
 @keyframes aboutAni {
 	0% {transform: translateX(200%) translateY(0);}
