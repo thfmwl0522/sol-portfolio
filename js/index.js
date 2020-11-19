@@ -58,7 +58,6 @@ function onAbout() {
 	$(".cont-wrap > ul.navi-ani > li:nth-child(2)").css({"animation-name":"naviAni7","animation-fill-mode":"forwards", "animation-iteration-count":"initial"});
 
 	$(".navi-wrapper .navi-wrap > div:nth-child(1)").css({"top": "5%", "left":"100px", "font-size":"6vw", "color":"rgb(255, 195, 29)"});
-
 	$(".navi-wrapper .navi-wrap > div:nth-child(2)").css({"top": "80vh", "left":"72%", "font-size":"4.5vw", "color":"rgb(255, 195, 29, 0.6)"});
 	$(".navi-wrapper .navi-wrap > div:nth-child(3)").css({"top": "90vh", "left":"70%", "font-size":"4.5vw", "color":"rgb(255, 195, 29, 0.6)"});
 /* 	$(window).resize(function() { 
@@ -112,51 +111,61 @@ function onWork() {
 	$(".works-wrapper").css({"left": "50%", "transform":"translateX(-50%)"});
 }
 
+/*********************** .works-navi ***************************/
 
+$(function () {
+	$("h2.frontend").stop().trigger("click");
+	
+	$("h2.frontend").click(onFront);
+	function onFront() {
+		$("h2.frontend").css("color"," rgb(255, 180, 180)");
+		$(".slide1").css("display","block");
+		$(".slide2").css("display","none");
+		$(".slide3").css("display","none");
+		$("h2.backend").css("color"," #fff");
+		$("h2.web").css("color","#fff");
+	}
+	
+	$("h2.backend").click(onBack);
+	function onBack() {
+		$(".slide2").css("display","block");
+		$(".slide3").css("display","none");
+		$(".slide1").css("display","none");
+		$("h2.backend").css("color"," rgb(255, 180, 180)");
+		$("h2.frontend").css("color"," #fff");
+		$("h2.web").css("color","#fff");
+	}
+	
+	$("h2.web").click(onWeb);
+	function onWeb() {
+		$(".wslide-wrap .slide3").css("display","block");
+		$(".wslide-wrap .slide1").css("display","none");
+		$(".wslide-wrap .slide2").css("display","none");
+		$("h2.web").css("color"," rgb(255, 180, 180)");
+		$("h2.frontend").css("color"," #fff");
+		$("h2.backend").css("color","#fff");
+	}
+});
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*********************** .works-wrapper .frontend-slide ***************************/
 
 (function(){
-	/*********** 전역변수 선언 ***********/
 	var datas = [
-		{ id: 0, src: '../img/slide-01.png', title: '침대1' },
-		{ id: 1, src: '../img/slide-02.png', title: '침대2' },
-		{ id: 2, src: '../img/slide-03.png', title: '침대3' },
-		{ id: 3, src: '../img/slide-04.png', title: '쇼파4' }
+		{ id: 0, src: '../img/slide-01.png'},
+		{ id: 1, src: '../img/slide-02.png'},
+		{ id: 2, src: '../img/slide-03.png'},
+		{ id: 3, src: '../img/slide-04.png'},
+		{ id: 4, src: '../img/slide-01.png'}
 	];
-
-	var $wrapper = $(".slide-wrapper");
-	var $slideWrap = $(".slide-wrap", $wrapper); 
+	var $wrapper = $(".slide1");
+	var $slideWrap = $(".front-slide", $wrapper); 
 	var $btnPrev = $(".btn-prev", $wrapper); 
 	var $btnNext = $(".btn-next", $wrapper);
-	var $slides = [];		// 모든 .slide
+	var $slides = [];
 	var idx = 0;
 	var lastIdx = datas.length - 1;
-	var winWid;					// 현재창의 크기
+	var winWid;
 	var target;
-	var interval;
 
 	/*********** 사용자 함수 ***********/
 	init();
@@ -169,7 +178,6 @@ function onWork() {
 			$slides.push($(html));
 		}
 		slideInit();
-/* 		interval = setInterval(onNext, 3000); */
 	}
 
 	function slideInit() {
@@ -188,7 +196,8 @@ function onWork() {
 		$slideWrap.stop().animate({"left": target+"%"}, 500, slideInit);
 	}
 
-	/*********** 이벤트 콜백 ***********/
+
+
 	function onPrev() {
 		$(this).off("click");
 		idx = idx == 0 ? lastIdx : idx - 1;
@@ -207,11 +216,144 @@ function onWork() {
 		ani();
 	}
 
-	/*********** 이벤트 등록 ***********/
-/* 	$wrapper.hover(function(){
-		clearInterval(interval);
-	}, function(){
-		interval = setInterval(onNext, 3000);
-	});
- */
+})();
+
+/*********************** .works-wrapper .backend-slide ***************************/
+(function(){
+	var datas = [
+		{ id: 0, src: '../img/slide-02.png'},
+		{ id: 1, src: '../img/slide-02.png'},
+		{ id: 2, src: '../img/slide-03.png'},
+		{ id: 3, src: '../img/slide-04.png'},
+		{ id: 4, src: '../img/slide-01.png'}
+	];
+	var $wrapper = $(".slide2");
+	var $slideWrap = $(".back-slide", $wrapper); 
+	var $btnPrev = $(".btn-prev", $wrapper); 
+	var $btnNext = $(".btn-next", $wrapper);
+	var $slides = [];
+	var idx = 0;
+	var lastIdx = datas.length - 1;
+	var winWid;
+	var target;
+
+	/*********** 사용자 함수 ***********/
+	init();
+	function init() {
+		var i, html;
+		for(i in datas) {
+			html  = '<div class="slide">';
+			html += '<img src="'+datas[i].src+'" class="w-100">';
+			html += '</div>';
+			$slides.push($(html));
+		}
+		slideInit();
+	}
+
+	function slideInit() {
+		$btnPrev.off("click").click(onPrev);
+		$btnNext.off("click").click(onNext);
+		$($slides[idx].clone()).appendTo($slideWrap.empty().attr("style", ""));
+		if(idx == 0) $($slides[lastIdx].clone()).prependTo($slideWrap);
+		else $($slides[idx - 1].clone()).prependTo($slideWrap);
+		for(var i=1; i<=3; i++) {
+			if(idx + i > lastIdx) $($slides[idx + i - 1 - lastIdx].clone()).appendTo($slideWrap);
+			else $($slides[idx + i].clone()).appendTo($slideWrap);
+		}
+	}
+
+	function ani() {
+		$slideWrap.stop().animate({"left": target+"%"}, 500, slideInit);
+	}
+
+
+	function onPrev() {
+		$(this).off("click");
+		idx = idx == 0 ? lastIdx : idx - 1;
+		target = 0;
+		ani();
+	}
+	
+	function onNext() {
+		$(this).off("click");
+		idx = idx == lastIdx ? 0 : idx + 1;
+		winWid = $(window).outerWidth();
+		if(winWid < 576) target = -200;
+		else if(winWid < 768) target = -200;
+		else if(winWid < 992) target = -100;
+		else target = -66.6666;
+		ani();
+	}
+
+})();
+
+/*********************** .works-wrapper .web-slide ***************************/
+(function(){
+	var datas = [
+		{ id: 0, src: '../img/slide-04.png'},
+		{ id: 1, src: '../img/slide-01.png'},
+		{ id: 2, src: '../img/slide-04.png'},
+		{ id: 3, src: '../img/slide-04.png'},
+		{ id: 4, src: '../img/slide-01.png'}
+	];
+	var $wrapper = $(".slide3");
+	var $slideWrap = $(".web-sldie", $wrapper); 
+	var $btnPrev = $(".btn-prev", $wrapper); 
+	var $btnNext = $(".btn-next", $wrapper);
+	var $slides = [];
+	var idx = 0;
+	var lastIdx = datas.length - 1;
+	var winWid;
+	var target;
+	var interval;
+
+	/*********** 사용자 함수 ***********/
+	init();
+	function init() {
+		var i, html;
+		for(i in datas) {
+			html  = '<div class="slide">';
+			html += '<img src="'+datas[i].src+'" class="w-100">';
+			html += '</div>';
+			$slides.push($(html));
+		}
+		slideInit();
+	}
+
+	function slideInit() {
+		$btnPrev.off("click").click(onPrev);
+		$btnNext.off("click").click(onNext);
+		$($slides[idx].clone()).appendTo($slideWrap.empty().attr("style", ""));
+		if(idx == 0) $($slides[lastIdx].clone()).prependTo($slideWrap);
+		else $($slides[idx - 1].clone()).prependTo($slideWrap);
+		for(var i=1; i<=3; i++) {
+			if(idx + i > lastIdx) $($slides[idx + i - 1 - lastIdx].clone()).appendTo($slideWrap);
+			else $($slides[idx + i].clone()).appendTo($slideWrap);
+		}
+	}
+
+	function ani() {
+		$slideWrap.stop().animate({"left": target+"%"}, 500, slideInit);
+	}
+
+
+
+	function onPrev() {
+		$(this).off("click");
+		idx = idx == 0 ? lastIdx : idx - 1;
+		target = 0;
+		ani();
+	}
+	
+	function onNext() {
+		$(this).off("click");
+		idx = idx == lastIdx ? 0 : idx + 1;
+		winWid = $(window).outerWidth();
+		if(winWid < 576) target = -200;
+		else if(winWid < 768) target = -200;
+		else if(winWid < 992) target = -100;
+		else target = -66.6666;
+		ani();
+	}
+
 })();
