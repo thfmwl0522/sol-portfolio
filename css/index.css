@@ -192,12 +192,14 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif;}
 
 
 
-	.navi-wrapper { max-width: 70%; z-index: 2; display: flex; flex-direction: column; justify-content: center; display: none; align-items: center;
-	font-size:8vw; color: rgb(18, 43, 126); font-family: 'Sorts Mill Goudy', serif; font-style: italic; cursor: pointer; margin-top: 2.2%; z-index: 100;}
-	.navi-wrapper .navi-wrap {margin: 0 auto;}
-	.navi-wrapper div {align-items: center; justify-items: center;}
+.navi-wrapper { max-width: 70%; z-index: 2; display: flex; flex-direction: column; justify-content: center; display: none; align-items: center;
+font-size:8vw; color: rgb(18, 43, 126); font-family: 'Sorts Mill Goudy', serif; font-style: italic; cursor: pointer; margin-top: 2.2%; z-index: 100;}
+.navi-wrapper .navi-wrap {margin: 0 auto; }
+.navi-wrapper .navi-wrap1 {display: none;}
+.navi-wrapper div {align-items: center; justify-items: center;}
 
 .navi-wrapper .navi-wrap > div {transition: top 0.5s, left 0.5s; position: relative;}
+.navi-wrapper .navi-wrap1 > div {transition: top 0.5s, left 0.5s; position: relative;}
 .navi-wrapper .navi-wrap > div:nth-child(1) {animation: aboutAni 8s;animation-fill-mode: forwards;}
 .navi-wrapper .navi-wrap > div:nth-child(2) {padding-left: 0.7em; animation: worksAni 8s; animation-fill-mode: forwards;}
 .navi-wrapper .navi-wrap > div:nth-child(3) {padding-left: 0.2em; animation: contactAni 8s; animation-fill-mode: backwards;}
@@ -272,7 +274,7 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif;}
 .about-wrapper .img-wrap .sol2 {width: 20vw; opacity: 0.85;}
 .about-wrapper .img-wrap h3 {font-family: 'Bree Serif', serif; margin: 0.6em 0; font-size:  2.6vw; padding: 1% 0 2%;
  background-color: rgb(5, 60, 105); color: #fff; width: 61%; text-align: center; line-height:1;} 
-.about-wrapper .about-wrap {display: flex; flex-direction: column; padding: 4% 2%; justify-content: space-between;}
+.about-wrapper .about-wrap {display: flex; flex-direction: column; padding: 2% 2%; justify-content: space-between;}
 .about-wrapper .about-wrap .about {margin: 4% 0 0%;}
 .about-wrapper .txt-wrap {font-family: 'Noto Sans KR', sans-serif; font-weight: 400; font-size: 1vw; margin:2%; color: rgb(255, 255, 255);}
 .about-wrapper .about-wrap h3 {font-size: 2vw; font-family: 'Bree Serif', serif; margin-bottom: 3%;}
@@ -281,12 +283,16 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif;}
 .about-wrapper .about-wrap .skills img {width: 4.2vw; margin: 1.6%;}
 .about-wrap .icon-wrap {display: flexbox; flex-wrap: nowrap;}
 
+.about-navi1 {top: 3vh; left: 810vw; font-size: 6.4vw; color: rgb(255, 195, 29);}
+.about-navi2 {top: 83vh; left: 88vw; font-size: 4.5vw; color: rgb(255, 195, 29, 0.6);}
+.about-navi3 {top: 91vh; left: 88vw; font-size: 4.5vw; color: rgb(255, 195, 29, 0.6);}
+
+
 .works-wrapper { position: absolute; display: flex; flex-direction: column; /* background-color: rgb(255, 255, 255, 0.1) */; 
-	z-index: 5; width: 80vw; height: auto; /* left: 150%;  */transition: all 0.5s;}
+	z-index: 5; width: 80vw; height: auto; left: 150%;  transition: all 0.5s;}
 .works-wrapper .sub-navi {width: 36%; display: flex; margin: 5% 0 1.8% 64% ;  align-items: center; justify-items: center; 
 	justify-content: space-around; background-color: rgba(0, 48, 182, 0.3);  border-radius: 24px; padding: 1% 1.5% 0.7%;}
 .works-wrapper .sub-navi h2 {cursor: pointer; font-family: 'Sorts Mill Goudy', serif; font-weight: 600; font-size: 1.2vw; color: rgb(255, 255, 255);  padding: 0.4% 0;}
-/* .works-wrapper .sub-navi h2:nth-child(1) {color: rgb(255, 138, 138);} */
 .active {color: rgb(255, 180, 180);}
 
 .wslide-wrap {position: relative; display: flex;}
