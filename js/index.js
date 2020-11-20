@@ -1,64 +1,148 @@
-/*********************** .navi-bar ***************************/
-var isNavi = false;
-$(".header-wrapper .navi-bar").on("click", onShow);
+$(".top-wrap > .bar1").click(onShow);
+$(".top-wrap > .bar2").click(onShow2);
+$(".top-wrap > .bar3").click(onShow3);
+
+/* function onshow() {
+	var $contWrap = $(".cont-wrapper ul, .cont-wrapper ul > li");
+	var $naviWrap = $(".navi-wrapper");
+	var $navi1 = $(".navi-wrapper .navi-wrap > div:nth-child(1)");
+	var $navi2 = $(".navi-wrapper .navi-wrap > div:nth-child(2)");
+	var $navi3 = $(".navi-wrapper .navi-wrap > div:nth-child(3)");
+	var $naviAni = $(".cont-wrap > ul.navi")
+	var $naviAni1 = $(".cont-wrap > ul.navi-ani > li:nth-child(1)")
+
+	var now = $(this).index();
+
+		if(now == 0) {
+			console.log(now == 0);
+			$contWrap.stop().css("animation-name", "none");
+			$naviWrap.css("display", "block");
+			$navi1.css("animation-name", "aboutAni");
+			$navi2.css("animation-name", "worksAni");
+			$navi3.css("animation-name", "contactAni");
+			$naviAni.css({"animation-name": "naviAni", "animation-fill-mode": "forwards", "animation-iteration-count": "initial"});
+			$naviAni1.css({"animation-name": "workAni", "animation-fill-mode": "forwards", "animation-iteration-count": "initial"});
+			$naviAni2.css({"animation-name": "naviAni1", "animation-fill-mode": "forwards", "animation-iteration-count": "initial"});
+		
+			$(".header-wrapper .bar2").css("display", "block");
+			$(".header-wrapper .bar1").css("display", "none");
+			$(".header-wrapper .bar3").css("display", "none");
+			$(".navi-wrapper .navi-wrap > div").css("display", "block");
+			$(".navi-wrapper .navi-wrap1 > div").css("display", "block");
+		}
+		else if(now == 1) {
+
+		}
+		else if(now == 2) {
+
+		}
+
+} */
+
+var $contWrap = $(".cont-wrapper ul, .cont-wrapper ul > li");
+var $naviWrap = $(".navi-wrapper");
+var $navi1 = $(".navi-wrapper .navi-wrap > div:nth-child(1)");
+var $navi2 = $(".navi-wrapper .navi-wrap > div:nth-child(2)");
+var $navi3 = $(".navi-wrapper .navi-wrap > div:nth-child(3)");
+var $naviAni = $(".cont-wrap > ul.navi")
+var $naviAni1 = $(".cont-wrap > ul.navi-ani > li:nth-child(1)")
+var $naviAni2 = $(".cont-wrap > ul.navi-ani > li:nth-child(2)")
+
 
 function onShow() {
-	if (isNavi) {
-		$(".cont-wrapper ul, .cont-wrapper ul > li").stop().css("animation-name", "none");
-		$(".navi-wrapper").css("display", "block");
-		$(".navi-wrapper .navi-wrap > div:nth-child(1)").css({"animation-name": "aboutAni2","animation-fill-mode": "forwards","animation-iteration-count":"initial"
-		});
-		$(".navi-wrapper .navi-wrap > div:nth-child(2)").css({
-			"animation-name": "worksAni2",
-			"animation-fill-mode": "forwards",
-			"animation-iteration-count": "initial"
-		});
-		$(".navi-wrapper .navi-wrap > div:nth-child(3)").css({
-			"animation-name": "contactAni2",
-			"animation-fill-mode": "forwards",
-			"animation-iteration-count": "initial"
-		});
-		$(".cont-wrap > ul.navi").css({
-			"animation-name": "naviAni2",
-			"animation-fill-mode": "forwards",
-			"animation-iteration-count": "initial"
-		});
-		$(".cont-wrap > ul.navi-ani > li:nth-child(1)").css({
-			"animation-name": "workAni2",
-			"animation-fill-mode": "forwards",
-			"animation-iteration-count": "initial"
-		});
-		$(".cont-wrap > ul.navi-ani > li:nth-child(2)").css({
-			"animation-name": "workAni3",
-			"animation-fill-mode": "forwards",
-			"animation-iteration-count": "initial"
-		});
+	$contWrap.stop().css("animation-name", "none");
+	$naviWrap.css("display", "block");
+	$navi1.css("animation-name", "aboutAni");
+	$navi2.css("animation-name", "worksAni");
+	$navi3.css("animation-name", "contactAni");
+	$naviAni.css({"animation-name": "naviAni", "animation-fill-mode": "forwards", "animation-iteration-count": "initial"});
+	$naviAni1.css({"animation-name": "workAni", "animation-fill-mode": "forwards", "animation-iteration-count": "initial"});
+	$naviAni2.css({"animation-name": "naviAni1", "animation-fill-mode": "forwards", "animation-iteration-count": "initial"});
 
+	$(".header-wrapper .bar2").css("display", "block");
+	$(".header-wrapper .bar1").css("display", "none");
+	$(".header-wrapper .bar3").css("display", "none");
+	$(".header-wrapper .bar4").css("display", "none");
+/* 	$(".navi-wrapper .navi-wrap1 > div").css("display", "block"); */
+/* 	$(".navi-wrapper .navi-wrap1 > div").css("display", "none"); */
+
+}
+
+function onShow2() {
+	$contWrap.stop().css("animation-name", "none");
+	$naviWrap.css("display", "block");
+	$navi1.css("animation-name", "").addClass("main-navi1");
+	$navi2.css("animation-name", "").addClass("main-navi2");
+	$navi3.css("animation-name", "").addClass("main-navi3");
+	$naviAni.css({"animation-name": "naviAni2", "animation-fill-mode": "forwards", "animation-iteration-count": "initial"});
+	$naviAni1.css({"animation-name": "workAni2", "animation-fill-mode": "forwards", "animation-iteration-count": "initial"});
+	$naviAni2.css({"animation-name": "workAni3", "animation-fill-mode": "forwards", "animation-iteration-count": "initial"});
+
+	$(".header-wrapper .bar1").css("display", "block");
+	$(".header-wrapper .bar2").css("display", "none");
+	$(".header-wrapper .bar3").css("display", "none");
+	$(".header-wrapper .bar4").css("display", "none");
+	$(".navi-wrapper .navi-wrap > div").show();
+}
+
+function onShow3() {
+	$(".about-wrapper").hide();
+	$(".works-wrapper").hide();
+	$(".contact-wrapper").hide();
+	$contWrap.stop().css("animation-name", "none");
+	$naviWrap.css("display", "block");
+	$navi1.css("animation-name", "").addClass("main-navi1");
+	$navi2.css("animation-name", "").addClass("main-navi2");
+	$navi3.css("animation-name", "").addClass("main-navi3");
+	$naviAni.css({"animation-name": "naviAni2", "animation-fill-mode": "forwards", "animation-iteration-count": "initial"});
+	$naviAni1.css({"animation-name": "workAni2", "animation-fill-mode": "forwards", "animation-iteration-count": "initial"});
+	$naviAni2.css({"animation-name": "workAni3", "animation-fill-mode": "forwards", "animation-iteration-count": "initial"});
+
+	$(".header-wrapper .bar1").trigger("click");
+	$(".header-wrapper .bar2").css("display", "block");
+	$(".header-wrapper .bar3").css("display", "none");
+	$(".navi-wrapper .navi-wrap1 > div").css("display", "none");
+	$(".navi-wrapper .navi-wrap > div").css("display", "block");
+}
+
+
+/*********************** .navi-bar ***************************/
+/* var isNavi = false;
+$(".header-wrapper .bar1").on("click", onShow);
+
+function onShow() {
+	var $contWrap = $(".cont-wrapper ul, .cont-wrapper ul > li");
+	var $naviWrap = $(".navi-wrapper");
+	var $navi1 = $(".navi-wrapper .navi-wrap > div:nth-child(1)");
+	var $navi2 = $(".navi-wrapper .navi-wrap > div:nth-child(2)");
+	var $navi3 = $(".navi-wrapper .navi-wrap > div:nth-child(3)");
+	var $naviAni = $(".cont-wrap > ul.navi")
+	var $naviAni1 = $(".cont-wrap > ul.navi-ani > li:nth-child(1)")
+	var $naviAni2 = $(".cont-wrap > ul.navi-ani > li:nth-child(2)")
+
+	if (isNavi) {
+		$contWrap.stop().css("animation-name", "none");
+		$naviWrap.css("display", "block");
+		$navi1.css("animation-name", "").addClass("main-navi1");
+		$navi2.css("animation-name", "").addClass("main-navi2");
+		$navi3.css("animation-name", "").addClass("main-navi3");
+		$naviAni.css({"animation-name": "naviAni2", "animation-fill-mode": "forwards", "animation-iteration-count": "initial"});
+		$naviAni1.css({"animation-name": "workAni2", "animation-fill-mode": "forwards", "animation-iteration-count": "initial"});
+		$naviAni2.css({"animation-name": "workAni3", "animation-fill-mode": "forwards", "animation-iteration-count": "initial"});
 	}
 	else {
-		$(".cont-wrapper ul, .cont-wrapper ul > li").stop().css("animation-name", "none");
-		$(".navi-wrapper").css("display", "block");
-		$(".navi-wrapper .navi-wrap > div:nth-child(1)").css("animation-name", "aboutAni");
-		$(".navi-wrapper .navi-wrap > div:nth-child(2)").css("animation-name", "worksAni");
-		$(".navi-wrapper .navi-wrap > div:nth-child(3)").css("animation-name", "contactAni");
-		$(".cont-wrap > ul.navi").css({
-			"animation-name": "naviAni",
-			"animation-fill-mode": "forwards",
-			"animation-iteration-count": "initial"
-		});
-		$(".cont-wrap > ul.navi-ani > li:nth-child(1)").css({
-			"animation-name": "workAni",
-			"animation-fill-mode": "forwards",
-			"animation-iteration-count": "initial"
-		});
-		$(".cont-wrap > ul.navi-ani > li:nth-child(2)").css({
-			"animation-name": "naviAni1",
-			"animation-fill-mode": "forwards",
-			"animation-iteration-count": "initial"
-		});
+		$contWrap.stop().css("animation-name", "none");
+		$naviWrap.css("display", "block");
+		$navi1.css("animation-name", "aboutAni");
+		$navi2.css("animation-name", "worksAni");
+		$navi3.css("animation-name", "contactAni");
+		$naviAni.css({"animation-name": "naviAni", "animation-fill-mode": "forwards", "animation-iteration-count": "initial"});
+		$naviAni1.css({"animation-name": "workAni", "animation-fill-mode": "forwards", "animation-iteration-count": "initial"});
+		$naviAni2.css({"animation-name": "naviAni1", "animation-fill-mode": "forwards", "animation-iteration-count": "initial"});
 	}
 	isNavi = !isNavi;
-}
+} */
+
 
 $(".navi-wrapper .navi-wrap > div").click(onNaviClick);
 $(".navi-wrapper .navi-wrap1 > div").click(onNaviClick);
@@ -69,12 +153,15 @@ function onNaviClick() {
 	var $navi = $(".navi-wrapper .navi-wrap1 > div");
 	var $works = 	$(".works-wrapper");
 	var $about = 	$(".about-wrapper");
-	var $contanct = $(".contact-wrapper");
+	var $contact = $(".contact-wrapper");
 
 	$naviWrap.css("display", "block");
 	$naviWrap.css("display");
 	$navi.css({"position": "absolute"});
 	$naviHide.hide();
+	$(".header-wrapper .bar3").css("display", "block");
+	$(".header-wrapper .bar1").css("display", "none");
+	$(".header-wrapper .bar2").css("display", "none");
 
 	var now = $(this).index();
 
@@ -82,20 +169,28 @@ function onNaviClick() {
 		$navi.eq(0).addClass("active1").removeClass("active2 active3");
 		$navi.eq(1).addClass("active2").removeClass("active1 active3");
 		$navi.eq(2).addClass("active3").removeClass("active1 active2");
+		$about.show().css({"left":"300%"});
 		$about.css({ "left": "50%", "transform": "translateX(-50%)"});
-		$works.css({"left": "-300%"});
+		$works.hide();
+		$contact.hide();
 	}
 	else if(now == 1) {
 		$navi.eq(0).addClass("active3").removeClass("active1 active2");
 		$navi.eq(1).addClass("active1").removeClass("active2 active3");
 		$navi.eq(2).addClass("active2").removeClass("active1 active3");
+		$works.show().css({"left":"300%"});
 		$works.css({ "left": "50%", "transform": "translateX(-50%)" });
-		$about.css({"left": "-300%"});
+		$about.hide();
+		$contact.hide();
 	}
 	else if(now == 2) {
 		$navi.eq(0).addClass("active2").removeClass("active1 active3");
 		$navi.eq(1).addClass("active3").removeClass("active1 active2");
 		$navi.eq(2).addClass("active1").removeClass("active2 active3");
+		$contact.show().css({"left":"300%"});
+		$contact.css({ "left": "50%", "transform": "translateX(-50%)" });
+		$about.hide();
+		$works.hide();
 	}
 
 
@@ -119,305 +214,9 @@ function onNaviClick() {
 	$(".cont-wrap > ul.navi-ani > li:nth-child(2)").css("animation-name");
 	$(".cont-wrap > ul.navi-ani > li:nth-child(2)").addClass("ani5");
 
-	
-}
-
-/*
-function onAbout() {
-
-	var left = '100px';
-	var top = '50px';
-
-
-	$(this).css({ "position": "absolute", "top": $(this).position().top + "px", "left": $(this).position().left + "px" });
-	$(this).css("position");
-	$(this).css("top");
-	$(this).css("left");
-
-	$(".navi-wrapper .navi-wrap1").css("display", "block");
-
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(1)").css({
-		"position": "absolute", "top": $(".navi-wrapper .navi-wrap1 > div:nth-child(1)").position().top + "px",
-		"left": $(".navi-wrapper .navi-wrap1 > div:nth-child(1)").position().left + "px"
-	});
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(1)").css("position");
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(1)").css("top");
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(1)").css("left");
-
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(2)").css({
-		"position": "absolute", "top": $(".navi-wrapper .navi-wrap1 > div:nth-child(2)").position().top + "px",
-		"left": $(".navi-wrapper .navi-wrap1 > div:nth-child(2)").position().left + "px"
-	});
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(2)").css("position");
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(2)").css("top");
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(2)").css("left");
-
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(3)").css({
-		"position": "absolute", "top": $(".navi-wrapper .navi-wrap1 > div:nth-child(3)").position().top + "px",
-		"left": $(".navi-wrapper .navi-wrap1 > div:nth-child(3)").position().left + "px"
-	});
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(3)").css("position");
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(3)").css("top");
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(3)").css("left");
-
-
-
-
-
-	/*
-	$(".navi-wrapper .navi-wrap > div:nth-child(1)").css({"top": top,
-		"left": left,
-		"font-size": "6.4vw",
-		"color": "rgb(255, 195, 29)"
-	});
-
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(1)").css({
-		"top": top,
-		"left": left,
-		"font-size": "6.4vw",
-		"color": "rgb(255, 195, 29)"
-	});
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(2)").css({
-		"top": "calc(100vh - "+ $(".navi-wrapper .navi-wrap1 > div:nth-child(2)").css("font-size") +")",
-		"left": "76%",
-		"font-size": "4.5vw",
-		"color": "rgb(255, 195, 29, 0.6)"
-	});
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(3)").css({
-		"top": "calc(100vh - 9vw)",
-		"left": "75%",
-		"font-size": "4.5vw",
-		"color": "rgb(255, 195, 29, 0.6)"
-	});
-	$(".navi-wrapper .navi-wrap > div").css("display", "none");
-
-	$(".cont-wrapper ul:nth-child(1)").css({"animation-name": "naviAni4", "animation-fill-mode": "forwards", "animation-iteration-count": "initial"});
-	$(".cont-wrapper ul:nth-child(5)").css({"animation-name": "naviAni3", "animation-fill-mode": "forwards", "animation-iteration-count": "initial"});
-	$(".cont-wrap > ul.navi").css({"animation-name": "naviAni5","animation-fill-mode": "forwards","animation-iteration-count": "initial"});
-	$(".cont-wrap > ul.navi-ani > li:nth-child(1)").css({"animation-name": "naviAni6", "animation-fill-mode": "forwards", "animation-iteration-count": initial"});
-	$(".cont-wrap > ul.navi-ani > li:nth-child(2)").css({"animation-name": "naviAni7", "animation-fill-mode": "forwards", "animation-iteration-count": "initial"});
-	*/
-	/* 	$(".navi-wrapper .navi-wrap > div:nth-child(1)").addClass("about-navi1");
-		$(".navi-wrapper .navi-wrap > div:nth-child(2)").addClass("about-navi2");
-		$(".navi-wrapper .navi-wrap > div:nth-child(3)").addClass("about-navi3"); */
-
-	/* 	$(window).resize(function() {
-			var winWidth = $(window).width();
-			if(winWidth > 991) {
-				$(".navi-wrapper .navi-wrap > div:nth-child(1)").css({"top": "3%", "left":"8%", "font-size":"6.4vw", "color":"rgb(255, 195, 29)"});
-				$(".navi-wrapper .navi-wrap > div:nth-child(2)").css({"top": "83vh", "left":"76%", "font-size":"4.5vw", "color":"rgb(255, 195, 29, 0.6)"});
-				$(".navi-wrapper .navi-wrap > div:nth-child(3)").css({"top": "91vh", "left":"75%", "font-size":"4.5vw", "color":"rgb(255, 195, 29, 0.6)"});
-			}
-			if(winWidth > 768) {
-				$(".navi-wrapper .navi-wrap > div:nth-child(2)").css({"top": "88vh", "left":"70%", "font-size":"5.5vw", "color":"rgb(255, 195, 29, 0.6)"});
-				$(".navi-wrapper .navi-wrap > div:nth-child(3)").css({"top": "92vh", "left":"70%", "font-size":"5.5vw", "color":"rgb(255, 195, 29, 0.6)"});
-			}
-			if(winWidth > 575) {
-				$(".navi-wrapper .navi-wrap > div:nth-child(2)").css({"top": "88vh", "left":"70%", "font-size":"6vw", "color":"rgb(255, 195, 29, 0.6)"});
-				$(".navi-wrapper .navi-wrap > div:nth-child(3)").css({"top": "92vh", "left":"68%", "font-size":"6vw", "color":"rgb(255, 195, 29, 0.6)"});
-				}
-				else {
-					$(".navi-wrapper .navi-wrap > div:nth-child(2)").css({"top": "90vh", "left":"70%", "font-size":"6vw", "color":"rgb(255, 195, 29, 0.6)"});
-					$(".navi-wrapper .navi-wrap > div:nth-child(3)").css({"top": "94vh", "left":"68%", "font-size":"6vw", "color":"rgb(255, 195, 29, 0.6)"});
-				}
-				$(Window).trigger("resize");
-		}); */
-
-	//$(".about-wrapper").css({ "left": "50%", "transform": "translateX(-50%)" });
-	/* 	$(".works-wrapper").css({"left": "-300%"});
-
-}
- */
-/*
-$(".navi-wrapper .navi-wrap1 > div:nth-child(1)").click(onAbout1);
-
-function onAbout1() {
-	$(this).css({ "position": "absolute", "top": $(this).position().top + "px", "left": $(this).position().left + "px" });
-	$(this).css("position");
-	$(this).css("top");
-	$(this).css("left");
-
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(2)").css({
-		"position": "absolute", "top": $(".navi-wrapper .navi-wrap1 > div:nth-child(2)").position().top + "px",
-		"left": $(".navi-wrapper .navi-wrap1 > div:nth-child(2)").position().left + "px"
-	});
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(2)").css("position");
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(2)").css("top");
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(2)").css("left");
-
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(3)").css({
-		"position": "absolute", "top": $(".navi-wrapper .navi-wrap1 > div:nth-child(3)").position().top + "px",
-		"left": $(".navi-wrapper .navi-wrap1 > div:nth-child(3)").position().left + "px"
-	});
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(3)").css("position");
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(3)").css("top");
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(3)").css("left");
-
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(1)").css({
-		"top": "3%",
-		"left": "8%",
-		"font-size": "6.4vw",
-		"color": "rgb(255, 195, 29)"
-	});
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(2)").css({
-		"top": "83vh",
-		"left": "76%",
-		"font-size": "4.5vw",
-		"color": "rgb(255, 195, 29, 0.6)"
-	});
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(3)").css({
-		"top": "91vh",
-		"left": "75%",
-		"font-size": "4.5vw",
-		"color": "rgb(255, 195, 29, 0.6)"
-	});
-
-	$(".about-wrapper").css({ "left": "50%", "transform": "translateX(-50%)" });
-	$(".works-wrapper").css({ "left": "-300%" });
 }
 
 
-$(".navi-wrapper .navi-wrap > div:nth-child(2)").click(onWork);
-
-function onWork() {
-	$(".navi-wrapper .navi-wrap1").css("display", "block");
-	$(this).css({ "position": "absolute", "top": $(this).position().top + "px", "left": $(this).position().left + "px" });
-	$(this).css("position");
-	$(this).css("top");
-	$(this).css("left");
-
-
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(1)").css({
-		"position": "absolute", "top": $(".navi-wrapper .navi-wrap1 > div:nth-child(1)").position().top + "px",
-		"left": $(".navi-wrapper .navi-wrap1 > div:nth-child(1)").position().left + "px"
-	});
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(1)").css("position");
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(1)").css("top");
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(1)").css("left");
-
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(2)").css({
-		"position": "absolute", "top": $(".navi-wrapper .navi-wrap1 > div:nth-child(2)").position().top + "px",
-		"left": $(".navi-wrapper .navi-wrap1 > div:nth-child(2)").position().left + "px"
-	});
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(2)").css("position");
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(2)").css("top");
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(2)").css("left");
-
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(3)").css({
-		"position": "absolute", "top": $(".navi-wrapper .navi-wrap1 > div:nth-child(3)").position().top + "px",
-		"left": $(".navi-wrapper .navi-wrap1 > div:nth-child(3)").position().left + "px"
-	});
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(3)").css("position");
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(3)").css("top");
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(3)").css("left");
-
-	$(".navi-wrapper .navi-wrap > div:nth-child(2)").css({
-		"top": "5%",
-		"left": "110px",
-		"font-size": "6vw",
-		"color": "rgb(255, 195, 29)"
-	});
-
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(2)").css({
-		"top": "5%",
-		"left": "110px",
-		"font-size": "6vw",
-		"color": "rgb(255, 195, 29)"
-	});
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(3)").css({
-		"top": "80vh",
-		"left": "70%",
-		"font-size": "4.5vw",
-		"color": "rgb(255, 195, 29, 0.6)"
-	});
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(1)").css({
-		"top": "90vh",
-		"left": "74%",
-		"font-size": "4.5vw",
-		"color": "rgb(255, 195, 29, 0.6)"
-	});
-	$(".navi-wrapper .navi-wrap > div").css("display", "none");
-
-	$(".cont-wrapper ul:nth-child(1)").css({
-		"animation-name": "naviAni4",
-		"animation-fill-mode": "forwards",
-		"animation-iteration-count": "initial"
-	});
-	$(".cont-wrapper ul:nth-child(5)").css({
-		"animation-name": "naviAni3",
-		"animation-fill-mode": "forwards",
-		"animation-iteration-count": "initial"
-	});
-	$(".cont-wrap > ul.navi").css({
-		"animation-name": "naviAni5",
-		"animation-fill-mode": "forwards",
-		"animation-iteration-count": "initial"
-	});
-	$(".cont-wrap > ul.navi-ani > li:nth-child(1)").css({
-		"animation-name": "naviAni6",
-		"animation-fill-mode": "forwards",
-		"animation-iteration-count": "initial"
-	});
-	$(".cont-wrap > ul.navi-ani > li:nth-child(2)").css({
-		"animation-name": "naviAni7",
-		"animation-fill-mode": "forwards",
-		"animation-iteration-count": "initial"
-	});
-
-	$(".works-wrapper").css({ "left": "50%", "transform": "translateX(-50%)" });
-
-}
-
-$(".navi-wrapper .navi-wrap1 > div:nth-child(2)").click(onWork1);
-
-function onWork1() {
-	$(this).css({ "position": "absolute", "top": $(this).position().top + "px", "left": $(this).position().left + "px" });
-	$(this).css("position");
-	$(this).css("top");
-	$(this).css("left");
-
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(1)").css({
-		"position": "absolute",
-		"top": $(".navi-wrapper .navi-wrap1 > div:nth-child(1)").position().top + "px",
-		"left": $(".navi-wrapper .navi-wrap1 > div:nth-child(1)").position().left + "px"
-	});
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(1)").css("position");
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(1)").css("top");
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(1)").css("left");
-
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(3)").css({
-		"position": "absolute",
-		"top": $(".navi-wrapper .navi-wrap1 > div:nth-child(3)").position().top + "px",
-		"left": $(".navi-wrapper .navi-wrap1 > div:nth-child(3)").position().left + "px"
-	});
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(3)").css("position");
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(3)").css("top");
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(3)").css("left");
-
-	$(".about-wrapper").css({ "left": "-300%" });
-
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(2)").css({
-		"top": "5%",
-		"left": "110px",
-		"font-size": "6vw",
-		"color": "rgb(255, 195, 29)"
-	});
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(3)").css({
-		"top": "80vh",
-		"left": "70%",
-		"font-size": "4.5vw",
-		"color": "rgb(255, 195, 29, 0.6)"
-	});
-	$(".navi-wrapper .navi-wrap1 > div:nth-child(1)").css({
-		"top": "90vh",
-		"left": "74%",
-		"font-size": "4.5vw",
-		"color": "rgb(255, 195, 29, 0.6)"
-	});
-
-	$(".works-wrapper").css({ "left": "50%", "transform": "translateX(-50%)" });
-}
-*/
 /*********************** .works-navi ***************************/
 
 $(function () {
