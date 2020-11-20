@@ -6,10 +6,7 @@ function onShow() {
 	if (isNavi) {
 		$(".cont-wrapper ul, .cont-wrapper ul > li").stop().css("animation-name", "none");
 		$(".navi-wrapper").css("display", "block");
-		$(".navi-wrapper .navi-wrap > div:nth-child(1)").css({
-			"animation-name": "aboutAni2",
-			"animation-fill-mode": "forwards",
-			"animation-iteration-count": "initial"
+		$(".navi-wrapper .navi-wrap > div:nth-child(1)").css({"animation-name": "aboutAni2","animation-fill-mode": "forwards","animation-iteration-count":"initial"
 		});
 		$(".navi-wrapper .navi-wrap > div:nth-child(2)").css({
 			"animation-name": "worksAni2",
@@ -101,16 +98,28 @@ function onNaviClick() {
 		$navi.eq(2).addClass("active1").removeClass("active2 active3");
 	}
 
+
 	$(".cont-wrapper ul:nth-child(1)").css("animation-name", "");
 	$(".cont-wrapper ul:nth-child(1)").css("animation-name");
 	$(".cont-wrapper ul:nth-child(1)").addClass("ani1");
-	/*
-	$(".cont-wrapper ul:nth-child(1)").css({"animation-name": "naviAni4", "animation-fill-mode": "forwards", "animation-iteration-count": "initial"});
-	$(".cont-wrapper ul:nth-child(5)").css({"animation-name": "naviAni3", "animation-fill-mode": "forwards", "animation-iteration-count": "initial"});
-	$(".cont-wrap > ul.navi").css({"animation-name": "naviAni5","animation-fill-mode": "forwards","animation-iteration-count": "initial"});
-	$(".cont-wrap > ul.navi-ani > li:nth-child(1)").css({"animation-name": "naviAni6", "animation-fill-mode": "forwards", "animation-iteration-count": "initial"});
-	$(".cont-wrap > ul.navi-ani > li:nth-child(2)").css({"animation-name": "naviAni7", "animation-fill-mode": "forwards", "animation-iteration-count": "initial"});
-	*/
+
+	$(".cont-wrapper ul:nth-child(5)").css("animation-name", "");
+	$(".cont-wrapper ul:nth-child(5)").css("animation-name");
+	$(".cont-wrapper ul:nth-child(5)").addClass("ani2");
+
+	$(".cont-wrap > ul.navi").css("animation-name", "");
+	$(".cont-wrap > ul.navi").css("animation-name");
+	$(".cont-wrap > ul.navi").addClass("ani3");
+
+	$(".cont-wrap > ul.navi-ani > li:nth-child(1)").css("animation-name", "");
+	$(".cont-wrap > ul.navi-ani > li:nth-child(1)").css("animation-name");
+	$(".cont-wrap > ul.navi-ani > li:nth-child(1)").addClass("ani4");
+
+	$(".cont-wrap > ul.navi-ani > li:nth-child(2)").css("animation-name", "");
+	$(".cont-wrap > ul.navi-ani > li:nth-child(2)").css("animation-name");
+	$(".cont-wrap > ul.navi-ani > li:nth-child(2)").addClass("ani5");
+
+	
 }
 
 /*
