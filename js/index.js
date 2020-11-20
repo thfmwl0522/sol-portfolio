@@ -101,13 +101,16 @@ function onNaviClick() {
 		$navi.eq(2).addClass("active1").removeClass("active2 active3");
 	}
 
+	$(".cont-wrapper ul:nth-child(1)").css("animation-name", "");
+	$(".cont-wrapper ul:nth-child(1)").css("animation-name");
 	$(".cont-wrapper ul:nth-child(1)").addClass("ani1");
+	/*
 	$(".cont-wrapper ul:nth-child(1)").css({"animation-name": "naviAni4", "animation-fill-mode": "forwards", "animation-iteration-count": "initial"});
 	$(".cont-wrapper ul:nth-child(5)").css({"animation-name": "naviAni3", "animation-fill-mode": "forwards", "animation-iteration-count": "initial"});
 	$(".cont-wrap > ul.navi").css({"animation-name": "naviAni5","animation-fill-mode": "forwards","animation-iteration-count": "initial"});
 	$(".cont-wrap > ul.navi-ani > li:nth-child(1)").css({"animation-name": "naviAni6", "animation-fill-mode": "forwards", "animation-iteration-count": "initial"});
 	$(".cont-wrap > ul.navi-ani > li:nth-child(2)").css({"animation-name": "naviAni7", "animation-fill-mode": "forwards", "animation-iteration-count": "initial"});
-
+	*/
 }
 
 /*
@@ -409,9 +412,8 @@ function onWork1() {
 /*********************** .works-navi ***************************/
 
 $(function () {
-	$("h2.frontend").stop().trigger("click");
 
-	$("h2.frontend").click(onFront);
+	$("h2.frontend").click(onFront).trigger("click");
 
 	function onFront() {
 		$("h2.frontend").css("color", " rgb(255, 180, 180)");
