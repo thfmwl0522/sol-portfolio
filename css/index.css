@@ -199,10 +199,15 @@ font-size:8vw; color: rgb(18, 43, 126); font-family: 'Sorts Mill Goudy', serif; 
 .navi-wrapper div {align-items: center; justify-items: center;}
 
 .navi-wrapper .navi-wrap > div {transition: top 0.5s, left 0.5s; position: relative;}
-.navi-wrapper .navi-wrap1 > div {transition: top 0.5s, left 0.5s; position: relative;}
 .navi-wrapper .navi-wrap > div:nth-child(1) {animation: aboutAni 8s;animation-fill-mode: forwards;}
 .navi-wrapper .navi-wrap > div:nth-child(2) {padding-left: 0.7em; animation: worksAni 8s; animation-fill-mode: forwards;}
 .navi-wrapper .navi-wrap > div:nth-child(3) {padding-left: 0.2em; animation: contactAni 8s; animation-fill-mode: backwards;}
+
+.navi-wrapper .navi-wrap1 > div {transition: top 0.5s, left 0.5s; width: 300px; top: 40%; left: 40%;}
+.navi-wrapper .navi-wrap1 > div.active1 {top: 50px; left: 150px; text-align: left;}
+.navi-wrapper .navi-wrap1 > div.active2 {top: calc(100vh - 200px); left: calc(100vw - 200px); text-align: center;}
+.navi-wrapper .navi-wrap1 > div.active3 {top: calc(100vh - 150px); left: calc(100vw - 150px); text-align: right;}
+
 
 @keyframes aboutAni {
 	0% {transform: translateX(200%) translateY(0);}
@@ -281,7 +286,7 @@ font-size:8vw; color: rgb(18, 43, 126); font-family: 'Sorts Mill Goudy', serif; 
 .about-wrapper .about-wrap div {margin:2% 0 2% 1%;}
 .about-wrapper .about-wrap .hi2 {display: none;}
 .about-wrapper .about-wrap .skills img {width: 4.2vw; margin: 1.6%;}
-.about-wrap .icon-wrap {display: flexbox; flex-wrap: nowrap;}
+.about-wrap .icon-wrap {display: flex; flex-wrap: nowrap;}
 
 .about-navi1 {top: 3vh; left: 810vw; font-size: 6.4vw; color: rgb(255, 195, 29);}
 .about-navi2 {top: 83vh; left: 88vw; font-size: 4.5vw; color: rgb(255, 195, 29, 0.6);}
