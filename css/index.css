@@ -76,6 +76,14 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif;}
 .cont-wrapper ul:nth-child(4) > li:nth-child(2) {animation-name: erAni2; animation-duration: 14s; animation-iteration-count: infinite;}
 .cont-wrapper ul:nth-child(5) {padding-left: 0.3em; animation-name: portAni; animation-duration: 14s; animation-iteration-count: infinite;}
 
+
+.cont-wrapper ul:nth-child(1).ani1 { animation-name: naviAni4; animation-fill-mode: forwards; animation-iteration-count: infinite;}
+.cont-wrapper ul:nth-child(5).ani2 { animation-name: naviAni3; animation-fill-mode: forwards; animation-iteration-count: infinite;}
+.cont-wrap > ul.navi.ani3 { animation-name: naviAni5; animation-fill-mode: forwards; animation-iteration-count: infinite;}
+.cont-wrap > ul.navi-ani > li:nth-child(1).ani4 { animation-name: naviAni6; animation-fill-mode: forwards; animation-iteration-count: infinite;}
+.cont-wrap > ul.navi-ani > li:nth-child(2).ani5 { animation-name: naviAni7; animation-fill-mode: forwards; animation-iteration-count: infinite;}
+
+
  @keyframes webAni{
 	0% {transform: translateX(120%); color: #07215f;}
 	3% {transform: translateX(0); color: #07215f;}
@@ -204,9 +212,11 @@ font-size:8vw; color: rgb(18, 43, 126); font-family: 'Sorts Mill Goudy', serif; 
 .navi-wrapper .navi-wrap > div:nth-child(3) {padding-left: 0.2em; animation: contactAni 8s; animation-fill-mode: backwards;}
 
 .navi-wrapper .navi-wrap1 > div {transition: top 0.5s, left 0.5s; width: 300px; top: 40%; left: 40%;}
-.navi-wrapper .navi-wrap1 > div.active1 {top: 50px; left: 150px; text-align: left;}
-.navi-wrapper .navi-wrap1 > div.active2 {top: calc(100vh - 200px); left: calc(100vw - 200px); text-align: center;}
-.navi-wrapper .navi-wrap1 > div.active3 {top: calc(100vh - 150px); left: calc(100vw - 150px); text-align: right;}
+.navi-wrapper .navi-wrap1 > div.active1 {top: 30px; left: 120px; text-align: left; color: rgb(255, 195, 29); font-size:6.4vw;}
+.navi-wrapper .navi-wrap1 > div.active2 {top: 82vh; left: 72vw; text-align: center; color: rgb(255, 195, 29, 0.6); font-size:5.4vw;}
+.navi-wrapper .navi-wrap1 > div.active3 {top: 90vh; left: 70vw; text-align: right; color: rgb(255, 195, 29, 0.6); font-size:5.4vw;}
+/* .navi-wrapper .navi-wrap1 > div.active2 {top: calc(100vh - 160px); left: calc(100vw - 380px); text-align: center; color: rgb(255, 195, 29, 0.6); font-size:5.4vw;}
+.navi-wrapper .navi-wrap1 > div.active3 {top: calc(100vh - 100px); left: calc(100vw - 430px); text-align: right; color: rgb(255, 195, 29, 0.6); font-size:5.4vw;} */
 
 
 @keyframes aboutAni {
@@ -286,7 +296,7 @@ font-size:8vw; color: rgb(18, 43, 126); font-family: 'Sorts Mill Goudy', serif; 
 .about-wrapper .about-wrap div {margin:2% 0 2% 1%;}
 .about-wrapper .about-wrap .hi2 {display: none;}
 .about-wrapper .about-wrap .skills img {width: 4.2vw; margin: 1.6%;}
-.about-wrap .icon-wrap {display: flex; flex-wrap: nowrap;}
+.about-wrap .icon-wrap {/* display: flex; */ flex-wrap: nowrap;}
 
 .about-navi1 {top: 3vh; left: 810vw; font-size: 6.4vw; color: rgb(255, 195, 29);}
 .about-navi2 {top: 83vh; left: 88vw; font-size: 4.5vw; color: rgb(255, 195, 29, 0.6);}
@@ -325,10 +335,13 @@ font-size:8vw; color: rgb(18, 43, 126); font-family: 'Sorts Mill Goudy', serif; 
 
 @media screen and (max-width: 1199px) {
 	.about-wrapper .txt-wrap {font-size: 1.4vw;}
+	.navi-wrapper .navi-wrap1 > div.active2 {top: 84vh; left: 72vw;}
+	.navi-wrapper .navi-wrap1 > div.active3 {top: 90vh; left: 70vw;}
 }
 
 @media screen and (max-width: 991px) {
-
+	.navi-wrapper .navi-wrap1 > div.active2 {top: 84vh; left: 62vw;}
+	.navi-wrapper .navi-wrap1 > div.active3 {top: 90vh; left: 62vw;}
 }
 
 @media screen and (max-width: 768px) {
@@ -346,7 +359,9 @@ font-size:8vw; color: rgb(18, 43, 126); font-family: 'Sorts Mill Goudy', serif; 
 	.about-wrapper .txt-wrap > div {margin: 3%;}
 	.cont-wrapper ul {font-size:11vw; }
 	.navi-wrapper {font-size:9vw;}
-
+	.navi-wrapper .navi-wrap1 > div.active1 {top: 30px; left: 120px; text-align: left; color: rgb(255, 195, 29); font-size:8vw;}
+	.navi-wrapper .navi-wrap1 > div.active2 {top: 84vh; left: 62vw; font-size:7vw;}
+	.navi-wrapper .navi-wrap1 > div.active3 {top: 90vh; left: 62vw; font-size:7vw;}
 	.slide-wrapper .slide-wrap {width: 200%; left: -50%;}
 	.slide-wrapper .slide {flex: 25% 0 0;}
 }
