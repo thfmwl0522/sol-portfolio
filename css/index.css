@@ -249,10 +249,10 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif;}
 
 .top-wrap img {width: 80px;}
 /* .top-wrap .navi-wrapper	 {border: 1px solid skyblue; } */
-.top-wrap .navi-bar {cursor: pointer; font-size: 4vw; color: #fff; }
-.top-wrap .bar1 {display: block; background-color: salmon;}
-.top-wrap .bar2 {display: none; background-color: skyblue;}
-.top-wrap .bar3 {display: none; background-color: yellow;}
+.top-wrap .navi-bar {cursor: pointer; font-size: 2vw; color: #fff; }
+.top-wrap .bar1 {display: block;/*  background-color: salmon; */}
+.top-wrap .bar2 {display: none; /* background-color: skyblue; */}
+.top-wrap .bar3 {display: none;/*  background-color: yellow; */}
 /* .top-wrap .bars::after {width: 46px; display: block; content: ""; border: 2px solid #fff; margin: 0.5em 0;} */
 
 .cont-wrapper {position: absolute; max-width: 80%; display: flex; flex-direction: column; justify-content: center; /* border: 1px solid red; */}
@@ -289,7 +289,7 @@ font-size:8vw; color: rgb(18, 43, 126); font-family: 'Sorts Mill Goudy', serif; 
 
 .navi-wrapper .navi-wrap1 > div {transition: top 0.5s, left 0.5s; width: 300px; top: 40%; left: 40%;}
 .navi-wrapper .navi-wrap1 > div.active1 {top: 36px; left: 110px; color: rgb(255, 195, 29); font-size:6.4vw;}
-.navi-wrapper .navi-wrap1 > div.active2 {top: 84vh; left: 73vw; color: rgb(255, 195, 29, 0.7); font-size:5vw;}
+.navi-wrapper .navi-wrap1 > div.active2 {top: 83vh; left: 73vw; color: rgb(255, 195, 29, 0.7); font-size:5vw;}
 .navi-wrapper .navi-wrap1 > div.active3 {top: 91vh; left: 74vw; color: rgb(255, 195, 29, 0.7); font-size:5vw;}
 
 .about-wrapper {position:absolute; display: flex; background-color: rgb(255, 255, 255, 0.1);  color: rgb(0, 32, 58);

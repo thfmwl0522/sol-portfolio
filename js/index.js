@@ -1,3 +1,7 @@
+$(".top-wrap > h1 ").click(function() {
+	location.reload();
+	});
+
 $(".top-wrap > .bar1").click(onShow);
 $(".top-wrap > .bar2").click(onShow2);
 $(".top-wrap > .bar3").click(onShow3);
@@ -82,7 +86,7 @@ function onShow2() {
 	$(".header-wrapper .bar2").css("display", "none");
 	$(".header-wrapper .bar3").css("display", "none");
 	$(".header-wrapper .bar4").css("display", "none");
-	$(".navi-wrapper .navi-wrap > div").show();
+/* 	$(".navi-wrapper .navi-wrap > div").show(); */
 }
 
 function onShow3() {
@@ -169,7 +173,7 @@ function onNaviClick() {
 		$navi.eq(0).addClass("active1").removeClass("active2 active3");
 		$navi.eq(1).addClass("active2").removeClass("active1 active3");
 		$navi.eq(2).addClass("active3").removeClass("active1 active2");
-		$about.show().css({"left":"300%"});
+		$about.css({"left":"300%"}).show();
 		$about.css({ "left": "50%", "transform": "translateX(-50%)"});
 		$works.hide();
 		$contact.hide();
@@ -178,7 +182,7 @@ function onNaviClick() {
 		$navi.eq(0).addClass("active3").removeClass("active1 active2");
 		$navi.eq(1).addClass("active1").removeClass("active2 active3");
 		$navi.eq(2).addClass("active2").removeClass("active1 active3");
-		$works.show().css({"left":"300%"});
+		$works.css({"left":"300%"}).show();
 		$works.css({ "left": "50%", "transform": "translateX(-50%)" });
 		$about.hide();
 		$contact.hide();
@@ -187,7 +191,7 @@ function onNaviClick() {
 		$navi.eq(0).addClass("active2").removeClass("active1 active3");
 		$navi.eq(1).addClass("active3").removeClass("active1 active2");
 		$navi.eq(2).addClass("active1").removeClass("active2 active3");
-		$contact.show().css({"left":"300%"});
+		$contact.css({"left":"300%"}).show();
 		$contact.css({ "left": "50%", "transform": "translateX(-50%)" });
 		$about.hide();
 		$works.hide();
