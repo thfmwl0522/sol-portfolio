@@ -19,6 +19,7 @@
 
 <body>
 	<header class="header-wrapper">
+		<div class="wrapper">
 		<div class="main-bg"></div>
 
 		<div class="top-wrap">
@@ -159,9 +160,18 @@
 		</div>
 
 		<div class="contact-wrapper">
-			
+			<div class="contact-wrap">
+			<h2 class="con-text">GET IN TOUCH</h2>
+			<form method="post" id="contact-form" onsubmit="return mailSend(this);">
+				<input type="hidden" name="contact_number">
+				<input class="name" type="text" name="name" placeholder="Name">
+				<input class="email" type="text" name="email" placeholder="E-mail">
+				<textarea class="comment" name="msg" placeholder="Message"></textarea>
+				<button class="btn btn-primary" type="submit" class="bt-send">SIGN UP</button>
+			</form>
 		</div>
-
+		</div>
+	</div>
 	</header>
 
 	<script src="../js/index.js"></script>

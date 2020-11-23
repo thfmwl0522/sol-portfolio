@@ -14,6 +14,7 @@
 /********************* 공통사항 *********************/
 html, body {font-size: 16px; font-family: 'Bellefair', serif;}
 
+
 @keyframes webAni{
 	0% {transform: translateX(120%); color: #07215f;}
 	3% {transform: translateX(0); color: #07215f;}
@@ -213,12 +214,14 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif;}
 
 /********************* .header-wrapper *********************/
 .header-wrapper {
-	width: 100%; height: 100vh; display: flex; align-items: center; justify-content: center;
-	position: relative; 
+
 	background-image: linear-gradient( 145deg, #006aff, #c7defd);
 	background-size: cover; background-position: center; background-repeat: no-repeat; overflow: hidden;
 }
-
+.header-wrapper .wrapper {
+	width: 100%; height: 100vh; display: flex; align-items: center; justify-content: center;
+	position: relative; /* max-width: 1800px; */
+}
 .main-bg {
 	opacity: 0.4;
 	width: 100%; height: 100vh; position: absolute; top: 0; left: 0;
@@ -239,17 +242,18 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif;}
 
 .top-wrap {
 	width: 100%;
-	padding: 1.8rem;
+	padding: 1.2em 1.6em;
 	display:flex;
 	align-items: center;
 	justify-content:space-between; 
 	position: absolute; 
 	top: 0; 
-	left: 0;}
+	left: 0;
+}
 
-.top-wrap img {width: 80px;}
+.top-wrap img {width: 70px;}
 /* .top-wrap .navi-wrapper	 {border: 1px solid skyblue; } */
-.top-wrap .navi-bar {cursor: pointer; font-size: 2vw; color: #fff; }
+.top-wrap .navi-bar {cursor: pointer; font-size: 2.8vw; color: #fff; }
 .top-wrap .bar1 {display: block;/*  background-color: salmon; */}
 .top-wrap .bar2 {display: none; /* background-color: skyblue; */}
 .top-wrap .bar3 {display: none;/*  background-color: yellow; */}
@@ -287,10 +291,12 @@ font-size:8vw; color: rgb(18, 43, 126); font-family: 'Sorts Mill Goudy', serif; 
 .navi-wrapper .navi-wrap > div:nth-child(2).main-navi2 {animation: worksAni2 8s; animation-fill-mode: forwards; animation-iteration-count: initial;}
 .navi-wrapper .navi-wrap > div:nth-child(3).main-navi3 {animation: contactAni2 8s; animation-fill-mode: forwards; animation-iteration-count: initial;}
 
-.navi-wrapper .navi-wrap1 > div {transition: top 0.5s, left 0.5s; width: 300px; top: 40%; left: 40%;}
+.navi-wrapper .navi-wrap1 > div {transition: top 0.5s, left 0.5s; width: 240px; top: 40%; left: 40%;}
 .navi-wrapper .navi-wrap1 > div.active1 {top: 36px; left: 110px; color: rgb(255, 195, 29); font-size:6.4vw;}
-.navi-wrapper .navi-wrap1 > div.active2 {top: 83vh; left: 73vw; color: rgb(255, 195, 29, 0.7); font-size:5vw;}
-.navi-wrapper .navi-wrap1 > div.active3 {top: 91vh; left: 74vw; color: rgb(255, 195, 29, 0.7); font-size:5vw;}
+.navi-wrapper .navi-wrap1 > div.active2 {top: calc(100vh - 156px); left: calc(100% - 500px); color: rgb(255, 195, 29, 0.7); font-size:5vw;}
+.navi-wrapper .navi-wrap1 > div.active3 {top: 91vh; left: calc(100% - 500px); color: rgb(255, 195, 29, 0.7); font-size:5vw;}
+/* .navi-wrapper .navi-wrap1 > div.active2 {top: 84vh; left: calc(100% - 400px); color: rgb(255, 195, 29, 0.7); font-size:5vw;}
+.navi-wrapper .navi-wrap1 > div.active3 {top: 91vh; left: calc(100% - 400px); color: rgb(255, 195, 29, 0.7); font-size:5vw;} */
 
 .about-wrapper {position:absolute; display: flex; background-color: rgb(255, 255, 255, 0.1);  color: rgb(0, 32, 58);
  z-index: 5; width: 72vw; max-width: 1600px; left: 300%; transition: all 0.5s;}
@@ -329,10 +335,17 @@ font-size:8vw; color: rgb(18, 43, 126); font-family: 'Sorts Mill Goudy', serif; 
 .wslide-wrap .slide2 {display: none;}
 .wslide-wrap .slide3 {display: none;}
 
-.contact-wrapper { position: absolute; display: flex; flex-direction: column; background-color: rgb(255, 255, 255, 0.1); 
-	z-index: 5; width: 80vw; height: 80vh; left: 300%;  transition: all 0.5s;}
-
-
+.contact-wrapper { position: absolute; display: flex; flex-direction: column; z-index: 5; width: 60vw; left: 300%; transition: all 0.5s; align-items: center; justify-content: center;}
+.contact-wrapper .contact-wrap {display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%;}
+.contact-wrapper .contact-wrap h2 {font-size: 2.6vw; margin: 1.8em 0 0; color: #fff; /* background-color:rgba(20, 55, 129, 0.575); */ /* border-bottom: 3px solid rgba(0, 29, 92, 0.575); */}
+.contact-wrapper .contact-wrap form {font-family: 'Sorts Mill Goudy', serif;  width: 60vw; display: flex; font-size: 1.2vw;  flex-direction: column; align-items: center; justify-content: center; }
+.contact-wrapper .contact-wrap form > input {padding: 1em; width: 40vw; height: 6vh; margin: 1.4em  0 0; background-color: rgba(255, 255, 255, 0.25); border: none;}
+.contact-wrapper .contact-wrap form > textarea {padding: 1em; width: 40vw; height: 30vh; margin: 1.4em 0 0.6em; background-color: rgba(255, 255, 255, 0.25); border: none;}
+.contact-wrapper .contact-wrap form > input::placeholder {color: rgb(255, 255, 255);}
+.contact-wrapper .contact-wrap form > input:focus {outline: none;}
+.contact-wrapper .contact-wrap form > textarea::placeholder {color: rgb(255, 255, 255);}
+.contact-wrapper .contact-wrap form > textarea:focus {outline: none;}
+.contact-wrapper .contact-wrap form > button {margin: 1em; font-size: 1vw;}
 
 /* ******************** 반응형 ******************** */
 @media screen and (max-width: 1399px) {
@@ -341,18 +354,24 @@ font-size:8vw; color: rgb(18, 43, 126); font-family: 'Sorts Mill Goudy', serif; 
 
 @media screen and (max-width: 1199px) {
 	.about-wrapper .txt-wrap {font-size: 1.4vw;}
-	.navi-wrapper .navi-wrap1 > div.active2 {top: 84vh; left: 72vw; font-size:5vw;}
+	.navi-wrapper .navi-wrap1 > div.active2 {top: 85vh; left: 72vw; font-size:5vw;}
 	.navi-wrapper .navi-wrap1 > div.active3 {top: 91vh; left: 72vw; font-size:5vw;}
 }
 
 @media screen and (max-width: 991px) {
 	.top-wrap img {width: 70px;}
+	.top-wrap .navi-bar {cursor: pointer; font-size: 30px; color: #fff; }
 	.navi-wrapper .navi-wrap1 > div.active2 {top: 86vh; left: 68vw; font-size:6vw;}
 	.navi-wrapper .navi-wrap1 > div.active3 {top: 92vh; left: 68vw; font-size:6vw;}
+	.contact-wrapper .contact-wrap h2 {font-size: 3.2vw;}
+	.contact-wrapper .contact-wrap form {font-size: 1.6vw;}
+	.contact-wrapper .contact-wrap form > input {padding: 1em; width: 48vw;}
+	.contact-wrapper .contact-wrap form > textarea {width: 48vw;}
+	.contact-wrapper .contact-wrap form > button {font-size: 1.4vw;}
 }
 
 @media screen and (max-width: 768px) {
-	.top-wrap img {width: 70px;}
+	.top-wrap img {width: 60px;}
 	.about-wrapper {width: 72vw; height: auto; flex-direction: column;}
 	.about-wrapper .img-wrap .sol2 {width: 26vw; opacity: 0.85;}
 	.about-wrapper .img-wrap {margin: 4% 7% 0%;}
@@ -366,18 +385,24 @@ font-size:8vw; color: rgb(18, 43, 126); font-family: 'Sorts Mill Goudy', serif; 
 	.about-wrapper .txt-wrap > div {margin: 3%;}
 	.cont-wrapper ul {font-size:11vw; }
 	.navi-wrapper {font-size:9vw;}
-	.navi-wrapper .navi-wrap1 > div.active1 {font-size:9vw;}
-	.navi-wrapper .navi-wrap1 > div.active2 {top: 88.5vh; left: 60vw; font-size:7.4vw;}
-	.navi-wrapper .navi-wrap1 > div.active3 {top: 94vh; left: 60vw; font-size:7.4vw;}
+	.navi-wrapper .navi-wrap1 > div.active1 {left: 100px; font-size:8.2vw;}
+	.navi-wrapper .navi-wrap1 > div.active2 {top: 89vh; left: 62vw; font-size:7vw;}
+	.navi-wrapper .navi-wrap1 > div.active3 {top: 94vh; left: 62vw; font-size:7vw;}
 	.slide-wrapper .slide-wrap {width: 200%; left: -50%;}
 	.slide-wrapper .slide {flex: 25% 0 0;}
 	.works-wrapper .sub-navi {width: 54vw; margin: 5% 0 2.4% 32% ; padding: 1% 1.5% 0.7%;}
 	.works-wrapper .sub-navi h2 {font-size: 2vw; padding: 1% 0;}
 	.slide-wrapper .btn-prev, .slide-wrapper .btn-next {font-size: 5vw;}
+	.contact-wrapper .contact-wrap h2 {font-size: 4vw;}
+	.contact-wrapper .contact-wrap form {font-size: 1.8vw;}
+	.contact-wrapper .contact-wrap form > input {padding: 1em; width: 50vw;}
+	.contact-wrapper .contact-wrap form > textarea {width: 50vw;}
+	.contact-wrapper .contact-wrap form > button {font-size: 1.6vw;}
 }
 
 @media screen and (max-width: 575px) {
 	.about-wrapper {width: 70vw; height: auto; flex-direction: column;}
+	.top-wrap {padding: 1em 1.2em;}
 	.top-wrap img {width: 50px;}
 	.top-wrap .bar::after {width: 8vw; display: block; content: ""; border: 1% solid #fff; margin: 17% 0;}
 	.about-wrapper .img-wrap .sol2 {width: 32vw; opacity: 0.85;}
@@ -391,13 +416,18 @@ font-size:8vw; color: rgb(18, 43, 126); font-family: 'Sorts Mill Goudy', serif; 
 	.cont-wrapper ul {font-size:13vw; }
 	.navi-wrapper {font-size:11vw;}
 	.navi-wrapper div {margin-bottom: -1%}
-	.navi-wrapper .navi-wrap1 > div.active1 {top: 40px; left: 90px; font-size:1em;}
-	.navi-wrapper .navi-wrap1 > div.active2 {top: 88%; left: 50vw; font-size:9vw;}
-	.navi-wrapper .navi-wrap1 > div.active3 {top: 93vh; left: 50vw; font-size:9vw;}
+	.navi-wrapper .navi-wrap1 > div.active1 {top: 30px; left: 80px; font-size:10vw;}
+	.navi-wrapper .navi-wrap1 > div.active2 {top: 87.6vh; left: 47vw; font-size:10vw;}
+	.navi-wrapper .navi-wrap1 > div.active3 {top: 93vh; left: 47vw; font-size:10vw;}
 	.slide-wrapper .slide-wrap {width: 300%; left: -100%;}
 	.slide-wrapper .slide {flex: 33.3333% 0 0;}
 	.slide-wrapper .stage {width: 84%; margin: auto; position: relative; }
 	.slide-wrapper .btn-prev, .slide-wrapper .btn-next {font-size: 5vw;}
 	.works-wrapper .sub-navi {width: 64vw; margin: 5% 0 3% 10% ; padding: 1% 1.5% 0.7%;}
 	.works-wrapper .sub-navi h2 {font-size: 2.8vw; padding: 1.8% 0;}
+	.contact-wrapper .contact-wrap h2 {font-size: 5vw;}
+	.contact-wrapper .contact-wrap form {font-size: 2.2vw;}
+	.contact-wrapper .contact-wrap form > input {padding: 1em; width: 62vw;}
+	.contact-wrapper .contact-wrap form > textarea {width: 62vw;}
+	.contact-wrapper .contact-wrap form > button {font-size: 1.8vw;}
 }
