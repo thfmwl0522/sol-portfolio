@@ -335,17 +335,24 @@ font-size:8vw; color: rgb(18, 43, 126); font-family: 'Sorts Mill Goudy', serif; 
 .wslide-wrap .slide2 {display: none;}
 .wslide-wrap .slide3 {display: none;}
 
-.contact-wrapper { position: absolute; display: flex; flex-direction: column; z-index: 5; width: 60vw; left: 300%; transition: all 0.5s; align-items: center; justify-content: center;}
-.contact-wrapper .contact-wrap {display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%;}
-.contact-wrapper .contact-wrap h2 {font-size: 2.6vw; margin: 1.8em 0 0; color: #fff; /* background-color:rgba(20, 55, 129, 0.575); */ /* border-bottom: 3px solid rgba(0, 29, 92, 0.575); */}
-.contact-wrapper .contact-wrap form {font-family: 'Sorts Mill Goudy', serif;  width: 60vw; display: flex; font-size: 1.2vw;  flex-direction: column; align-items: center; justify-content: center; }
-.contact-wrapper .contact-wrap form > input {padding: 1em; width: 40vw; height: 6vh; margin: 1.4em  0 0; background-color: rgba(255, 255, 255, 0.25); border: none;}
-.contact-wrapper .contact-wrap form > textarea {padding: 1em; width: 40vw; height: 30vh; margin: 1.4em 0 0.6em; background-color: rgba(255, 255, 255, 0.25); border: none;}
-.contact-wrapper .contact-wrap form > input::placeholder {color: rgb(255, 255, 255);}
-.contact-wrapper .contact-wrap form > input:focus {outline: none;}
-.contact-wrapper .contact-wrap form > textarea::placeholder {color: rgb(255, 255, 255);}
-.contact-wrapper .contact-wrap form > textarea:focus {outline: none;}
-.contact-wrapper .contact-wrap form > button {margin: 1em; font-size: 1vw;}
+.contact-wrapper {position: absolute; display: flex; z-index: 5; width: 70vw;/*  left: 300%;  */ background-color:rgba(20, 55, 129, 0.5); transition: all 0.5s; align-items: center; justify-content: space-around;}
+.sns-wrap {color: #fff; font-size: 1.2vw; margin-left: 4.2vw; font-family: 'Bree Serif', serif; width: 20vw; display: flex; flex-direction: column; align-items: center; justify-items: center;}
+.sns-wrap img {width: 340px; margin: 0 0 1em;}
+.sns-wrap > div {margin: 0.2em;}
+.sns-wrap .fa {margin-right: 0.2em;}
+.sns-wrap .fab {margin-right: 0.2em;}
+.sns-wrap .email-wrap {opacity: 0.8;}
+.sns-wrap .git-wrap {opacity: 0.8;}
+.contact-wrap {display: flex; flex-direction: column; align-items: center; justify-content: center; margin-right: 1.8vw;}
+.contact-wrap h2 {font-size: 2.2vw; margin: 1.6em 0 0.2em; color: #fff;}
+.contact-wrap form {font-family: 'Sorts Mill Goudy', serif;  width: 36vw; display: flex; font-size: 1.2vw;  flex-direction: column; align-items: center; justify-content: center; }
+.contact-wrap form > input {padding: 1em; width: 32vw; height: 5.4vh; margin: 1em  0 0; background-color: rgba(255, 255, 255, 0.25); border: none;}
+.contact-wrap form > textarea {padding: 1em; width: 32vw; height: 26vh; margin: 1em 0 0.6em; background-color: rgba(255, 255, 255, 0.25); border: none;}
+.contact-wrap form > input::placeholder {color: rgb(255, 255, 255);}
+.contact-wrap form > input:focus {outline: none;}
+.contact-wrap form > textarea::placeholder {color: rgb(255, 255, 255);}
+.contact-wrap form > textarea:focus {outline: none;}
+.contact-wrap form > button {margin: 1em 0 2em; font-size: 1vw;}
 
 /* ******************** 반응형 ******************** */
 @media screen and (max-width: 1399px) {
