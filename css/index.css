@@ -291,10 +291,10 @@ font-size:8vw; color: rgb(18, 43, 126); font-family: 'Sorts Mill Goudy', serif; 
 .navi-wrapper .navi-wrap > div:nth-child(2).main-navi2 {animation: worksAni2 8s; animation-fill-mode: forwards; animation-iteration-count: initial;}
 .navi-wrapper .navi-wrap > div:nth-child(3).main-navi3 {animation: contactAni2 8s; animation-fill-mode: forwards; animation-iteration-count: initial;}
 
-.navi-wrapper .navi-wrap1 > div {transition: top 0.5s, left 0.5s; width: 240px; top: 40%; left: 40%;}
+.navi-wrapper .navi-wrap1 > div {transition: top 0.5s, left 0.5s; width: 240px; top: 40%; left: 40%; position: absolute;}
 .navi-wrapper .navi-wrap1 > div.active1 {top: 36px; left: 110px; color: rgb(255, 195, 29); font-size:6.4vw;}
-.navi-wrapper .navi-wrap1 > div.active2 {top: calc(100vh - 156px); left: calc(100% - 500px); color: rgb(255, 195, 29, 0.7); font-size:5vw;}
-.navi-wrapper .navi-wrap1 > div.active3 {top: 91vh; left: calc(100% - 500px); color: rgb(255, 195, 29, 0.7); font-size:5vw;}
+.navi-wrapper .navi-wrap1 > div.active2 {top: calc(100vh - 156px); left: calc(100% - 500px); color: rgba(255, 195, 29, 0.7); font-size:5vw;}
+.navi-wrapper .navi-wrap1 > div.active3 {top: 91vh; left: calc(100% - 500px); color: rgba(255, 195, 29, 0.7); font-size:5vw;}
 /* .navi-wrapper .navi-wrap1 > div.active2 {top: 84vh; left: calc(100% - 400px); color: rgb(255, 195, 29, 0.7); font-size:5vw;}
 .navi-wrapper .navi-wrap1 > div.active3 {top: 91vh; left: calc(100% - 400px); color: rgb(255, 195, 29, 0.7); font-size:5vw;} */
 

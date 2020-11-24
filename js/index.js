@@ -25,6 +25,9 @@ function onShow() {
 	$navi1.css("animation-name", "aboutAni");
 	$navi2.css("animation-name", "worksAni");
 	$navi3.css("animation-name", "contactAni");
+	$navi1.css("animation-name");
+	$navi2.css("animation-name");
+	$navi3.css("animation-name");
 	$naviAni.css({"animation-name": "naviAni", "animation-fill-mode": "forwards", "animation-iteration-count": "initial"});
 	$naviAni1.css({"animation-name": "workAni", "animation-fill-mode": "forwards", "animation-iteration-count": "initial"});
 	$naviAni2.css({"animation-name": "naviAni1", "animation-fill-mode": "forwards", "animation-iteration-count": "initial"});
@@ -52,6 +55,9 @@ function onShow2() {
 	$(".header-wrapper .bar3").css("display", "none");
 	$(".header-wrapper .bar4").css("display", "none");
 /* 	$(".navi-wrapper .navi-wrap > div").show(); */
+	$(".navi-wrapper .navi-wrap1 > .about1").removeClass("active1");
+	$(".navi-wrapper .navi-wrap1 > .wroks1").removeClass("active2");
+	$(".navi-wrapper .navi-wrap1 > .contact1").removeClass("active3");
 }
 
 function onShow3() {
@@ -71,8 +77,16 @@ function onShow3() {
 	$(".header-wrapper .bar1").trigger("click");
 	$(".header-wrapper .bar2").css("display", "block");
 	$(".header-wrapper .bar3").css("display", "none");
-	$(".navi-wrapper .navi-wrap1 > div").css("display", "none");
 	$(".navi-wrapper .navi-wrap > div").css("display", "block");
+	$(".navi-wrapper .navi-wrap1").hide(0, function(){
+		$(".navi-wrapper .navi-wrap1 > div").css("transition");
+		$(".navi-wrapper .navi-wrap1 > div").css("position");
+		$(".navi-wrapper .navi-wrap1 > div").css("top");
+		$(".navi-wrapper .navi-wrap1 > div").css("left");
+		$(".navi-wrapper .navi-wrap1 > .about1").removeClass("active1");
+		$(".navi-wrapper .navi-wrap1 > .wroks1").removeClass("active2");
+		$(".navi-wrapper .navi-wrap1 > .contact1").removeClass("active3");
+	});
 }
 
 
@@ -84,69 +98,71 @@ function onNaviClick() {
 	var $naviHide = $(".navi-wrapper .navi-wrap > div");
 	var $naviWrap = $(".navi-wrapper .navi-wrap1");
 	var $navi = $(".navi-wrapper .navi-wrap1 > div");
-	var $works = 	$(".works-wrapper");
-	var $about = 	$(".about-wrapper");
+	var $works = $(".works-wrapper");
+	var $about = $(".about-wrapper");
 	var $contact = $(".contact-wrapper");
 
-	$naviWrap.css("display", "block");
-	$naviWrap.css("display");
-	$navi.css({"position": "absolute"});
 	$naviHide.hide();
-	$(".header-wrapper .bar3").css("display", "block");
-	$(".header-wrapper .bar1").css("display", "none");
-	$(".header-wrapper .bar2").css("display", "none");
+	$naviWrap.show(0, function () {
+		$(".header-wrapper .bar3").css("display", "block");
+		$(".header-wrapper .bar1").css("display", "none");
+		$(".header-wrapper .bar2").css("display", "none");
 
-	var now = $(this).index();
+		$(".navi-wrapper .navi-wrap1 > div").css("transition");
+		$(".navi-wrapper .navi-wrap1 > div").css("position");
+		$(".navi-wrapper .navi-wrap1 > div").css("top");
+		$(".navi-wrapper .navi-wrap1 > div").css("left");
 
-	if(now == 0) {
-		$navi.eq(0).addClass("active1").removeClass("active2 active3");
-		$navi.eq(1).addClass("active2").removeClass("active1 active3");
-		$navi.eq(2).addClass("active3").removeClass("active1 active2");
-		$about.css({"left":"300%"}).show();
-		$about.css({ "left": "50%", "transform": "translateX(-50%)"});
-		$works.hide();
-		$contact.hide();
-	}
-	else if(now == 1) {
-		$navi.eq(0).addClass("active3").removeClass("active1 active2");
-		$navi.eq(1).addClass("active1").removeClass("active2 active3");
-		$navi.eq(2).addClass("active2").removeClass("active1 active3");
-		$works.css({"left":"300%"}).show();
-		$works.css({ "left": "50%", "transform": "translateX(-50%)" });
-		$about.hide();
-		$contact.hide();
-	}
-	else if(now == 2) {
-		$navi.eq(0).addClass("active2").removeClass("active1 active3");
-		$navi.eq(1).addClass("active3").removeClass("active1 active2");
-		$navi.eq(2).addClass("active1").removeClass("active2 active3");
-		$contact.css({"left":"300%"}).show();
-		$contact.css({ "left": "50%", "transform": "translateX(-50%)" });
-		$about.hide();
-		$works.hide();
-	}
+		var now = $(this).index();
+		if(now == 0) {
+			$navi.eq(0).addClass("active1").removeClass("active2 active3");
+			$navi.eq(1).addClass("active2").removeClass("active1 active3");
+			$navi.eq(2).addClass("active3").removeClass("active1 active2");
+			$about.css({"left":"300%"}).show();
+			$about.css({ "left": "50%", "transform": "translateX(-50%)"});
+			$works.hide();
+			$contact.hide();
+		}
+		else if(now == 1) {
+			$navi.eq(0).addClass("active3").removeClass("active1 active2");
+			$navi.eq(1).addClass("active1").removeClass("active2 active3");
+			$navi.eq(2).addClass("active2").removeClass("active1 active3");
+			$works.css({"left":"300%"}).show();
+			$works.css({ "left": "50%", "transform": "translateX(-50%)" });
+			$about.hide();
+			$contact.hide();
+		}
+		else if(now == 2) {
+			$navi.eq(0).addClass("active2").removeClass("active1 active3");
+			$navi.eq(1).addClass("active3").removeClass("active1 active2");
+			$navi.eq(2).addClass("active1").removeClass("active2 active3");
+			$contact.css({"left":"300%"}).show();
+			$contact.css({ "left": "50%", "transform": "translateX(-50%)" });
+			$about.hide();
+			$works.hide();
+		}
 
 
-	$(".cont-wrapper ul:nth-child(1)").css("animation-name", "");
-	$(".cont-wrapper ul:nth-child(1)").css("animation-name");
-	$(".cont-wrapper ul:nth-child(1)").addClass("ani1");
+		$(".cont-wrapper ul:nth-child(1)").css("animation-name", "");
+		$(".cont-wrapper ul:nth-child(1)").css("animation-name");
+		$(".cont-wrapper ul:nth-child(1)").addClass("ani1");
 
-	$(".cont-wrapper ul:nth-child(5)").css("animation-name", "");
-	$(".cont-wrapper ul:nth-child(5)").css("animation-name");
-	$(".cont-wrapper ul:nth-child(5)").addClass("ani2");
+		$(".cont-wrapper ul:nth-child(5)").css("animation-name", "");
+		$(".cont-wrapper ul:nth-child(5)").css("animation-name");
+		$(".cont-wrapper ul:nth-child(5)").addClass("ani2");
 
-	$(".cont-wrap > ul.navi").css("animation-name", "");
-	$(".cont-wrap > ul.navi").css("animation-name");
-	$(".cont-wrap > ul.navi").addClass("ani3");
+		$(".cont-wrap > ul.navi").css("animation-name", "");
+		$(".cont-wrap > ul.navi").css("animation-name");
+		$(".cont-wrap > ul.navi").addClass("ani3");
 
-	$(".cont-wrap > ul.navi-ani > li:nth-child(1)").css("animation-name", "");
-	$(".cont-wrap > ul.navi-ani > li:nth-child(1)").css("animation-name");
-	$(".cont-wrap > ul.navi-ani > li:nth-child(1)").addClass("ani4");
+		$(".cont-wrap > ul.navi-ani > li:nth-child(1)").css("animation-name", "");
+		$(".cont-wrap > ul.navi-ani > li:nth-child(1)").css("animation-name");
+		$(".cont-wrap > ul.navi-ani > li:nth-child(1)").addClass("ani4");
 
-	$(".cont-wrap > ul.navi-ani > li:nth-child(2)").css("animation-name", "");
-	$(".cont-wrap > ul.navi-ani > li:nth-child(2)").css("animation-name");
-	$(".cont-wrap > ul.navi-ani > li:nth-child(2)").addClass("ani5");
-
+		$(".cont-wrap > ul.navi-ani > li:nth-child(2)").css("animation-name", "");
+		$(".cont-wrap > ul.navi-ani > li:nth-child(2)").css("animation-name");
+		$(".cont-wrap > ul.navi-ani > li:nth-child(2)").addClass("ani5");
+	});
 }
 
 
