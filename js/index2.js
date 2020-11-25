@@ -3,174 +3,150 @@ $(".top-wrap > h1 ").click(function() {
 	location.reload();
 });
 
-/***************** main btn ************************/
-$(".top-wrap > .bar1").click(onShow);
-$(".top-wrap > .bar2").click(onShow2);
-$(".top-wrap > .bar3").click(onShow3);
+/***************** navi-bar ************************/
+var step = 0;
 
 var $contWrap = $(".cont-wrapper ul, .cont-wrapper ul > li");
 var $naviWrap = $(".navi-wrapper");
-var $navi1 = $(".navi-wrapper .navi-wrap > div:nth-child(1)");
-var $navi2 = $(".navi-wrapper .navi-wrap > div:nth-child(2)");
-var $navi3 = $(".navi-wrapper .navi-wrap > div:nth-child(3)");
+var $naviAbout = $(".navi-wrapper .navi-wrap > .about");
+var $naviWorks = $(".navi-wrapper .navi-wrap > .works");
+var $naviCont = $(".navi-wrapper .navi-wrap > .contact");
 var $naviAni = $(".cont-wrap > ul.navi")
-var $naviAni1 = $(".cont-wrap > ul.navi-ani > li:nth-child(1)")
-var $naviAni2 = $(".cont-wrap > ul.navi-ani > li:nth-child(2)")
+var $front = $(".cont-wrap > ul.navi");
+var $devel = $(".cont-wrap > ul.navi-ani > li:nth-child(1)");
+var $erAni = $(".cont-wrap > ul.navi-ani > li:nth-child(2)");
 
 
 function onShow() {
+	if(step == 0) {
+		ani1();
+	}
+	else if(step == 1) {
+		ani2();
+	}
+	else if(step == 2) {
+		ani3();
+	}
+}
+
+function ani1() {
+	console.log('ani1');
+	step == 1
 	$contWrap.stop().css("animation-name", "none");
 	$contWrap.stop().css("animation-name");
 	$naviWrap.css("display", "block");
-	$navi1.css("animation-name", "aboutAni");
-	$navi2.css("animation-name", "worksAni");
-	$navi3.css("animation-name", "contactAni");
-	$navi1.css("animation-name");
-	$navi2.css("animation-name");
-	$navi3.css("animation-name");
-	$naviAni.css({"animation-name": "naviAni", "animation-fill-mode": "forwards", "animation-iteration-count": "initial"});
-	$naviAni1.css({"animation-name": "workAni", "animation-fill-mode": "forwards", "animation-iteration-count": "initial"});
-	$naviAni2.css({"animation-name": "naviAni1", "animation-fill-mode": "forwards", "animation-iteration-count": "initial"});
-
-	$(".header-wrapper .bar2").css("display", "block");
-	$(".header-wrapper .bar1").css("display", "none");
-	$(".header-wrapper .bar3").css("display", "none");
-	$(".header-wrapper .bar4").css("display", "none");
+	$naviAbout.css("animation-name", "aboutAni");
+	$naviWorks.css("animation-name", "worksAni");
+	$naviCont.css("animation-name", "contactAni");
+	$naviAbout.css("animation-name");
+	$naviWorks.css("animation-name");
+	$naviCont.css("animation-name");
+	$front.css({"animation-name": "naviAni"}).addClass("ani");
+	$devel.css({"animation-name": "workAni"}).addClass("ani");
+	$erAni.css({"animation-name": "naviAni1"}).addClass("ani");
+	step == 2
 }
-
-function onShow2() {
+	function ani2() {
+	console.log(ani2)
+	step == 3
 	$(".navi-wrapper .navi-wrap1 > div").css("display", "block");
 	$contWrap.stop().css("animation-name", "none");
 	$contWrap.stop().css("animation-name");
 	$naviWrap.css("display", "block");
-	$navi1.css("animation-name", "").addClass("main-navi1");
-	$navi2.css("animation-name", "").addClass("main-navi2");
-	$navi3.css("animation-name", "").addClass("main-navi3");
-	$naviAni.css({"animation-name": "naviAni2", "animation-fill-mode": "forwards", "animation-iteration-count": "initial"});
-	$naviAni1.css({"animation-name": "workAni2", "animation-fill-mode": "forwards", "animation-iteration-count": "initial"});
-	$naviAni2.css({"animation-name": "workAni3", "animation-fill-mode": "forwards", "animation-iteration-count": "initial"});
+	$naviAbout.css("animation-name", "").addClass("main-navi1");
+	$naviWorks.css("animation-name", "").addClass("main-navi2");
+	$naviCont.css("animation-name", "").addClass("main-navi3");
+	$front.css({"animation-name": "naviAni2"}).addClass("ani");
+	$devel.css({"animation-name": "workAni2"}).addClass("ani");
+	$er.css({"animation-name": "workAni3"}).addClass("ani");
 
-	$(".header-wrapper .bar1").css("display", "block");
-	$(".header-wrapper .bar2").css("display", "none");
-	$(".header-wrapper .bar3").css("display", "none");
-	$(".header-wrapper .bar4").css("display", "none");
-/* 	$(".navi-wrapper .navi-wrap > div").show(); */
-	$(".navi-wrapper .navi-wrap1 > .about1").removeClass("active1");
-	$(".navi-wrapper .navi-wrap1 > .wroks1").removeClass("active2");
-	$(".navi-wrapper .navi-wrap1 > .contact1").removeClass("active3");
+	$naviAbout.removeClass("active1");
+	$naviWorks.removeClass("active2");
+	$naviCont.removeClass("active3");
 }
+	
 
-function onShow3() {
-	$(".about-wrapper").hide();
-	$(".works-wrapper").hide();
-	$(".contact-wrapper").hide();
-	$contWrap.stop().css("animation-name", "none");
-	$contWrap.stop().css("animation-name");
-	$naviWrap.css("display", "block");
-	$navi1.css("animation-name", "").addClass("main-navi1");
-	$navi2.css("animation-name", "").addClass("main-navi2");
-	$navi3.css("animation-name", "").addClass("main-navi3");
-	$naviAni.css({"animation-name": "naviAni2", "animation-fill-mode": "forwards", "animation-iteration-count": "initial"});
-	$naviAni1.css({"animation-name": "workAni2", "animation-fill-mode": "forwards", "animation-iteration-count": "initial"});
-	$naviAni2.css({"animation-name": "workAni3", "animation-fill-mode": "forwards", "animation-iteration-count": "initial"});
-
-	$(".header-wrapper .bar1").trigger("click");
-	$(".header-wrapper .bar2").css("display", "block");
-	$(".header-wrapper .bar3").css("display", "none");
-	$(".navi-wrapper .navi-wrap > div").css("display", "block");
-	$(".navi-wrapper .navi-wrap1").hide(0, function(){
-		$(".navi-wrapper .navi-wrap1 > div").css("transition");
-		$(".navi-wrapper .navi-wrap1 > div").css("position");
-		$(".navi-wrapper .navi-wrap1 > div").css("top");
-		$(".navi-wrapper .navi-wrap1 > div").css("left");
-		$(".navi-wrapper .navi-wrap1 > .about1").removeClass("active1");
-		$(".navi-wrapper .navi-wrap1 > .wroks1").removeClass("active2");
-		$(".navi-wrapper .navi-wrap1 > .contact1").removeClass("active3");
-	});
-}
-
-
-/*********************** .navi-bar ***************************/
+/***************** Event ************************/
+$(".top-wrap > .bar").click(onShow); 
 $(".navi-wrapper .navi-wrap > div").click(onNaviClick);
-$(".navi-wrapper .navi-wrap1 > div").click(onNaviClick);
 
 function onNaviClick() {
-	var $naviHide = $(".navi-wrapper .navi-wrap > div");
-	var $naviWrap = $(".navi-wrapper .navi-wrap1");
-	var $navi = $(".navi-wrapper .navi-wrap1 > div");
+	var $navi = $(".navi-wrapper .navi-wrap > div");
 	var $works = $(".works-wrapper");
 	var $about = $(".about-wrapper");
 	var $contact = $(".contact-wrapper");
+	var $web = $(".cont-wrapper ul:nth-child(1)");
+	var $port = $(".cont-wrapper ul:nth-child(5)");
+	var $front = $(".cont-wrap > ul.navi");
+	var $devel = $(".cont-wrap > ul.navi-ani > li:nth-child(1)");
+	var $er = $(".cont-wrap > ul.navi-ani > li:nth-child(2)");
 
-	$naviHide.hide();
-	$naviWrap.show(0, function () {
-		$(".header-wrapper .bar3").css("display", "block");
-		$(".header-wrapper .bar1").css("display", "none");
-		$(".header-wrapper .bar2").css("display", "none");
+	$navi.addClass("active");
+	$navi.css("position");
+	$navi.css("transition");
+	$navi.css("top");
+	$navi.css("left");
 
-		$(".navi-wrapper .navi-wrap1 > div").css("transition");
-		$(".navi-wrapper .navi-wrap1 > div").css("position");
-		$(".navi-wrapper .navi-wrap1 > div").css("top");
-		$(".navi-wrapper .navi-wrap1 > div").css("left");
+	var now = $(this).index();
 
-		var now = $(this).index();
-		if(now == 0) {
-			$navi.eq(0).addClass("active1").removeClass("active2 active3");
-			$navi.eq(1).addClass("active2").removeClass("active1 active3");
-			$navi.eq(2).addClass("active3").removeClass("active1 active2");
-			$about.css({"left":"300%"}).show();
-			$about.css({ "left": "50%", "transform": "translateX(-50%)"});
-			$works.hide();
-			$contact.hide();
-		}
-		else if(now == 1) {
-			$navi.eq(0).addClass("active3").removeClass("active1 active2");
-			$navi.eq(1).addClass("active1").removeClass("active2 active3");
-			$navi.eq(2).addClass("active2").removeClass("active1 active3");
-			$works.css({"left":"300%"}).show();
-			$works.css({ "left": "50%", "transform": "translateX(-50%)" });
-			$about.hide();
-			$contact.hide();
-		}
-		else if(now == 2) {
-			$navi.eq(0).addClass("active2").removeClass("active1 active3");
-			$navi.eq(1).addClass("active3").removeClass("active1 active2");
-			$navi.eq(2).addClass("active1").removeClass("active2 active3");
-			$contact.css({"left":"300%"}).show();
-			$contact.css({ "left": "50%", "transform": "translateX(-50%)" });
-			$about.hide();
-			$works.hide();
-		}
+	if(now == 0) {
+		$navi.eq(0).addClass("active1").removeClass("active2 active3");
+		$navi.eq(1).addClass("active2").removeClass("active1 active3");
+		$navi.eq(2).addClass("active3").removeClass("active1 active2");
+		$about.css({"left":"300%"}).show();
+		$about.css({ "left": "50%", "transform": "translateX(-50%)"});
+		$works.hide();
+		$contact.hide();
+	}
+	else if(now == 1) {
+		$navi.eq(0).addClass("active3").removeClass("active1 active2");
+		$navi.eq(1).addClass("active1").removeClass("active2 active3");
+		$navi.eq(2).addClass("active2").removeClass("active1 active3");
+		$works.css({"left":"300%"}).show();
+		$works.css({ "left": "50%", "transform": "translateX(-50%)" });
+		$about.hide();
+		$contact.hide();
+	}
+	else if(now == 2) {
+		$navi.eq(0).addClass("active2").removeClass("active1 active3");
+		$navi.eq(1).addClass("active3").removeClass("active1 active2");
+		$navi.eq(2).addClass("active1").removeClass("active2 active3");
+		$contact.css({"left":"300%"}).show();
+		$contact.css({ "left": "50%", "transform": "translateX(-50%)" });
+		$about.hide();
+		$works.hide();
+	}
 
 
-		$(".cont-wrapper ul:nth-child(1)").css("animation-name", "");
-		$(".cont-wrapper ul:nth-child(1)").css("animation-name");
-		$(".cont-wrapper ul:nth-child(1)").addClass("ani1");
+	$web.css("animation-name", "");
+	$web.css("animation-name");
+	$web.addClass("ani1");
 
-		$(".cont-wrapper ul:nth-child(5)").css("animation-name", "");
-		$(".cont-wrapper ul:nth-child(5)").css("animation-name");
-		$(".cont-wrapper ul:nth-child(5)").addClass("ani2");
+	$port.css("animation-name", "");
+	$port.css("animation-name");
+	$port.addClass("ani2");
 
-		$(".cont-wrap > ul.navi").css("animation-name", "");
-		$(".cont-wrap > ul.navi").css("animation-name");
-		$(".cont-wrap > ul.navi").addClass("ani3");
+	$front.css("animation-name", "");
+	$front.css("animation-name");
+	$front.addClass("ani3");
 
-		$(".cont-wrap > ul.navi-ani > li:nth-child(1)").css("animation-name", "");
-		$(".cont-wrap > ul.navi-ani > li:nth-child(1)").css("animation-name");
-		$(".cont-wrap > ul.navi-ani > li:nth-child(1)").addClass("ani4");
+	$devel.css("animation-name", "");
+	$devel.css("animation-name");
+	$devel.addClass("ani4");
 
-		$(".cont-wrap > ul.navi-ani > li:nth-child(2)").css("animation-name", "");
-		$(".cont-wrap > ul.navi-ani > li:nth-child(2)").css("animation-name");
-		$(".cont-wrap > ul.navi-ani > li:nth-child(2)").addClass("ani5");
-	});
+	$er.css("animation-name", "");
+	$er.css("animation-name");
+	$er.addClass("ani5");
 }
 
 
-/*********************** .works-navi ***************************/
+
+	/*********************** .works-navi ***************************/
 
 $(function () {
 
 	$("h2.frontend").click(onFront).trigger("click");
+
 
 	function onFront() {
 		$("h2.frontend").css("color", " rgb(255, 180, 180)");

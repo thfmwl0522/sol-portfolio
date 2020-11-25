@@ -210,7 +210,9 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif;}
 	100% {transform: translateX(-1200%) translateY(0);}
 }
 
-.ani {animation-fill-mode: forwards; animation-iteration-count: initial;}
+.cont-wrap > ul.navi.ani {animation-fill-mode: forwards; animation-iteration-count: initial;}
+.cont-wrap > ul.navi-ani > li:nth-child(1).ani {animation-fill-mode: forwards; animation-iteration-count: initial;}
+.cont-wrap > ul.navi-ani > li:nth-child(2).ani {animation-fill-mode: forwards; animation-iteration-count: initial;}
 
 /********************* .header-wrapper *********************/
 .header-wrapper {
@@ -252,14 +254,10 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif;}
 }
 
 .top-wrap img {width: 70px;}
-/* .top-wrap .navi-wrapper	 {border: 1px solid skyblue; } */
 .top-wrap .navi-bar {cursor: pointer; font-size: 2.8vw; color: #fff; }
-.top-wrap .bar1 {display: block;/*  background-color: salmon; */}
-.top-wrap .bar2 {display: none; /* background-color: skyblue; */}
-.top-wrap .bar3 {display: none;/*  background-color: yellow; */}
-/* .top-wrap .bars::after {width: 46px; display: block; content: ""; border: 2px solid #fff; margin: 0.5em 0;} */
+.top-wrap .bar {display: block;}
 
-.cont-wrapper {position: absolute; max-width: 80%; display: flex; flex-direction: column; justify-content: center; /* border: 1px solid red; */}
+.cont-wrapper {position: absolute; max-width: 80%; display: flex; flex-direction: column; justify-content: center;}
 
 .cont-wrapper ul {font-size:9vw; color: #fff; display:flex; cursor: pointer; margin-bottom: -2%;}
 .cont-wrapper ul:nth-child(1) {padding-left: 0.1em; animation-name: webAni; animation-duration: 14s; animation-iteration-count: infinite;}
@@ -291,18 +289,16 @@ font-size:8vw; color: rgb(18, 43, 126); font-family: 'Sorts Mill Goudy', serif; 
 .navi-wrapper .navi-wrap > div:nth-child(2).main-navi2 {animation: worksAni2 8s; animation-fill-mode: forwards; animation-iteration-count: initial;}
 .navi-wrapper .navi-wrap > div:nth-child(3).main-navi3 {animation: contactAni2 8s; animation-fill-mode: forwards; animation-iteration-count: initial;}
 
-.navi-wrapper .navi-wrap1 > div {transition: top 0.5s, left 0.5s; width: 240px; top: 40%; left: 40%; position: absolute;}
-.navi-wrapper .navi-wrap1 > div.active1 {top: 36px; left: 110px; color: rgb(255, 195, 29); font-size:6.4vw;}
-.navi-wrapper .navi-wrap1 > div.active2 {top: calc(100vh - 156px); left: calc(100% - 500px); color: rgba(255, 195, 29, 0.7); font-size:5vw;}
-.navi-wrapper .navi-wrap1 > div.active3 {top: 91vh; left: calc(100% - 500px); color: rgba(255, 195, 29, 0.7); font-size:5vw;}
+.navi-wrapper .navi-wrap > div.active {transition: top 0.5s, left 0.5s; width: 240px; top: 40%; left: 40%; position: absolute;}
+.navi-wrapper .navi-wrap > div.active1 {top: 36px; left: 110px; color: rgb(255, 195, 29); font-size:6.4vw;}
+.navi-wrapper .navi-wrap > div.active2 {top: calc(100vh - 156px); left: calc(100% - 500px); color: rgba(255, 195, 29, 0.7); font-size:5vw;}
+.navi-wrapper .navi-wrap > div.active3 {top: 91vh; left: calc(100% - 500px); color: rgba(255, 195, 29, 0.7); font-size:5vw;}
 	
 
-.about-wrapper {position:absolute; display: flex; background-color: rgb(255, 255, 255, 0.1);  color: rgb(0, 32, 58);
- z-index: 5; width: 72vw; max-width: 1600px; left: 300%; transition: all 0.5s;}
+.about-wrapper {position:absolute; display: flex; background-color: rgb(255, 255, 255, 0.1);  color: rgb(0, 32, 58); z-index: 5; width: 72vw; max-width: 1600px; left: 300%; transition: all 0.5s;}
 .about-wrapper .img-wrap {display: flex; flex-direction: column; align-items: center; margin: 12% 7% 3%;}
 .about-wrapper .img-wrap .sol2 {width: 20vw; opacity: 0.85;}
-.about-wrapper .img-wrap h3 {font-family: 'Bree Serif', serif; margin: 0.6em 0; font-size:  2.6vw; padding: 1% 0 2%;
- background-color: rgb(5, 60, 105); color: #fff; width: 61%; text-align: center; line-height:1;} 
+.about-wrapper .img-wrap h3 {font-family: 'Bree Serif', serif; margin: 0.6em 0; font-size:  2.6vw; padding: 1% 0 2%; background-color: rgb(5, 60, 105); color: #fff; width: 61%; text-align: center; line-height:1;} 
 .about-wrapper .about-wrap {display: flex; flex-direction: column; padding: 2% 2%; justify-content: space-between;}
 .about-wrapper .about-wrap .about {margin: 4% 0 0%;}
 .about-wrapper .txt-wrap {font-family: 'Noto Sans KR', sans-serif; font-weight: 400; font-size: 1vw; margin:2%; color: rgb(255, 255, 255);}
@@ -334,19 +330,19 @@ font-size:8vw; color: rgb(18, 43, 126); font-family: 'Sorts Mill Goudy', serif; 
 .wslide-wrap .slide2 {display: none;}
 .wslide-wrap .slide3 {display: none;}
 
-.contact-wrapper {position: absolute; display: flex; z-index: 5; width: 70vw;/*  left: 300%;  */ background-color:rgba(20, 55, 129, 0.5); transition: all 0.5s; align-items: center; justify-content: space-around;}
+.contact-wrapper {position: absolute; display: flex; z-index: 5; width: 70vw; left: 300%;  background-color: rgb(255, 255, 255, 0.1); transition: all 0.5s; align-items: center; justify-content: space-around;}
 .sns-wrap {color: #fff; font-size: 1.2vw; margin-left: 4.2vw; font-family: 'Bree Serif', serif; width: 20vw; display: flex; flex-direction: column; align-items: center; justify-items: center;}
-.sns-wrap img {width: 340px; margin: 0 0 1em;}
+.sns-wrap img {width: 18vw; margin: 0 0 1em; opacity: 0.85;}
 .sns-wrap > div {margin: 0.2em;}
 .sns-wrap .fa {margin-right: 0.2em;}
 .sns-wrap .fab {margin-right: 0.2em;}
 .sns-wrap .email-wrap {opacity: 0.8;}
 .sns-wrap .git-wrap {opacity: 0.8;}
 .contact-wrap {display: flex; flex-direction: column; align-items: center; justify-content: center; margin-right: 1.8vw;}
-.contact-wrap h2 {font-size: 2.2vw; margin: 1.6em 0 0.2em; color: #fff;}
+.contact-wrap h2 {font-size: 2.2vw; margin: 1.6em 0 0.2em; color: rgb(0, 31, 99);}
 .contact-wrap form {font-family: 'Sorts Mill Goudy', serif;  width: 36vw; display: flex; font-size: 1.2vw;  flex-direction: column; align-items: center; justify-content: center; }
-.contact-wrap form > input {padding: 1em; width: 32vw; height: 5.4vh; margin: 1em  0 0; background-color: rgba(255, 255, 255, 0.25); border: none;}
-.contact-wrap form > textarea {padding: 1em; width: 32vw; height: 26vh; margin: 1em 0 0.6em; background-color: rgba(255, 255, 255, 0.25); border: none;}
+.contact-wrap form > input {padding: 1em; width: 32vw; height: 5.4vh; margin: 1em  0 0; background-color: rgba(20, 55, 129, 0.4); border: none;}
+.contact-wrap form > textarea {padding: 1em; width: 32vw; height: 26vh; margin: 1em 0 0.6em; background-color:rgba(20, 55, 129, 0.4); border: none;}
 .contact-wrap form > input::placeholder {color: rgb(255, 255, 255);}
 .contact-wrap form > input:focus {outline: none;}
 .contact-wrap form > textarea::placeholder {color: rgb(255, 255, 255);}
@@ -360,15 +356,15 @@ font-size:8vw; color: rgb(18, 43, 126); font-family: 'Sorts Mill Goudy', serif; 
 
 @media screen and (max-width: 1199px) {
 	.about-wrapper .txt-wrap {font-size: 1.4vw;}
-	.navi-wrapper .navi-wrap1 > div.active2 {top: 85vh; left: 72vw; font-size:5vw;}
-	.navi-wrapper .navi-wrap1 > div.active3 {top: 91vh; left: 72vw; font-size:5vw;}
+	.navi-wrapper .navi-wrap > div.active2 {top: 85vh; left: 72vw; font-size:5vw;}
+	.navi-wrapper .navi-wrap > div.active3 {top: 91vh; left: 72vw; font-size:5vw;}
 }
 
 @media screen and (max-width: 991px) {
 	.top-wrap img {width: 70px;}
 	.top-wrap .navi-bar {cursor: pointer; font-size: 30px; color: #fff; }
-	.navi-wrapper .navi-wrap1 > div.active2 {top: 86vh; left: 68vw; font-size:6vw;}
-	.navi-wrapper .navi-wrap1 > div.active3 {top: 92vh; left: 68vw; font-size:6vw;}
+	.navi-wrapper .navi-wrap > div.active2 {top: 86vh; left: 68vw; font-size:6vw;}
+	.navi-wrapper .navi-wrap > div.active3 {top: 92vh; left: 68vw; font-size:6vw;}
 	.contact-wrapper .contact-wrap h2 {font-size: 3.2vw;}
 	.contact-wrapper .contact-wrap form {font-size: 1.6vw;}
 	.contact-wrapper .contact-wrap form > input {padding: 1em; width: 48vw;}
@@ -391,9 +387,9 @@ font-size:8vw; color: rgb(18, 43, 126); font-family: 'Sorts Mill Goudy', serif; 
 	.about-wrapper .txt-wrap > div {margin: 3%;}
 	.cont-wrapper ul {font-size:11vw; }
 	.navi-wrapper {font-size:9vw;}
-	.navi-wrapper .navi-wrap1 > div.active1 {left: 100px; font-size:8.2vw;}
-	.navi-wrapper .navi-wrap1 > div.active2 {top: 89vh; left: 62vw; font-size:7vw;}
-	.navi-wrapper .navi-wrap1 > div.active3 {top: 94vh; left: 62vw; font-size:7vw;}
+	.navi-wrapper .navi-wrap > div.active1 {left: 100px; font-size:8.2vw;}
+	.navi-wrapper .navi-wrap > div.active2 {top: 89vh; left: 62vw; font-size:7vw;}
+	.navi-wrapper .navi-wrap > div.active3 {top: 94vh; left: 62vw; font-size:7vw;}
 	.slide-wrapper .slide-wrap {width: 200%; left: -50%;}
 	.slide-wrapper .slide {flex: 25% 0 0;}
 	.works-wrapper .sub-navi {width: 54vw; margin: 5% 0 2.4% 32% ; padding: 1% 1.5% 0.7%;}
@@ -410,7 +406,7 @@ font-size:8vw; color: rgb(18, 43, 126); font-family: 'Sorts Mill Goudy', serif; 
 	.about-wrapper {width: 70vw; height: auto; flex-direction: column;}
 	.top-wrap {padding: 1em 1.2em;}
 	.top-wrap img {width: 50px;}
-	.top-wrap .bar::after {width: 8vw; display: block; content: ""; border: 1% solid #fff; margin: 17% 0;}
+/* 	.top-wrap .bar::after {width: 8vw; display: block; content: ""; border: 1% solid #fff; margin: 17% 0;} */
 	.about-wrapper .img-wrap .sol2 {width: 32vw; opacity: 0.85;}
 	.about-wrapper .img-wrap h3 {margin: 1% 0; width: 36%; font-size: 3.6vw; }
 	.about-wrapper .about h3{font-size: 2vh; padding: 1%;}
@@ -422,9 +418,9 @@ font-size:8vw; color: rgb(18, 43, 126); font-family: 'Sorts Mill Goudy', serif; 
 	.cont-wrapper ul {font-size:13vw; }
 	.navi-wrapper {font-size:11vw;}
 	.navi-wrapper div {margin-bottom: -1%}
-	.navi-wrapper .navi-wrap1 > div.active1 {top: 30px; left: 80px; font-size:10vw;}
-	.navi-wrapper .navi-wrap1 > div.active2 {top: 87.6vh; left: 47vw; font-size:10vw;}
-	.navi-wrapper .navi-wrap1 > div.active3 {top: 93vh; left: 47vw; font-size:10vw;}
+	.navi-wrapper .navi-wrap > div.active1 {top: 30px; left: 80px; font-size:10vw;}
+	.navi-wrapper .navi-wrap > div.active2 {top: 87.6vh; left: 47vw; font-size:10vw;}
+	.navi-wrapper .navi-wrap > div.active3 {top: 93vh; left: 47vw; font-size:10vw;}
 	.slide-wrapper .slide-wrap {width: 300%; left: -100%;}
 	.slide-wrapper .slide {flex: 33.3333% 0 0;}
 	.slide-wrapper .stage {width: 84%; margin: auto; position: relative; }
