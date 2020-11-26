@@ -46,9 +46,9 @@ function ani1() {
 	$erAni.css({ "animation-name": "naviAni1" }).addClass("ani");
 }
 
-function ani2() {
-	console.log('ani2')
-	step = '2'
+function ani3() {
+	console.log('ani3')
+	step = '3'
 	$(".navi-wrapper .navi-wrap1 > div").css("display", "block");
 	$contWrap.stop().css("animation-name", "none");
 	$contWrap.stop().css("animation-name");
@@ -58,11 +58,30 @@ function ani2() {
 	$naviCont.css("animation-name", "").addClass("main-navi3");
 	$front.css({ "animation-name": "naviAni2" }).addClass("ani");
 	$devel.css({ "animation-name": "workAni2" }).addClass("ani");
-	$er.css({ "animation-name": "workAni3" }).addClass("ani");
+	$erAni.css({ "animation-name": "workAni3" }).addClass("ani");
 
 	$naviAbout.removeClass("active1");
 	$naviWorks.removeClass("active2");
 	$naviCont.removeClass("active3");
+}
+
+function ani2() {
+	console.log('ani2')
+	step = '2'
+	$(".about-wrapper").hide();
+	$(".works-wrapper").hide();
+	$(".contact-wrapper").hide();
+	$naviWrap.css("display", "none");
+	$contWrap.stop().css("animation-name", "none");
+	$contWrap.stop().css("animation-name");
+	$naviAbout.css("animation-name", "").addClass("main-navi1");
+	$naviWorks.css("animation-name", "").addClass("main-navi2");
+	$naviCont.css("animation-name", "").addClass("main-navi3");
+	$naviAni.css({ "animation-name": "naviAni2" }).addClass("ani");
+	$devel.css({ "animation-name": "workAni2" }).addClass("ani");
+	$erAni.css({ "animation-name": "workAni3" }).addClass("ani");
+
+	$(".header-wrapper .bar").trigger("click");
 }
 
 
