@@ -47,8 +47,8 @@ function aniShow() {
 }
 
 function ani3() {
-	console.log('ani3')
-	step = '3'
+	console.log('ani2')
+	step = '2'
 	$(".navi-wrapper .navi-wrap1 > div").css("display", "block");
 	$contWrap.stop().css("animation-name", "none");
 	$contWrap.stop().css("animation-name");
@@ -65,9 +65,9 @@ function ani3() {
 	$naviCont.removeClass("active3");
 }
 
-function ani2() {
-	console.log('ani2');
-	step = '2'
+function ani() {
+	console.log('ani3');
+	step = '3'
 	$(".about-wrapper").hide();
 	$(".works-wrapper").hide();
 	$(".contact-wrapper").hide();
