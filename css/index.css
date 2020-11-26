@@ -216,13 +216,13 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif;}
 
 /********************* .header-wrapper *********************/
 .header-wrapper {
+	width: 100%; height: 100vh; display: flex; 
 
 	background-image: linear-gradient( 145deg, #006aff, #c7defd);
 	background-size: cover; background-position: center; background-repeat: no-repeat; overflow: hidden;
 }
 .header-wrapper .wrapper {
-	width: 100%; height: 100vh; display: flex; align-items: center; justify-content: center;
-	position: relative; /* max-width: 1800px; */
+	width: 100%; height: 100%; 	position: relative;  display: flex; max-width: 1800px; align-items: center; justify-content: center; margin: 0 auto;/*  border: 1px solid red; */
 }
 .main-bg {
 	opacity: 0.4;
@@ -281,7 +281,7 @@ font-size:8vw; color: rgb(18, 43, 126); font-family: 'Sorts Mill Goudy', serif; 
 .navi-wrapper .navi-wrap1 {display: none;}
 .navi-wrapper div {align-items: center; justify-items: center;}
 
-.navi-wrapper .navi-wrap > div {transition: top 0.5s, left 0.5s; position: relative;}
+.navi-wrapper .navi-wrap > div {transition: top 0.5s, left 0.5s; /* position: relative; */}
 .navi-wrapper .navi-wrap > div:nth-child(1) {animation: aboutAni 8s;animation-fill-mode: forwards;}
 .navi-wrapper .navi-wrap > div:nth-child(2) {padding-left: 0.7em; animation: worksAni 8s; animation-fill-mode: forwards;}
 .navi-wrapper .navi-wrap > div:nth-child(3) {padding-left: 0.2em; animation: contactAni 8s; animation-fill-mode: backwards;}
@@ -290,9 +290,9 @@ font-size:8vw; color: rgb(18, 43, 126); font-family: 'Sorts Mill Goudy', serif; 
 .navi-wrapper .navi-wrap > div:nth-child(3).main-navi3 {animation: contactAni2 8s; animation-fill-mode: forwards; animation-iteration-count: initial;}
 
 .navi-wrapper .navi-wrap > div.active {transition: top 0.5s, left 0.5s; width: 240px; top: 40%; left: 40%; position: absolute;}
-.navi-wrapper .navi-wrap > div.active1 {top: 36px; left: 110px; color: rgb(255, 195, 29); font-size:6.4vw;}
-.navi-wrapper .navi-wrap > div.active2 {top: calc(100vh - 156px); left: calc(100% - 500px); color: rgba(255, 195, 29, 0.7); font-size:5vw;}
-.navi-wrapper .navi-wrap > div.active3 {top: 91vh; left: calc(100% - 500px); color: rgba(255, 195, 29, 0.7); font-size:5vw;}
+.navi-wrapper .navi-wrap > div.active1 {top: 36px; left: 90px; color: rgb(255, 195, 29); font-size:6.4vw;}
+.navi-wrapper .navi-wrap > div.active2 {top: 83vh; left: calc(100% - 480px); color: rgba(255, 195, 29, 0.7); font-size:4.8vw;}
+.navi-wrapper .navi-wrap > div.active3 {top: 91vh; left: calc(100% - 480px); color: rgba(255, 195, 29, 0.7); font-size:4.8vw;}
 	
 
 .about-wrapper {position:absolute; display: flex; background-color: rgb(255, 255, 255, 0.1);  color: rgb(0, 32, 58); z-index: 5; width: 72vw; max-width: 1600px; left: 300%; transition: all 0.5s;}
@@ -330,15 +330,15 @@ font-size:8vw; color: rgb(18, 43, 126); font-family: 'Sorts Mill Goudy', serif; 
 .wslide-wrap .slide2 {display: none;}
 .wslide-wrap .slide3 {display: none;}
 
-.contact-wrapper {position: absolute; display: flex; z-index: 5; width: 70vw; left: 300%;  background-color: rgb(255, 255, 255, 0.1); transition: all 0.5s; align-items: center; justify-content: space-around;}
-.sns-wrap {color: #fff; font-size: 1.2vw; margin-left: 4.2vw; font-family: 'Bree Serif', serif; width: 20vw; display: flex; flex-direction: column; align-items: center; justify-items: center;}
-.sns-wrap img {width: 18vw; margin: 0 0 1em; opacity: 0.85;}
-.sns-wrap > div {margin: 0.2em;}
+.contact-wrapper {position:absolute; display: flex; background-color: rgb(255, 255, 255, 0.1); z-index: 5; width: 64vw; max-width: 1600px; left: 300%; transition: all 0.5s; justify-content: space-around;}
+.sns-wrap {font-size: 1.4vw; color: #fff;  margin-left: 1vw; font-family: 'Bree Serif', serif; width: 24vw; display: flex; flex-direction: column; align-items: center; justify-items: center; justify-content: center;}
+.sns-wrap img {width: 16vw; margin: 0 0 1.2vw; opacity: 0.85;}
+.sns-wrap  > div {margin:0.2em;}
 .sns-wrap .fa {margin-right: 0.2em;}
 .sns-wrap .fab {margin-right: 0.2em;}
 .sns-wrap .email-wrap {opacity: 0.8;}
 .sns-wrap .git-wrap {opacity: 0.8;}
-.contact-wrap {display: flex; flex-direction: column; align-items: center; justify-content: center; margin-right: 1.8vw;}
+.contact-wrap {display: flex; flex-direction: column; align-items: center; justify-content: center; margin-right: 1vw;}
 .contact-wrap h2 {font-size: 2.2vw; margin: 1.6em 0 0.2em; color: rgb(0, 31, 99);}
 .contact-wrap form {font-family: 'Sorts Mill Goudy', serif;  width: 36vw; display: flex; font-size: 1.2vw;  flex-direction: column; align-items: center; justify-content: center; }
 .contact-wrap form > input {padding: 1em; width: 32vw; height: 5.4vh; margin: 1em  0 0; background-color: rgba(20, 55, 129, 0.4); border: none;}
@@ -358,6 +358,7 @@ font-size:8vw; color: rgb(18, 43, 126); font-family: 'Sorts Mill Goudy', serif; 
 	.about-wrapper .txt-wrap {font-size: 1.4vw;}
 	.navi-wrapper .navi-wrap > div.active2 {top: 85vh; left: 72vw; font-size:5vw;}
 	.navi-wrapper .navi-wrap > div.active3 {top: 91vh; left: 72vw; font-size:5vw;}
+	.sns-wrap img {width: 16vw;}
 }
 
 @media screen and (max-width: 991px) {
@@ -365,6 +366,9 @@ font-size:8vw; color: rgb(18, 43, 126); font-family: 'Sorts Mill Goudy', serif; 
 	.top-wrap .navi-bar {cursor: pointer; font-size: 30px; color: #fff; }
 	.navi-wrapper .navi-wrap > div.active2 {top: 86vh; left: 68vw; font-size:6vw;}
 	.navi-wrapper .navi-wrap > div.active3 {top: 92vh; left: 68vw; font-size:6vw;}
+/* 	.sns-wrap img {width: 20vw; margin: 0;}
+	.contact-wrapper {flex-direction: column;} */
+	.contact-wrapper .sns-wrap {border: 1px solid salmon; margin: 0 20vw 2vw; display: none; }
 	.contact-wrapper .contact-wrap h2 {font-size: 3.2vw;}
 	.contact-wrapper .contact-wrap form {font-size: 1.6vw;}
 	.contact-wrapper .contact-wrap form > input {padding: 1em; width: 48vw;}
@@ -426,10 +430,11 @@ font-size:8vw; color: rgb(18, 43, 126); font-family: 'Sorts Mill Goudy', serif; 
 	.slide-wrapper .stage {width: 84%; margin: auto; position: relative; }
 	.slide-wrapper .btn-prev, .slide-wrapper .btn-next {font-size: 5vw;}
 	.works-wrapper .sub-navi {width: 64vw; margin: 5% 0 3% 10% ; padding: 1% 1.5% 0.7%;}
-	.works-wrapper .sub-navi h2 {font-size: 2.8vw; padding: 1.8% 0;}
+	.works-wrapper .sub-navi h2 {font-size: 2.8vw; padding: 2% 0;}
+	.contact-wrapper {width: 72vw;}
 	.contact-wrapper .contact-wrap h2 {font-size: 5vw;}
 	.contact-wrapper .contact-wrap form {font-size: 2.2vw;}
-	.contact-wrapper .contact-wrap form > input {padding: 1em; width: 62vw;}
-	.contact-wrapper .contact-wrap form > textarea {width: 62vw;}
+	.contact-wrapper .contact-wrap form > input {padding: 1em; width: 58vw;}
+	.contact-wrapper .contact-wrap form > textarea {width: 58vw;}
 	.contact-wrapper .contact-wrap form > button {font-size: 1.8vw;}
 }

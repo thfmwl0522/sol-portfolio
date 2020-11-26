@@ -12,6 +12,7 @@ var $naviAbout = $(".navi-wrapper .navi-wrap > .about");
 var $naviWorks = $(".navi-wrapper .navi-wrap > .works");
 var $naviCont = $(".navi-wrapper .navi-wrap > .contact");
 var $naviAni = $(".cont-wrap > ul.navi")
+var $navi = $(".navi-wrapper .navi-wrap > div");
 var $front = $(".cont-wrap > ul.navi");
 var $devel = $(".cont-wrap > ul.navi-ani > li:nth-child(1)");
 var $erAni = $(".cont-wrap > ul.navi-ani > li:nth-child(2)");
@@ -24,14 +25,15 @@ function onShow() {
 	else if (step === '1') {
 		aniHide();
 	}
-	else if (step === '2') {
+/* 	else if (step === '2') {
 		ani3();
-	}
+	} */
 }
 
 function aniShow() {
 	console.log('ani1');
 	step = "1"
+	$navi.css("display","block")
 	$contWrap.stop().css("animation-name", "none");
 	$contWrap.stop().css("animation-name");
 	$naviWrap.css("display", "block");
@@ -46,13 +48,18 @@ function aniShow() {
 	$erAni.css({ "animation-name": "naviAni1" }).addClass("ani");
 }
 
-function ani3() {
+function aniHide() {
 	console.log('ani2')
-	step = '2'
-	$(".navi-wrapper .navi-wrap1 > div").css("display", "block");
+	step = '0'
+	$navi.removeClass("active");
+	$naviAbout.removeClass("active1 active2 active3");
+	$naviWorks.removeClass("active1 active2 active3");
+	$naviCont.removeClass("active1 active2 active3");	
+	$(".about-wrapper").css("left", "300%");
+	$(".works-wrapper").css("left", "300%");
+	$(".contact-wrapper").css("left", "300%");
 	$contWrap.stop().css("animation-name", "none");
 	$contWrap.stop().css("animation-name");
-	$naviWrap.css("display", "block");
 	$naviAbout.css("animation-name", "").addClass("main-navi1");
 	$naviWorks.css("animation-name", "").addClass("main-navi2");
 	$naviCont.css("animation-name", "").addClass("main-navi3");
@@ -60,12 +67,10 @@ function ani3() {
 	$devel.css({ "animation-name": "workAni2" }).addClass("ani");
 	$erAni.css({ "animation-name": "workAni3" }).addClass("ani");
 
-	$naviAbout.removeClass("active1");
-	$naviWorks.removeClass("active2");
-	$naviCont.removeClass("active3");
+
 }
 
-function ani() {
+/* function ani() {
 	console.log('ani3');
 	step = '3'
 	$(".about-wrapper").hide();
@@ -83,7 +88,7 @@ function ani() {
 
 	$(".header-wrapper .bar").trigger("click");
 }
-
+ */
 
 /***************** Event ************************/
 $(".top-wrap > .bar").click(onShow);
@@ -409,3 +414,12 @@ $(function () {
 	}
 
 })();
+
+
+// 이메일 발송
+emailjs.init("user_aomWLdEBcIBIJeWkmj5K3");
+function mailSend(f) {
+	f.contact_number.value = Math.random() * 100000 | 0;
+	emailjs.sendForm('service_x2o6uy3', 'template_djh0pjg', f);
+	return false;
+}
