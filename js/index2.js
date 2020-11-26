@@ -19,17 +19,17 @@ var $erAni = $(".cont-wrap > ul.navi-ani > li:nth-child(2)");
 
 function onShow() {
 	if (step === '0') {
-		ani1();
+		aniShow();
 	}
 	else if (step === '1') {
-		ani2();
+		aniHide();
 	}
 	else if (step === '2') {
 		ani3();
 	}
 }
 
-function ani1() {
+function aniShow() {
 	console.log('ani1');
 	step = "1"
 	$contWrap.stop().css("animation-name", "none");
@@ -66,7 +66,7 @@ function ani3() {
 }
 
 function ani2() {
-	console.log('ani2')
+	console.log('ani2');
 	step = '2'
 	$(".about-wrapper").hide();
 	$(".works-wrapper").hide();
