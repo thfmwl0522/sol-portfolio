@@ -1,10 +1,10 @@
 /***************** logo ************************/
-$(".top-wrap > h1 ").click(function() {
+$(".top-wrap > h1 ").click(function () {
 	location.reload();
 });
 
 /***************** navi-bar ************************/
-var step = 0;
+var step = "0";
 
 var $contWrap = $(".cont-wrapper ul, .cont-wrapper ul > li");
 var $naviWrap = $(".navi-wrapper");
@@ -18,20 +18,20 @@ var $erAni = $(".cont-wrap > ul.navi-ani > li:nth-child(2)");
 
 
 function onShow() {
-	if(step == 0) {
+	if (step === '0') {
 		ani1();
 	}
-	else if(step == 1) {
+	else if (step === '1') {
 		ani2();
 	}
-	else if(step == 2) {
+	else if (step === '2') {
 		ani3();
 	}
 }
 
 function ani1() {
 	console.log('ani1');
-	step == 1
+	step = "1"
 	$contWrap.stop().css("animation-name", "none");
 	$contWrap.stop().css("animation-name");
 	$naviWrap.css("display", "block");
@@ -41,14 +41,14 @@ function ani1() {
 	$naviAbout.css("animation-name");
 	$naviWorks.css("animation-name");
 	$naviCont.css("animation-name");
-	$front.css({"animation-name": "naviAni"}).addClass("ani");
-	$devel.css({"animation-name": "workAni"}).addClass("ani");
-	$erAni.css({"animation-name": "naviAni1"}).addClass("ani");
-	step == 2
+	$front.css({ "animation-name": "naviAni" }).addClass("ani");
+	$devel.css({ "animation-name": "workAni" }).addClass("ani");
+	$erAni.css({ "animation-name": "naviAni1" }).addClass("ani");
 }
-	function ani2() {
-	console.log(ani2)
-	step == 3
+
+function ani2() {
+	console.log('ani2')
+	step = '2'
 	$(".navi-wrapper .navi-wrap1 > div").css("display", "block");
 	$contWrap.stop().css("animation-name", "none");
 	$contWrap.stop().css("animation-name");
@@ -56,18 +56,18 @@ function ani1() {
 	$naviAbout.css("animation-name", "").addClass("main-navi1");
 	$naviWorks.css("animation-name", "").addClass("main-navi2");
 	$naviCont.css("animation-name", "").addClass("main-navi3");
-	$front.css({"animation-name": "naviAni2"}).addClass("ani");
-	$devel.css({"animation-name": "workAni2"}).addClass("ani");
-	$er.css({"animation-name": "workAni3"}).addClass("ani");
+	$front.css({ "animation-name": "naviAni2" }).addClass("ani");
+	$devel.css({ "animation-name": "workAni2" }).addClass("ani");
+	$er.css({ "animation-name": "workAni3" }).addClass("ani");
 
 	$naviAbout.removeClass("active1");
 	$naviWorks.removeClass("active2");
 	$naviCont.removeClass("active3");
 }
-	
+
 
 /***************** Event ************************/
-$(".top-wrap > .bar").click(onShow); 
+$(".top-wrap > .bar").click(onShow);
 $(".navi-wrapper .navi-wrap > div").click(onNaviClick);
 
 function onNaviClick() {
@@ -89,29 +89,29 @@ function onNaviClick() {
 
 	var now = $(this).index();
 
-	if(now == 0) {
+	if (now == 0) {
 		$navi.eq(0).addClass("active1").removeClass("active2 active3");
 		$navi.eq(1).addClass("active2").removeClass("active1 active3");
 		$navi.eq(2).addClass("active3").removeClass("active1 active2");
-		$about.css({"left":"300%"}).show();
-		$about.css({ "left": "50%", "transform": "translateX(-50%)"});
+		$about.css({ "left": "300%" }).show();
+		$about.css({ "left": "50%", "transform": "translateX(-50%)" });
 		$works.hide();
 		$contact.hide();
 	}
-	else if(now == 1) {
+	else if (now == 1) {
 		$navi.eq(0).addClass("active3").removeClass("active1 active2");
 		$navi.eq(1).addClass("active1").removeClass("active2 active3");
 		$navi.eq(2).addClass("active2").removeClass("active1 active3");
-		$works.css({"left":"300%"}).show();
+		$works.css({ "left": "300%" }).show();
 		$works.css({ "left": "50%", "transform": "translateX(-50%)" });
 		$about.hide();
 		$contact.hide();
 	}
-	else if(now == 2) {
+	else if (now == 2) {
 		$navi.eq(0).addClass("active2").removeClass("active1 active3");
 		$navi.eq(1).addClass("active3").removeClass("active1 active2");
 		$navi.eq(2).addClass("active1").removeClass("active2 active3");
-		$contact.css({"left":"300%"}).show();
+		$contact.css({ "left": "300%" }).show();
 		$contact.css({ "left": "50%", "transform": "translateX(-50%)" });
 		$about.hide();
 		$works.hide();
@@ -140,8 +140,7 @@ function onNaviClick() {
 }
 
 
-
-	/*********************** .works-navi ***************************/
+/*********************** .works-navi ***************************/
 
 $(function () {
 
