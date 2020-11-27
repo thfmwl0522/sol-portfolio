@@ -118,6 +118,8 @@ function onNaviClick() {
 		$navi.eq(1).addClass("active2").removeClass("active1 active3");
 		$navi.eq(2).addClass("active3").removeClass("active1 active2");
 		$about.css({ "left": "300%" }).show();
+		$about.css("left");
+		$about.css("transition");
 		$about.css({ "left": "50%", "transform": "translateX(-50%)" });
 		$works.hide();
 		$contact.hide();
@@ -126,7 +128,9 @@ function onNaviClick() {
 		$navi.eq(0).addClass("active3").removeClass("active1 active2");
 		$navi.eq(1).addClass("active1").removeClass("active2 active3");
 		$navi.eq(2).addClass("active2").removeClass("active1 active3");
+		$works.css("left");
 		$works.css({ "left": "300%" }).show();
+		$works.css("left");
 		$works.css({ "left": "50%", "transform": "translateX(-50%)" });
 		$about.hide();
 		$contact.hide();
@@ -135,7 +139,9 @@ function onNaviClick() {
 		$navi.eq(0).addClass("active2").removeClass("active1 active3");
 		$navi.eq(1).addClass("active3").removeClass("active1 active2");
 		$navi.eq(2).addClass("active1").removeClass("active2 active3");
+		$contact.css("left");
 		$contact.css({ "left": "300%" }).show();
+		$contact.css("left");
 		$contact.css({ "left": "50%", "transform": "translateX(-50%)" });
 		$about.hide();
 		$works.hide();

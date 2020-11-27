@@ -16,7 +16,7 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif;}
 
 
 @keyframes webAni{
-	0% {transform: translateX(120%); color: #07215f;}
+	0% {transform: translateX(300%); color: #07215f;}
 	3% {transform: translateX(0); color: #07215f;}
 	56% {transform: translateX(0); color: #07215f;opacity: 1;}
 	58% {opacity: 0; transform: translateX(0); color: #07215f; color: #fff;}
@@ -26,7 +26,7 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif;}
 }
 
 @keyframes portAni {
-	0% {transform: translateX(120%) translateY(-264%); color:#07215f;}
+	0% {transform: translateX(300%) translateY(-264%); color:#07215f;}
 	3% {transform: translateX(0) translateY(-264%)}
 	10% {transform: translateX(0) translateY(-264%);}
 	13% {transform: translateX(0) translateY(-175%);}
@@ -41,8 +41,8 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif;}
 }
 
 @keyframes frontAni {
-	0% {transform: translateX(150%) translateY(0); color: #07215f;}
-	12% {transform: translateX(150%) translateY(0);}
+	0% {transform: translateX(300%) translateY(0); color: #07215f;}
+	12% {transform: translateX(300%) translateY(0);}
 	14% {transform: translateX(0) translateY(0);}
 	56% {transform: translateX(0); color: #07215f; opacity: 1; }
 	58% {opacity: 0; transform: translateX(0); color:#07215f; color: #fff;}
@@ -51,8 +51,8 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif;}
 }
 
 @keyframes devAni {
-	0% {transform: translateX(200%) translateY(0); color:#07215f;}
-	22% {transform: translateX(200%) translateY(0); }
+	0% {transform: translateX(300%) translateY(0); color:#07215f;}
+	22% {transform: translateX(300%) translateY(0); }
 	24% {transform: translateX(0) translateY(0);}
 	56% {transform: translateX(0); color: #07215f; opacity: 1;}
 	58% {opacity: 0; transform: translateX(0); color: #07215f; color: #fff;}
@@ -61,8 +61,8 @@ html, body {font-size: 16px; font-family: 'Bellefair', serif;}
 }
 
 @keyframes designAni {
-	0% {transform: translateX(200%) translateY(0); color: #07215f;}
-	32% {transform: translateX(200%) translateY(0);}
+	0% {transform: translateX(300%) translateY(0); color: #07215f;}
+	32% {transform: translateX(300%) translateY(0);}
 	34% {transform: translateX(0) translateY(0);}
 	56% {transform: translateX(0); color:#07215f; opacity: 1;}
 	58% {opacity: 0; transform: translateX(0); color:#07215f; color: #fff;}
