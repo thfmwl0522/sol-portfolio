@@ -230,7 +230,7 @@ $(function () {
 		var i, html;
 		for (i in datas) {
 			html = '<div class="slide">';
-			html += '<img src="' + datas[i].src + '" class="w-100">';
+			html += '<a href="#" target="_blank"><img src="' + datas[i].src + '" class="w-100"></a>';
 			html += '</div>';
 			$slides.push($(html));
 		}
@@ -300,7 +300,7 @@ $(function () {
 		var i, html;
 		for (i in datas) {
 			html = '<div class="slide">';
-			html += '<img src="' + datas[i].src + '" class="w-100">';
+			html += '<a href="#" target="_blank"><img src="' + datas[i].src + '" class="w-100"></a>';
 			html += '</div>';
 			$slides.push($(html));
 		}
@@ -371,7 +371,7 @@ $(function () {
 		var i, html;
 		for (i in datas) {
 			html = '<div class="slide">';
-			html += '<img src="' + datas[i].src + '" class="w-100">';
+			html += '<a href="#" target="_blank"><img src="' + datas[i].src + '" class="w-100"></a>';
 			html += '</div>';
 			$slides.push($(html));
 		}
@@ -416,10 +416,16 @@ $(function () {
 })();
 
 
-// 이메일 발송
+/***************** 이메일 발송 *********************/
 emailjs.init("user_aomWLdEBcIBIJeWkmj5K3");
 function mailSend(f) {
 	f.contact_number.value = Math.random() * 100000 | 0;
 	emailjs.sendForm('service_x2o6uy3', 'template_djh0pjg', f);
 	return false;
 }
+
+/***************** 이메일 새로고침 *********************/
+$(".contact-wrap .btn").click(function () {
+	alert('감사합니다:)');
+	location.reload();
+});
