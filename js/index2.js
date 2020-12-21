@@ -213,11 +213,9 @@ $(function () {
 
 (function () {
 	var datas = [
-		{ id: 0, src: '../img/slide-01.png' },
-		{ id: 1, src: '../img/slide-02.png' },
-		{ id: 2, src: '../img/slide-03.png' },
-		{ id: 3, src: '../img/slide-04.png' },
-		{ id: 4, src: '../img/slide-01.png' }
+		{ id: 0, src: '../img/front-01.png', href: 'https://sol-shop.web.app/html/index.html' },
+		{ id: 1, src: '../img/front-021.png', href: 'https://sol2-weather.web.app/html/index.html' },
+		{ id: 2, src: '../img/front-03.png', href: 'https://sol-vueweather.web.app/' }
 	];
 	var $wrapper = $(".slide1");
 	var $slideWrap = $(".front-slide", $wrapper);
@@ -236,7 +234,7 @@ $(function () {
 		var i, html;
 		for (i in datas) {
 			html = '<div class="slide">';
-			html += '<a href="#" target="_blank"><img src="' + datas[i].src + '" class="w-100"></a>';
+			html += '<a href="' + datas[i].href + '" target="_blank"><img src="' + datas[i].src + '" class="w-100"></a>';
 			html += '</div>';
 			$slides.push($(html));
 		}
@@ -249,10 +247,10 @@ $(function () {
 		$($slides[idx].clone()).appendTo($slideWrap.empty().attr("style", ""));
 		if (idx == 0) $($slides[lastIdx].clone()).prependTo($slideWrap);
 		else $($slides[idx - 1].clone()).prependTo($slideWrap);
-		for (var i = 1; i <= 3; i++) {
+/* 		for (var i = 1; i <= 3; i++) {
 			if (idx + i > lastIdx) $($slides[idx + i - 1 - lastIdx].clone()).appendTo($slideWrap);
 			else $($slides[idx + i].clone()).appendTo($slideWrap);
-		}
+		} */
 	}
 
 	function ani() {
@@ -261,20 +259,14 @@ $(function () {
 
 
 	function onPrev() {
-		$(this).off("click");
-		idx = idx == 0 ? lastIdx : idx - 1;
-		target = 0;
+		target = '100%';
+		idx = (idx == 0) ? lastIdx : idx - 1;
 		ani();
 	}
 
 	function onNext() {
-		$(this).off("click");
-		idx = idx == lastIdx ? 0 : idx + 1;
-		winWid = $(window).outerWidth();
-		if (winWid < 576) target = -200;
-		else if (winWid < 768) target = -200;
-		else if (winWid < 992) target = -100;
-		else target = -66.6666;
+		target = '-100%';
+		idx = (idx == lastIdx) ? 0 : idx + 1;
 		ani();
 	}
 
@@ -332,19 +324,19 @@ $(function () {
 
 	function onPrev() {
 		$(this).off("click");
-		idx = idx == 0 ? lastIdx : idx - 1;
-		target = 0;
+/* 		idx = idx == 0 ? lastIdx : idx - 1;
+		target = 0; */
 		ani();
 	}
 
 	function onNext() {
 		$(this).off("click");
-		idx = idx == lastIdx ? 0 : idx + 1;
+/* 		idx = idx == lastIdx ? 0 : idx + 1;
 		winWid = $(window).outerWidth();
 		if (winWid < 576) target = -200;
 		else if (winWid < 768) target = -200;
 		else if (winWid < 992) target = -100;
-		else target = -66.6666;
+		else target = -66.6666; */
 		ani();
 	}
 
@@ -355,9 +347,7 @@ $(function () {
 	var datas = [
 		{ id: 0, src: '../img/slide-04.png' },
 		{ id: 1, src: '../img/slide-01.png' },
-		{ id: 2, src: '../img/slide-04.png' },
-		{ id: 3, src: '../img/slide-04.png' },
-		{ id: 4, src: '../img/slide-01.png' }
+
 	];
 	var $wrapper = $(".slide3");
 	var $slideWrap = $(".web-sldie", $wrapper);
